@@ -9,7 +9,9 @@ This repo is an attempt to solve that problem.  I will go through the Learning P
 I think this will be helpful for my learning process, and I hope it's helpful to anyone else who stumbles across this repo.
 
 
-# Part 1 - What is p5.js
+# Introduction
+
+## What is p5.js?
 
 See [this Coding Train video](https://www.youtube.com/watch?v=8j0UDiN7my4&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) for Dan Shiffman's explanation of the origin of p5.js, and how to get started coding with p5.js.
 
