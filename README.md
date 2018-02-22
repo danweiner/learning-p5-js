@@ -30,7 +30,7 @@ Space Invaders example:
 2. Program the invaders 
 3. Program the scoring system 
 
-Editor's note - this may be a completely inappropriate project depending on the coder's skill level.  The philosophy of deliberate practice dictates that learning is best done through exercises that are challenging, but not too challenging.  I have found it very hard to find that proper balance in learning to code.  Either projects are too easy, or I start out on a project, only to hit a wall because I don't have the skills to continue, and don't have the network to ask for assistajce.  I'd love to find a way to bridge this gap and figure out difficulty appropriate projects.
+(Editor's note - this may be a completely inappropriate project depending on the coder's skill level.  The philosophy of deliberate practice dictates that learning is best done through exercises that are challenging, but not too challenging.  I have found it very hard to find that proper balance in learning to code.  Either projects are too easy, or they're too difficult (and I don't have the network to ask for assistance when I hit a wall).  I'd love to find a way to bridge this gap and figure out difficulty appropriate projects.)
 
 Back to Space Invaders...
 
