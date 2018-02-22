@@ -2,7 +2,7 @@
 
 The Learning Processing book is meant for Processing, which is built on top of Java.
 
-There, however, is no JavaScript based version of Learning Processing; in other words there is no Learning p5.js book, just the Dan Shiffman repo of Learning Processing code ported to p5.js.
+There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to p5.js.
 
 This repo is an attempt to solve that problem.  I will go through the Learning Processing book, link to the appropriate Shiffman p5.js repos from the Learning Processing book, link to the most relevant Coding Train videos, and post my own code for the exercises. 
 
