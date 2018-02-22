@@ -42,12 +42,12 @@ Then divide the problem into the smallest pieces necessary. Simple and easy step
 
 We would break down Step 1 into six programs.  The first program would *display a triangle*.  Each step would add a small improvement.  The next would *move the triangle*.  
 
-1.1 Draw the triangle onscreen.  This is the spaceship.
-1.2 Position the triangle at the bottom of the screen.
-1.3 Position the triangle slightly to the right of where it was before.
-1.4 Animate the trangle so that it moves from position left to right.
-1.5 Animate the triangle from left to right only when the right-arrow key is pressed.
-1.6 Animate the triangle right to left when the left-arrow key is pressed.
+1. 1 Draw the triangle onscreen.  This is the spaceship.
+1. 2 Position the triangle at the bottom of the screen.
+1. 3 Position the triangle slightly to the right of where it was before.
+1. 4 Animate the trangle so that it moves from position left to right.
+1. 5 Animate the triangle from left to right only when the right-arrow key is pressed.
+1. 6 Animate the triangle right to left when the left-arrow key is pressed.
 
 (Of course, being able to figure out these steps assumes a ton of coding knowledge already.  If you can't figure out the order for these steps, or even what steps there should be in the first place, what chance do you have of writing the code to execute them?)
 
