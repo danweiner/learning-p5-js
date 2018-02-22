@@ -23,6 +23,8 @@ Dan Shiffman's [next video](https://www.youtube.com/watch?v=HZ4D3wDRaec&list=PLR
 
 This is also known as the "one step at a time" approach.
 
+This could also be called "top down design".
+
 Don't try to do too much all at once.  Break a larger vision down into smaller parts and attack each piece slowly, one at a time.  
 
 Space Invaders example:
@@ -36,7 +38,18 @@ Back to Space Invaders...
 
 Then divide the problem into the smallest pieces necessary. Simple and easy steps will make programming the game seem more achievable (how you go about figuring out those steps is another important question).
 
-Step 1 would break down into six smaller programs.  The first would be to display a triangle.  Them move the triangle.
+We would break down Step 1 into six programs.  The first program would *display a triangle*.  Each step would add a small improvement.  The next would *move the triangle*.  
+
+1.1 Draw the triangle onscreen.  This is the spaceship.
+1.2 Position the triangle at the bottom of the screen.
+1.3 Position the triangle slightly to the right of where it was before.
+1.4 Animate the trangle so that it moves from position left to right.
+1.5 Animate the triangle from left to right only when the right-arrow key is pressed.
+1.6 Animate the triangle right to left when the left-arrow key is pressed.
+
+(Of course, being able to figure out these steps assumes a ton of coding knowledge already.  If you can't figure out the order for these steps, or even what steps there should be in the first place, what chance do you have of writing the code to execute them?)
+
+This makes programming and "debugging" easier - more on this next.
 
 
 
