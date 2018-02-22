@@ -53,6 +53,24 @@ We would break down Step 1 into six programs.  The first program would *display 
 
 This makes programming and "debugging" easier - more on this next.
 
+## Debugging
+
+See [this link]() from p5.js and [this link]() from ITP for more info on debugging.
+
+Note that a "bug" is "the moment when there is both a technical problem with your code as well as a problem with your mental picture of what is happening in your code."
+
+I'd like to dive a little deeper than this.  
+
+Most debugging lessons and tutorials that I have seen have focused on the above - namely first understanding what the code is doing before even trying to fix it.
+
+This seems logical, but it forgets that fact that a true newbie might be totally lost in the woods.  Even if a newbie can understand what is going on in the code (a big if), this programmer might not have the skills to solve the problem.  Going beyond this, all of the steps that "worked" previously, might in fact be the cause of the current problem.  The newbie has no way of knowing whats going on.
+
+Additionally, unless the newbie is in a course, or has another network to rely on, he or she is all alone to find the "bug".  This can end up being a hopeless endeavor.
+
+This brings be back to my early point, which was the importance of finding projects at the right difficulty level.  Additionally, the newbie either needs to know how to find answers online (StackOverflow for instance), or needs a network of people to call on for assistance).  Otherwise there will be a string of failed projects.  
+
+
+
 
 
 
