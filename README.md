@@ -19,6 +19,31 @@ Note that the above video references an editor for download that has since been 
 
 Dan Shiffman's [next video](https://www.youtube.com/watch?v=HZ4D3wDRaec&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=2) is about a p5.js workflow, meaning how to download the project files, how to setup node.js and package manager, and how to run a local server on your computer.  I plan on going through all these steps later, but for now, I'm going to use the [online editor](https://alpha.editor.p5js.org/).
 
+## Incremental Development
+
+This is also known as the "one step at a time" approach.
+
+Don't try to do too much all at once.  Break a larger vision down into smaller parts and attack each piece slowly, one at a time.  
+
+Space Invaders example:
+1. Program the spaceship
+2. Program the invaders 
+3. Program the scoring system 
+
+Editor's note - this may be a completely inappropriate project depending on the coder's skill level.  The philosophy of deliberate practice dictates that learning is best done through exercises that are challenging, but not too challenging.  I have found it very hard to find that proper balance in learning to code.  Either projects are too easy, or I start out on a project, only to hit a wall because I don't have the skills to continue, and don't have the network to ask for assistajce.  I'd love to find a way to bridge this gap and figure out difficulty appropriate projects.
+
+Back to Space Invaders...
+
+Then divide the problem into the smallest pieces necessary. Simple and easy steps will make programming the game seem more achievable (how you go about figuring out those steps is another important question).
+
+Step 1 would break down into six smaller programs.  The first would be to display a triangle.  Them move the triangle.
+
+
+
+
+
+
+
  
 
 
