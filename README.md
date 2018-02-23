@@ -53,6 +53,8 @@ We would break down Step 1 into six programs.  The first program would *display 
 
 This makes programming and "debugging" easier - more on this next.
 
+Incremental development also lends itself well to *object oriented programming*, which allows us to develop projects in modular pieces, meaning these pieces can be easily organized, shared, and reused.
+
 ## Debugging
 
 See [this link]() from p5.js and [this link]() from ITP for more info on debugging.
@@ -70,7 +72,13 @@ Additionally, unless the newbie is in a course, or has another network to rely o
 This brings be back to my early point, which was the importance of finding projects at the right difficulty level.  Additionally, the newbie either needs to know how to find answers online (StackOverflow for instance), or needs a network of people to call on for assistance).  Otherwise there will be a string of failed projects.  
 
 
+## Algorithms
 
+Programming is all about writing algorithms.
+
+An algorithm is a sequential list of instructions that solves a particular problem.  Incremental development should make it easier to write an algorithm that implements your idea.
+
+(I have been wondering about the algorithm development process. How does one get good at developing basic algorithms, like the ones above for Space Invaders? Does it come with practice in programming? Is it an innate skill that people have, that perhaps they can hone - people who are good at math and logic games naturally become more adept at learning to write algorithms?  If you have taken a long break from doing anything quantitative, for instance adult learners, would they benefit from a crash course in Precalculus, or even Philosophy, to hone their logical thinking skills?  From a first principles perspective, how do you write those first lines of pseudocode that lead to a larger program? Is there a way to teach that, besides "write an algorithm to provide instructions on how to brush your teeth - this book's first exercise?)
 
 
 
