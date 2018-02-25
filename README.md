@@ -83,7 +83,7 @@ An algorithm is a sequential list of instructions that solves a particular probl
 (I have been wondering about the algorithm development process. How does one get good at developing basic algorithms, like the ones above for Space Invaders? Does it come with practice in programming? Is it an innate skill that people have, that perhaps they can hone - people who are good at math and logic games naturally become more adept at learning to write algorithms?  If you have taken a long break from doing anything quantitative, for instance adult learners, would they benefit from a crash course in Precalculus, or even Philosophy, to hone their logical thinking skills?  From a first principles perspective, how do you write those first lines of pseudocode that lead to a larger program? Is there a way to teach that, besides "write an algorithm to provide instructions on how to brush your teeth - this book's first exercise?)
 
 
-## GitHub and Command Line
+## Detour 1 - GitHub and Command Line
 
 If you found this page, you must at least know how to find GitHub.  You might even have a GitHub profile.  Thoseare a good first steps.
 
