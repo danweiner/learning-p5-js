@@ -85,7 +85,7 @@ An algorithm is a sequential list of instructions that solves a particular probl
 
 ## Detour 1 - GitHub and Command Line
 
-If you found this page, you must at least know how to find GitHub.  You might even have a GitHub profile.  Thoseare a good first steps.
+If you found this page, you must at least know how to find GitHub.  You might even have a GitHub profile.  Those are a good first steps.
 
 Check out [this video series](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) by Dan Shiffman for a introduction to GitHub and Command Line.
 
