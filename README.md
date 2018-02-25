@@ -59,7 +59,7 @@ Incremental development also lends itself well to *object oriented programming*,
 
 ## Debugging
 
-See [this link]() from p5.js and [this link]() from ITP for more info on debugging.
+See [this link](http://staging.p5js.org/tutorials/debugging.html) from p5.js and [this link](https://vimeo.com/105069079) from ITP for more info on debugging.
 
 Note that a "bug" is "the moment when there is both a technical problem with your code as well as a problem with your mental picture of what is happening in your code."
 
@@ -87,7 +87,7 @@ An algorithm is a sequential list of instructions that solves a particular probl
 
 If you found this page, you must at least know how to find GitHub.  You might even have a GitHub profile.  Thoseare a good first steps.
 
-Check out [this video series](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV by Dan Shiffman for a introduction to GitHub and Command Line.
+Check out [this video series](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) by Dan Shiffman for a introduction to GitHub and Command Line.
 
 I remember being very intimidated the first time working with Terminal.  That was a big deal for me.  The first real turning point towards being a "real" programmer.  Maybe you'll feel similarly.
 
