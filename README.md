@@ -92,6 +92,11 @@ Check out [this video series](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6
 I remember being very intimidated the first time working with Terminal.  That was a big deal for me.  The first real turning point towards being a "real" programmer.  Maybe you'll feel similarly.
 
 
+# Chapters 1 - 3
+
+[Watch](https://www.youtube.com/watch?v=D1ELEeIs0j8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=3) Foundations of Programming in JavaScript - p5.js, videos 1.3 - 2.1.  This covers drawing basics (shapes and colors), uploading p5.js sketches, and mouseX and mouseY variables.
+
+
 
 
 
