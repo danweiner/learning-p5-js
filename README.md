@@ -82,6 +82,8 @@ An algorithm is a sequential list of instructions that solves a particular probl
 
 (I have been wondering about the algorithm development process. How does one get good at developing basic algorithms, like the ones above for Space Invaders? Does it come with practice in programming? Is it an innate skill that people have, that perhaps they can hone - people who are good at math and logic games naturally become more adept at learning to write algorithms?  If you have taken a long break from doing anything quantitative, for instance adult learners, would they benefit from a crash course in Precalculus, or even Philosophy, to hone their logical thinking skills?  From a first principles perspective, how do you write those first lines of pseudocode that lead to a larger program? Is there a way to teach that, besides "write an algorithm to provide instructions on how to brush your teeth - this book's first exercise?)
 
+See [this link](https://github.com/danweiner/learning-p5-js/blob/master/intro/touthbrush.txt) for my answer to toothbrushing algorithm exercise.
+
 
 ## Detour 1 - GitHub and Command Line
 
@@ -96,6 +98,7 @@ I remember being very intimidated the first time working with Terminal.  That wa
 
 [Watch](https://www.youtube.com/watch?v=D1ELEeIs0j8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=3) Foundations of Programming in JavaScript - p5.js, videos 1.3 - 2.1.  This covers drawing basics (shapes and colors), uploading p5.js sketches, and mouseX and mouseY variables.
 
+See [this link](https://github.com/danweiner/learning-p5-js/tree/master/ch-1-3/fido for my first sketch in p5.js.  I drew a dog using ellipses and rects.  It's called "Fido".
 
 
 
