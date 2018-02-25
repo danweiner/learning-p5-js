@@ -98,7 +98,7 @@ I remember being very intimidated the first time working with Terminal.  That wa
 
 [Watch](https://www.youtube.com/watch?v=D1ELEeIs0j8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=3) Foundations of Programming in JavaScript - p5.js, videos 1.3 - 2.1.  This covers drawing basics (shapes and colors), uploading p5.js sketches, and mouseX and mouseY variables.
 
-See [this link](https://github.com/danweiner/learning-p5-js/tree/master/ch-1-3/fido for my first sketch in p5.js.  I drew a dog using ellipses and rects.  It's called "Fido".
+See [this link](https://github.com/danweiner/learning-p5-js/tree/master/ch-1-3/fido) for my first sketch in p5.js.  I drew a dog using ellipses and rects.  It's called "Fido".
 
 
 
