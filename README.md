@@ -96,6 +96,8 @@ I remember being very intimidated the first time working with Terminal.  That wa
 
 # Chapters 1 - 3
 
+## Basics of Drawing
+
 [Watch](https://www.youtube.com/watch?v=D1ELEeIs0j8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=3) Foundations of Programming in JavaScript - p5.js, videos 1.3 - 2.1.  This covers drawing basics (shapes and colors), uploading p5.js sketches, and mouseX and mouseY variables.
 
 [Here](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp01_drawing) are Dan Shiffman repos for drawing basic shapes.  Note that these initial examples are written in the "setup" function.  This is because Dan is trying to follow the order of the book, where "static" sketches are taught first, and "flow" isn't introduced until chapter 3.
