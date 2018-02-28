@@ -10,6 +10,10 @@ I will also have the occasional "detour" when relevant topics come up that aren'
 
 I think this will be helpful for my learning process, and I hope it's helpful to anyone else who stumbles across this repo.
 
+I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
+
+I'm thinking of calling it Project Tengu. A Tengu is a long-nosed goblin creature from Japanese folklore.  I'm also intrigued that the characters for Tengu (天狗) mean "celestial dog."  This name is in beta.  See this [tofugu link](https://www.tofugu.com/japan/tengu/) for more info on Tengu.
+
 
 # Introduction
 
@@ -100,13 +104,25 @@ I remember being very intimidated the first time working with Terminal.  That wa
 
 [Watch](https://www.youtube.com/watch?v=D1ELEeIs0j8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=3) Foundations of Programming in JavaScript - p5.js, videos 1.3 - 2.1.  This covers drawing basics (shapes and colors), uploading p5.js sketches, and mouseX and mouseY variables.
 
-[Here](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp01_drawing) are Dan Shiffman repos for drawing basic shapes.  Note that these initial examples are written in the "setup" function.  This is because Dan is trying to follow the order of the book, where "static" sketches are taught first, and "flow" isn't introduced until chapter 3.
+[Here](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp01_drawing) are Dan Shiffman's repos for drawing basic shapes.  Note that these initial examples are written in the "setup" function.  This is because Dan is trying to follow the order of the book, where "static" sketches are taught first, and "flow" isn't introduced until chapter 3.
 
 [Here](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp02_processing/example_02_01_zoog) is Dan's static alien character sketch called "Zoog".
 
+Software happens over a *period of time* - we'll call this *flow*.
+
+What is *Setup*?
+- The set of initial conditions (in a game for instance - character name, score of zero, level 1...)
+- This only happens one time
+
+What is *Draw*?
+- Happens after setup
+- This cycles over and over again (ideally more than 30 times per second for smooth animation)
+- In a game, this could be checking mouse moves, calculating behaviors of game characters, updating screen to render game graphics..
+-This runs until the program quits
+
 See [this link](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp03_flow/example_03_01_setupdraw) for "Zoog" using setup and draw functions.
 
-See [this link](https://github.com/danweiner/learning-p5-js/tree/master/ch-1-3/fido) for my first sketch in p5.js.  I have used the setup and draw functions.  The only shape functions I used were ellipses and rects.  I drew a dog called "Fido".
+See [this link](https://github.com/danweiner/learning-p5-js/tree/master/ch-1-3/fido) for my first sketch in p5.js.  This was Exercise 3.2 in the Learning Processing book.  I have used the setup and draw functions.  The only shape functions I used were ellipses and rects.  I drew a dog called "Fido".
 
 ## Detour 3 - Translate, Rotate, Push, and Pop
 
