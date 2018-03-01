@@ -161,8 +161,8 @@ See these Coding Train videos for Dan's lessons on [rotating images](https://www
 These stand for "previous" mouseX and mouseY locations, meaning the last place the mouse was when we cycled through draw.
 
 Examples of using pmouseX and pmouseY:
-- draw a [continuous line]() - example 3.4
-- Exercise 3.7 - write a [program]() where the faster the user moves the mouse,
+- draw a [continuous line](https://github.com/danweiner/learning-p5-js/tree/master/lesson-1/example-3.4-continuousline) - example 3.4
+- Exercise 3.7 - write a [program](https://github.com/danweiner/learning-p5-js/tree/master/lesson-1/example-absval) where the faster the user moves the mouse,
 the wider the line is drawn. Hint: look up strokeWeight( ) in the
 p5.js reference.
   - The formula for calculating the speed of the mouse’s horizontal motion is the
@@ -170,6 +170,20 @@ absolute value of the difference between mouseX and pmouseX. The absolute value 
 number is defined as that number without its sign
   - The speed at which the mouse is moving is therefore:
   - abs(mouseX - pmouseX )
+
+### Mouse Clicks and Key Presses
+
+Mouse clicks are *events* - this means adding a new function separate from setup and draw
+
+This new function will tell the program what code to execute when an event occurs.
+
+Similar to setup, it will occur once and only once - for each occurence of the event - that event can of course happen multiple times over the course of the program.
+
+Two new functions:
+- mousePressed() - mouse clicks
+- keyPressed() - key presses
+
+This example demonstrates [both event functions]() - adding squares whenever the ouse is pressed and clearing the background when a key is pressed.
 
 
 
