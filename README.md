@@ -161,7 +161,7 @@ See these Coding Train videos for Dan's lessons on [rotating images](https://www
 These stand for "previous" mouseX and mouseY locations, meaning the last place the mouse was when we cycled through draw.
 
 Examples of using pmouseX and pmouseY:
-- draw [continuous line] - example 3.4
+- draw a [continuous line]() - example 3.4
 - Exercise 3.7 - write a [program]() where the faster the user moves the mouse,
 the wider the line is drawn. Hint: look up strokeWeight( ) in the
 p5.js reference.
