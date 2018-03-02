@@ -271,6 +271,12 @@ Note how he also discusses the assignment operation in
 
 It is difficult to think of this as an assignment operation, where the right side is evaluated and then "assigned" to the left side, but this is a critical concept to learn up front.
 
+Examples [4.3]() and [4.4]() use variables to change the size, color, and location of shapes.
+
+Exercises [4.4]() for more practice with variables.
+
+Dan is smart to have students first draw these sketches with hard coded values before replacing these values with variables.  Always start with the basics - make sure to get the basic drawing right first then move on to something a little more advanced like a new concept.
+
 
 
 
