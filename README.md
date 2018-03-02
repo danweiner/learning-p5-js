@@ -189,7 +189,15 @@ frameRate() requires a integer between 1 and 60 and enforces the speed at which 
 
 Here is Dan's [sketch](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp03_flow/example_03_06_interactive_zoog) of interactive Zoog.  Zoog's entire body follows the mouse.  Its eye color is determined by the mouse location.  Its legs are drawn from the previous mouse location to the current mouse location.  Finally, when the mouse is clicked, the message is displayed in the console: "Take me to your leader!"
 
+The final project for this lesson is to draw a new sketch using everything we've learned from chapters 1 through 3.
 
+This must include RGB colors, shapes, setup and draw, and some interaction using the mousePressed() or keyPressed() functions.
+
+I drew a [sketch](https://github.com/danweiner/learning-p5-js/tree/master/lesson-1/lesson-1-project) of a house where the original scene is daytime, but when the mouse is pressed, it changes to nighttime.
+
+I would need a variable to change it back to daytime with another mouse click, but that's the subject for the next lessons.
+
+I also thought about using loops for thinks like drawing stars, and using the random function, but I decided to wait on that until those are brought up in the book.
 
 
 
