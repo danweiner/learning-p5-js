@@ -202,8 +202,68 @@ I would need a variable to change it back to daytime with another mouse click, b
 I also thought about using loops for things like drawing stars, and using the random function, but I decided to wait on that until those are brought up in the book.
 
 
+# Lesson 2 - Everything you need to know
 
+This section covers:
+- Variables
+- Conditionals
+- Loops
 
+## Chapter 4 - Variables
+
+Overview:
+- Variables: What are they?
+- Declaring and initializing variables
+- Common uses for variables
+- "Built-in" variables
+- Using random values for variables
+
+This [video](https://www.youtube.com/watch?v=Bn_B3T_Vbxs&t=87s) is Dan's introduction to variables in p5.js.
+
+### What is a Variable?
+
+A laundry list of analogies to describe variables:
+- a storage locker
+- a bucket
+- a post-it note
+
+(Note how the lawyers in this $9 billion [case](https://motherboard.vice.com/en_us/article/yp33dy/googles-lawyers-tried-to-explain-apis-to-a-jury-using-a-physical-filing-cabinet) tried to compare Java's APIs to a filing cabinet.  Explaining tech is hard.  That's why Coding Train is so great.)
+
+The computer has memory.  A variable is a *named pointer* to a location in the computer's memory (a "memory address") where data is stored.
+
+Computers only process one instruction at a time.  So, a variable allows a programmer to *save information* from one point in the program, and refer back to it at a later time.
+
+Examples:
+- variables can keep track of info related to shapes - color size, location
+- make a triange change from blue to purple
+- make a rectangle move across the screen
+- make an ellipse shrink into nothingness
+
+Dan say's he prefers the *piece of paper* approach: graph paper.  
+
+Imagine the computer's memory as a sheet of graph paper, and each cell on the graph paper has an address.  With variables, we can name each of these cells.  
+
+Let's name one "Dan's score" and give it the value of 100.  Then, when we want to use "Dan's score" in a progran, it's right there in memory.  We can just ask for it by the name "Dan's score".
+
+The whole point of variables is that they *vary*.  
+
+### Exercise 4.1 Variables in Pong
+
+Player 1 score
+Player 2 score
+time
+ball position (tracking ball movement)
+paddle position (tracking paddle movement)
+
+Dan's [coding challenge](https://www.youtube.com/watch?v=IIrC5Qcb2G4) for Pong.
+
+### Declaring, Initializing, and Using Variables
+
+It's best to refer to Dan's video on variables, linked above.  The book discusses variables in Java, which have similarities, but can still be confusing because of the need to declare variable types.
+
+Dan's first example, moving a circle across the screen, has a valuable lesson for debugging.  He repeats this phrase over and over, in slightly different versions.  "Let's predent we are the computer."  Or "be one with the computer."
+
+I've written the [example]() here.  Even though this code is fairly straightforward, it's getting the student to start thinking like the computer. Thinking methodically, step by step, about how the computer is executing the code.  This will be crucial as code gets more complex
 
 
 
