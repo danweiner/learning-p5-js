@@ -2,6 +2,7 @@ function setup() {
   createCanvas(400, 640);
   
   //remember background must be in setup!
+  //draw the daytime sky
   background(66, 134, 244);
   
   //draw sun
@@ -12,7 +13,7 @@ function setup() {
 } 
 
 function draw() { 
-  //draw the daytime sky
+  
   
   rectMode(CENTER);
   ellipseMode(CENTER);

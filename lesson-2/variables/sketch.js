@@ -1,5 +1,5 @@
 var circleX = 0;
-//can't use height before setup
+
 var circleY;
 
 function setup() { 
@@ -9,7 +9,6 @@ function setup() {
 } 
 
 function draw() { 
-  //draw the daytime sky
   background(255);
   ellipseMode(CENTER);
   
