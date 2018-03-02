@@ -189,6 +189,8 @@ frameRate() requires a integer between 1 and 60 and enforces the speed at which 
 
 Here is Dan's [sketch](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp03_flow/example_03_06_interactive_zoog) of interactive Zoog.  Zoog's entire body follows the mouse.  Its eye color is determined by the mouse location.  Its legs are drawn from the previous mouse location to the current mouse location.  Finally, when the mouse is clicked, the message is displayed in the console: "Take me to your leader!"
 
+## Lesson 1 Project
+
 The final project for this lesson is to draw a new sketch using everything we've learned from chapters 1 through 3.
 
 This must include RGB colors, shapes, setup and draw, and some interaction using the mousePressed() or keyPressed() functions.
