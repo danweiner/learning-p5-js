@@ -12,7 +12,7 @@ I think this will be helpful for my learning process, and I hope it's helpful to
 
 I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
 
-I'm thinking of calling it Project Tengu. A Tengu is a long-nosed goblin creature from Japanese folklore.  I'm also intrigued that the characters for Tengu (天狗) mean "celestial dog."  This name is in beta.  See this [tofugu link](https://www.tofugu.com/japan/tengu/) for more info on Tengu.
+I'm thinking of calling it Space Bear. Or Coding Jet.
 
 
 # Introduction
@@ -183,7 +183,13 @@ Two new functions:
 - mousePressed() - mouse clicks
 - keyPressed() - key presses
 
-This example demonstrates [both event functions]() - adding squares whenever the ouse is pressed and clearing the background when a key is pressed.
+This example demonstrates [both event functions](https://github.com/danweiner/learning-p5-js/tree/master/lesson-1/example-3.5-events) - adding squares whenever the ouse is pressed and clearing the background when a key is pressed.
+
+frameRate() requires a integer between 1 and 60 and enforces the speed at which p5.js will cycle through draw().  frameRate(30) means 30 frames per second, the traditional speed for computer animation.  If you don't include frameRate(), p5 will attempt to run the sketch at 60 frames per second.  Since computers run at different speeds, framerate() is used to make sure that your sketch is consistent across multiple computers.
+
+Here is Dan's [sketch](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp03_flow/example_03_06_interactive_zoog) of interactive Zoog.  Zoog's entire body follows the mouse.  Its eye color is determined by the mouse location.  Its legs are drawn from the previous mouse location to the current mouse location.  Finally, when the mouse is clicked, the message is displayed in the console: "Take me to your leader!"
+
+
 
 
 
