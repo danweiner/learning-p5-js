@@ -199,7 +199,7 @@ I drew a [sketch](https://github.com/danweiner/learning-p5-js/tree/master/lesson
 
 I would need a variable to change it back to daytime with another mouse click, but that's the subject for the next lessons.
 
-I also thought about using loops for thinks like drawing stars, and using the random function, but I decided to wait on that until those are brought up in the book.
+I also thought about using loops for things like drawing stars, and using the random function, but I decided to wait on that until those are brought up in the book.
 
 
 
