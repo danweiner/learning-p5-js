@@ -263,7 +263,13 @@ It's best to refer to Dan's video on variables, linked above.  The book discusse
 
 Dan's first example, moving a circle across the screen, has a valuable lesson for debugging.  He repeats this phrase over and over, in slightly different versions.  "Let's predent we are the computer."  Or "be one with the computer."
 
-I've written the [example]() here.  Even though this code is fairly straightforward, it's getting the student to start thinking like the computer. Thinking methodically, step by step, about how the computer is executing the code.  This will be crucial as code gets more complex
+I've written the [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/variables) here.  Even though this code is fairly straightforward, it's getting the student to start thinking like the computer. Thinking methodically, step by step, about how the computer is executing the code.  This will be crucial as code gets more complex.
+
+Note how he also discusses the assignment operation in 
+
+```circleX = circleX + 1```
+
+It is difficult to think of this as an assignment operation, where the right side is evaluated and then "assigned" to the left side, but this is a critical concept to learn up front.
 
 
 
