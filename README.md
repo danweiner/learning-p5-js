@@ -144,7 +144,7 @@ Only after watching Dan's video on translate, rotate, etc, and translating the e
 
 Note that Dan also has a sketch using [translate](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp03_flow/example_03_07_translated_zoog), even though I don't think this is mentioned in the book.  
 
-### Detour 3 - Translate, Rotate, Push, and Pop
+### Detour 2 - Translate, Rotate, Push, and Pop
 
 Unlike "Zoog", my drawing required a special feature - rectangle shaped ears that were rotated related to the screen.  This relates back to a previous point that I made - not knowing what you're getting yourself into before starting a project.  I searched for "draw dog with simple shapes", found an image online of a dog made of circles and rectangles, and thought I could draw this in p5.js.  Of course it's not that easy.
 
@@ -298,9 +298,37 @@ Commonly used system variables:
 - mousePressed: True of false? Is the mouse pressed?
 - mouseButton: Which button is pressed? Left, right, or center?
 
-Here's an example using [system variables]().
+Here's an example using [system variables](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/example-4.5).
 
 I don't think this is covered by any Coding Train videos.  See the videos above about mouseX and making your own variables.
+
+Exercise 4.5, getting the shapes to resize themselves relative to the window size, did not work in the online editor.  I tried my code, and Dan's code in the learning p5.js repo.  I think the code might have worked in the deprecated p5.js editor (when a separate canvas launches, which can then be resized - similar to what happens with processing), but this does not happen with the online editor.
+
+In any event, this seemed like a good time for a detour.  I will now go through Dan's [workflow](https://www.youtube.com/watch?v=HZ4D3wDRaec&index=2&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) video to see if this code works in the browser on a local server.  It will also be a good test to see if I can execute the steps in his workflow video.  Here we go.
+
+### Detour 3 - Workflow
+
+First note - I could also try codepen.  I'll do that after this video.  Dan also mentioned Glitch.  I'll look into that as well.
+
+Note that I'm using Sublime Text instead of Atom, so I downloaded the package [SublimeServer](http://learningcn.com/SublimeServer/) to turn Sublime into a server.  I remember I needed to first install [Package Control](https://packagecontrol.io/installation) in order to download things like SublimeServer.  If you're new to programming, you could definitely get stuck at this stage because it's confusing to navigate these kinds of setup details.
+
+SublimeServer also does live reload, just like Dan's example in Atom.
+
+This was successful - I even troubleshot package manager with Sublime Text.  :)
+
+A few commands to remember:
+
+```
+p5 generate -b myproject
+
+(node) http-server
+
+python -m SimpleHTTPServer
+
+```
+
+
+
 
 
 
