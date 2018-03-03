@@ -249,11 +249,12 @@ The whole point of variables is that they *vary*.
 
 ### Exercise 4.1 Variables in Pong
 
-Player 1 score
-Player 2 score
-time
-ball position (tracking ball movement)
-paddle position (tracking paddle movement)
+List of possible variables:
+- Player 1 score
+- Player 2 score
+- time
+- ball position (tracking ball movement)
+- paddle position (tracking paddle movement)
 
 Dan's [coding challenge](https://www.youtube.com/watch?v=IIrC5Qcb2G4) for Pong.
 
@@ -265,17 +266,43 @@ Dan's first example, moving a circle across the screen, has a valuable lesson fo
 
 I've written the [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/variables) here.  Even though this code is fairly straightforward, it's getting the student to start thinking like the computer. Thinking methodically, step by step, about how the computer is executing the code.  This will be crucial as code gets more complex.
 
-Note how he also discusses the assignment operation in 
+Note how he also discusses the assignment operation in:
 
 ```circleX = circleX + 1```
 
-It is difficult to think of this as an assignment operation, where the right side is evaluated and then "assigned" to the left side, but this is a critical concept to learn up front.
+It is difficult to think of this as an assignment operation (rather than "equals"), where the right side is evaluated and then "assigned" to the left side, but this is a critical concept to learn up front.
 
-Examples [4.3]() and [4.4]() use variables to change the size, color, and location of shapes.
+Examples [4.3](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/example-4.3) and [4.4](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/example-4.4) use variables to change the size, color, and location of shapes.
 
-Exercises [4.4]() for more practice with variables.
+Exercises [4.4](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/exercise-4.4) for more practice with variables.
 
 Dan is smart to have students first draw these sketches with hard coded values before replacing these values with variables.  Always start with the basics - make sure to get the basic drawing right first then move on to something a little more advanced like a new concept.
+
+
+### System Variables
+
+Just like mouseX and mouseY - these are commonly needed pieces of data associated with all sketches (width of window, key pressed on keyboard, etc.)
+
+Avoid using system variable names when naming your own variables.
+
+Commonly used system variables:
+- width: Width (in pixels) of sketch window
+- height: Height (in pixels) of sketch window
+- frameCount: Number of frames processed
+- frameRate: Rate that frames are processed (per second)
+- screen.width: Width (in pixels) of entire screen
+- screen.height: Height (in pixels) of entire screen
+- key: most recent key pressed on keyboard
+- keyCode: Numeric code for key pressed on keyboard
+- keyPressed: True or false? Is a key pressed?
+- mousePressed: True of false? Is the mouse pressed?
+- mouseButton: Which button is pressed? Left, right, or center?
+
+Here's an example using [system variables]().
+
+I don't think this is covered by any Coding Train videos.  See the videos above about mouseX and making your own variables.
+
+
 
 
 
