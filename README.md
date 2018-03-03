@@ -304,6 +304,8 @@ I don't think this is covered by any Coding Train videos.  See the videos above 
 
 Exercise 4.5, getting the shapes to resize themselves relative to the window size, did not work in the online editor.  I tried my code, and Dan's code in the learning p5.js repo.  I think the code might have worked in the deprecated p5.js editor (when a separate canvas launches, which can then be resized - similar to what happens with processing), but this does not happen with the online editor.
 
+This was the best answer I could come up with.  I used windowWidth and windowHeight, instead of width and height (which are suggested in the book).  
+
 In any event, this seemed like a good time for a detour.  I will now go through Dan's [workflow](https://www.youtube.com/watch?v=HZ4D3wDRaec&index=2&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) video to see if this code works in the browser on a local server.  It will also be a good test to see if I can execute the steps in his workflow video.  Here we go.
 
 ### Detour 3 - Workflow
@@ -327,7 +329,15 @@ python -m SimpleHTTPServer
 
 ```
 
+### JavaScript Objects
 
+The next chapter in the book Learning Processing is about using random(), but Coding Train has two videos before this.  One about [JavaScript Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY&index=8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) and the other about the [map function](https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=9).  I'll follow the Coding Train curriculum and address these subjects before moving on to random().
+
+### Random: Variety is the spice of life
+
+Think back to incremental development - learn the fundamentals by looking at individual pieces - programs that do one and only one thing.  Then begin to add functionality on top, step by step.
+
+random() returns a value - abs() does the same thing - more on this in Chapter 7
 
 
 
