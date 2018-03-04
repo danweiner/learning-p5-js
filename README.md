@@ -3,8 +3,7 @@
 # Table of Contents  
 [Introduction](#introduction)  
 - [What is p5.js?](#what-is-p5js)  
-
-<a name="introduction"/>
+- [Incremental Development](#incremental-development)
 
 # Introduction
 
@@ -22,7 +21,6 @@ I'm beginning to think this may become an open source project similar to [The Od
 
 I'm thinking of calling it Space Bear. Or Coding Jet.
 
-<a name="what-is-p5js"/>
 
 ## What is p5.js?
 
