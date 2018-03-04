@@ -388,7 +388,7 @@ Additionally, here is sample code from my table of contents:
 [Introduction](#introduction)  
 - [What is p5.js?](#what-is-p5js)  
 - [Incremental Development](#incremental-development)
-``
+```
 
 Note that the links must be in *lower case*
 
