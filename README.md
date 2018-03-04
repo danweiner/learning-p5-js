@@ -4,6 +4,11 @@
 [Introduction](#introduction)  
 - [What is p5.js?](#what-is-p5js)  
 - [Incremental Development](#incremental-development)
+- [Debugging](#debugging)
+- [Algorithms](#algorithms)
+- [Detour 1 - GitHub and Command Line](#detour-1---gitHub-and-command-line)
+[Lesson 1 - The Beginning](#lesson-1---the-beginning)
+- [Basics of Drawing](#basics-of-drawing)
 
 # Introduction
 
@@ -383,18 +388,17 @@ Additionally, here is sample code from my table of contents:
 
 ```
 # Table of contents 
-
-# Table of Contents  
+  
 [Introduction](#introduction)  
 - [What is p5.js?](#what-is-p5js)  
 - [Incremental Development](#incremental-development)
 ```
 
-Note that the links must be in *lower case*
+Note that the links must be in *lower case*.
 
-Additionally, any punctuation or spaces are removed or replaced.  For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
+Additionally, any punctuation or spaces are removed or replaced from the Header to form the header link (the part in parentheses).  For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
 
-If you hover over a Header in a GitHub Markdown file, you'll see a little link icon appear. This is where you find the "slugified" version of the header name - the version in lower case and with spaces and punctuation removed.  The format for that link is `project URL#<header name>`.
+If you hover over a Header in a GitHub Markdown file, you'll see a little link icon appear. This is where you find the "slugified" version of the Header - the version in lower case and with spaces and punctuation removed.  The format for that link is `project URL#<header link>`.
 
 
 ### Random: Variety is the spice of life
