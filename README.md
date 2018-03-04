@@ -335,7 +335,7 @@ The next chapter in the book Learning Processing is about using the random() fun
 
 Dan sets up an example of using variables and moving an ellipse across the screen.
 
-He then will use an object to organize the variables.  This sets a foundation for later, and makes code more tidy, and keep track of what you're creating.
+He then uses an object to organize the variables.  This sets a foundation for later, makes code more tidy, and keeps track of what you're creating.
 
 ```
 var x = 0;
@@ -358,7 +358,7 @@ We access this data using dot notation.
 
 `ellipse(circle.x, circle.y, circle.diameter, circle.diameter)`
 
-The exercise is to reorganize our code using objects.  Here is [example 4.4 using objects]().
+The exercise is to reorganize our code using objects.  Here is [example 4.4 using objects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/objects).
 
 Dan also notes in this video that we should get very used to seeing error messages when writing code.  This is absolutely true.  How to debug those error messages is another story altogether...
 
