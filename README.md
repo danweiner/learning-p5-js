@@ -10,6 +10,13 @@
 
 [Lesson 1 - The Beginning](#lesson-1---the-beginning)
 - [Basics of Drawing](#basics-of-drawing)
+-  [Interaction](#interaction)
+	- [Dynamic Sketches - Setup and Draw](dynamic-sketches---setup-and-draw)
+	- [Variations with the Mouse](#variations-with-the-mouse)
+	- [Detour 2 - Translate, Rotate, Push, and Pop](#detour-2---translate-rotate-push-and-pop)
+	- [pmouseX and pmouseY](#pmousex-and-pmousey)
+	- [Mouse Clicks and Key Presses](#mouse-clicks-and-key-presses)
+
 
 # Introduction
 
