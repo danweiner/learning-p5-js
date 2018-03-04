@@ -331,7 +331,36 @@ python -m SimpleHTTPServer
 
 ### JavaScript Objects
 
-The next chapter in the book Learning Processing is about using random(), but Coding Train has two videos before this.  One about [JavaScript Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY&index=8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) and the other about the [map function](https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=9).  I'll follow the Coding Train curriculum and address these subjects before moving on to random().
+The next chapter in the book Learning Processing is about using the random() function, but Coding Train has two videos before this.  One about [JavaScript Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY&index=8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) and the other about the [map function](https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=9).  I'll follow the Coding Train curriculum and address these subjects before moving on to random().
+
+Dan sets up an example of using variables and moving an ellipse across the screen.
+
+He then will use an object to organize the variables.  This sets a foundation for later, and makes code more tidy, and keep track of what you're creating.
+
+```
+var x = 0;
+var y = 100;
+var diameter = 50;
+
+//becomes...
+
+var circle = {
+	x: 0,
+	y: 100;
+	diameter: 50
+};
+
+```
+
+This is JavaScript object notation.  We can access the circle's *data*.
+
+We access this data using dot notation.  
+
+`ellipse(circle.x, circle.y, circle.diameter, circle.diameter)`
+
+The exercise is to reorganize our code using objects.  Here is [example 4.4 using objects]().
+
+Dan also notes in this video that we should get very used to seeing error messages when writing code.  This is absolutely true.  How to debug those error messages is another story altogether...
 
 ### Random: Variety is the spice of life
 
