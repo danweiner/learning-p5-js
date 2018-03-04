@@ -5,7 +5,9 @@
 - [What is p5.js?](#what-is-p5js)  
 
 <a name="introduction"/>
+
 # Introduction
+
 Learning Processing is an introductory workbook/textbook for Processing, which is built on top of Java.
 
 There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to p5.js. Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target.
@@ -20,7 +22,8 @@ I'm beginning to think this may become an open source project similar to [The Od
 
 I'm thinking of calling it Space Bear. Or Coding Jet.
 
-<https://github.com/danweiner/learning-p5-js#what-is-p5js>
+<a name="what-is-p5js"/>
+
 ## What is p5.js?
 
 See [this Coding Train video](https://www.youtube.com/watch?v=8j0UDiN7my4&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) for Dan Shiffman's explanation of the origin of p5.js, and how to get started coding with p5.js.
