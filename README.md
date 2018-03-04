@@ -7,6 +7,7 @@
 - [Debugging](#debugging)
 - [Algorithms](#algorithms)
 - [Detour 1 - GitHub and Command Line](#detour-1---gitHub-and-command-line)
+
 [Lesson 1 - The Beginning](#lesson-1---the-beginning)
 - [Basics of Drawing](#basics-of-drawing)
 
