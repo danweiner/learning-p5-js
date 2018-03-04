@@ -367,6 +367,36 @@ The exercise is to reorganize our code using objects.  Here is [example 4.4 usin
 
 Dan also notes in this video that we should get very used to seeing error messages when writing code.  This is absolutely true.  How to debug those error messages is another story altogether...
 
+### Detour 4 - Table of Contents in Markdown
+
+This markdown file is getting very long.  I felt that it necessitated a table of contents.  
+
+I could probably also add a detour about the [basics of markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), but I'll skip that for now.
+
+I was proud of myself that I was able to troubleshoot creating a table of contents in markdown.  I probably did not find the best way - maybe some kind of [javascript/node.js tool](https://github.com/jonschlinkert/markdown-toc) is more efficient - but for now I found a way that works.  And that's good enough.
+
+This was also a good experience in troubleshooting with StackOverflow articles.  I needed to read a couple of different articles, and eventually, by putting together useful pieces of information from both of them, I made the table of contents work.  
+
+Here are the [two](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)[articles](https://stackoverflow.com/questions/18244417/how-do-i-create-some-kind-of-table-of-content-in-github-wiki) from StackOverflow that I found helpful.
+
+Additionally, here is sample code from my table of contents:
+
+```
+# Table of contents 
+
+# Table of Contents  
+[Introduction](#introduction)  
+- [What is p5.js?](#what-is-p5js)  
+- [Incremental Development](#incremental-development)
+``
+
+Note that the links must be in *lower case*
+
+Additionally, any punctuation or spaces are removed or replaced.  For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
+
+If you hover over a Header in a GitHub Markdown file, you'll see a little link icon appear. This is where you find the "slugified" version of the header name - the version in lower case and with spaces and punctuation removed.  The format for that link is `project URL#<header name>`.
+
+
 ### Random: Variety is the spice of life
 
 Think back to incremental development - learn the fundamentals by looking at individual pieces - programs that do one and only one thing.  Then begin to add functionality on top, step by step.
