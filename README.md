@@ -44,7 +44,7 @@ I think this will be helpful for my learning process, and I hope it's helpful to
 
 I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
 
-I'm thinking of calling it Space Bear. Or Coding Jet.
+I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours.
 
 
 ## What is p5.js?
