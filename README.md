@@ -28,6 +28,7 @@
 	- [JavaScript Objects](#javascript-objects)
 	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
 	- [Detour 1a - More GitHub](#detour-1a---more-github)
+	- [The map() function](#the-map-function)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
 # Introduction
@@ -455,11 +456,27 @@ I even ran `git reset --hard` at one point.  I'm not sure if that did anything t
 
 Ultimately, upon inspecting the merge conflict itself, it didnt really look like a conflict at all.  I couldn't see any changes that I needed to make.  So I ran `git stash clear` which got rid of the stashed away commit.  It didn't look like I had stashed anything important.
 
-This ultimated solved the issue.
+This ultimately solved the issue.
 
 I don't know if this sort of hack away and try everything approach is ok - maybe it is - but it's a little nerve-wracking.  
 
 I remember being told that when learning development, you have to be ok with "breaking things".  In this case, I interpreted that to mean, you have to be ok with messing with your code, with the risk that you'll "screw things up", only to have to go back and fix it later.  It's scary when you're new to coding and you feel that you don't have to the tools to fix what you've "broken", but I guess you can only develop those tools by "breaking" a lot of things and then trying to put them back together.
+
+### The map() function
+
+Here's Dan's video on the [map() function](https://www.youtube.com/watch?v=nicMAoW6u1g&t=33s).
+
+Example - as you move the mouse across the screen, background color changes from black (RGB(0)) to white (RGB(255)).  
+
+Let's also say the canvas has dimensions of 600 width x 400 height.
+
+So mouseX has a range of 0 to 600.  And RGB has a range of 0 to 255. So we have to *map* the mouseX range to the RGB range.  When mouseX = 0, RGB = 0, and when mouseX = 600, RGB = 255.
+
+Syntax:
+
+`col = map(mouseX, 0, 600, 0, 255)`
+
+Here's Dan's [code](https://github.com/CodingTrain/website/blob/master/Tutorials/P5JS/p5.js/02/2.4_p5.js_map/sketch.js) using the map function
 
 
 ### Random: Variety is the spice of life
