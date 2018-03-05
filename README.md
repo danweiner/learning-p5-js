@@ -27,7 +27,7 @@
 	- [Detour 3 - Workflow](#detour-3---workflow)
 	- [JavaScript Objects](#javascript-objects)
 	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
-	[Detour 1a - More GitHub](#detour-1a---more-github)
+	- [Detour 1a - More GitHub](#detour-1a---more-github)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
 # Introduction
@@ -436,6 +436,30 @@ I foresee this being a potential problem down the road as I develop larger proje
 I just almost got into some issues with `git stash`.  That almost led to a Git rabbit hole, with me resolving Git conflicts that may or may not have existed, with upstream changes that I dont really understand.
 
 I'll leave this on the backburner for now, but I know that this is important, and potentially a major hurdle.
+
+Just to do a quick recap of what I encountered so I don't forget.
+
+I remembered that I run `git stash` at some point (following along with a Git error message I had received), so I decided to Google git stash to find out what git stash even means.
+
+I then ran a series of commands, including `git stash list`, `git stash apply` and `git stash show`.  
+
+It turned out I had a merge conflict in my README.md file.
+
+I tried to resolve the conflict in Sublime, but somehow whatever I was doing wasn't working.  
+
+I watched Dan's video on merge conflicts.
+
+I copy and pasted my error message into Google and that didn't help - it just led to the Git rabbit hole (Git rebase?!).
+
+I even ran `git reset --hard` at one point.  I'm not sure if that did anything to help.
+
+Ultimately, upon inspecting the merge conflict itself, it didnt really look like a conflict at all.  I couldn't see any changes that I needed to make.  So I ran `git stash clear` which got rid of the stashed away commit.  It didn't look like I had stashed anything important.
+
+This ultimated solved the issue.
+
+I don't know if this sort of hack away and try everything approach is ok - maybe it is - but it's a little nerve-wracking.  
+
+I remember being told that when learning development, you have to be ok with "breaking things".  In this case, I interpreted that to mean, you have to be ok with messing with your code, with the risk that you'll "screw things up", only to have to go back and fix it later.  It's scary when you're new to coding and you feel that you don't have to the tools to fix what you've "broken", but I guess you can only develop those tools by "breaking" a lot of things and then trying to put them back together.
 
 
 ### Random: Variety is the spice of life
