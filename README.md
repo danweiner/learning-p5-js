@@ -11,11 +11,23 @@
 [Lesson 1 - The Beginning](#lesson-1---the-beginning)
 - [Basics of Drawing](#basics-of-drawing)
 -  [Interaction](#interaction)
-	- [Dynamic Sketches - Setup and Draw](dynamic-sketches---setup-and-draw)
+	- [Dynamic Sketches - Setup and Draw](#dynamic-sketches---setup-and-draw)
 	- [Variations with the Mouse](#variations-with-the-mouse)
 	- [Detour 2 - Translate, Rotate, Push, and Pop](#detour-2---translate-rotate-push-and-pop)
 	- [pmouseX and pmouseY](#pmousex-and-pmousey)
 	- [Mouse Clicks and Key Presses](#mouse-clicks-and-key-presses)
+- [Lesson 1 Project](#lesson-1-project)
+
+[Lesson 2 - Everything you need to know](#lesson-2---everything-you-need-to-know)
+- [Chapter 4 - Variables](#chapter-4---variables)
+	- [What is a Variable?](#what-is-a-variable)
+	- [Exercise 4.1 Variables in Pong](#exercise-41-variables-i-pong)
+	- [Declaring, Initializing, and Using Variables](#declaring-initializing-and-using-variables)
+	- [System Variables](#system-variables)
+	- [Detour 3 - Workflow](#detour-3---workflow)
+	- [JavaScript Objects](#javascript-objects)
+	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
+	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
 
 # Introduction
@@ -388,7 +400,7 @@ I could probably also add a detour about the [basics of markdown](https://github
 
 I was proud of myself that I was able to troubleshoot creating a table of contents in markdown.  I probably did not find the best way - maybe some kind of [javascript/node.js tool](https://github.com/jonschlinkert/markdown-toc) is more efficient - but for now I found a way that works.  And that's good enough.
 
-This was also a good experience in troubleshooting with StackOverflow articles.  I needed to read a couple of different articles, and eventually, by putting together useful pieces of information from both of them, I made the table of contents work.  
+This was also a good experience in troubleshooting with googling for answers, and finding relevant StackOverflow articles.  I needed to read a couple of different articles, and eventually, by putting together useful pieces of information from both of them, I made the table of contents work.  
 
 Here are the [two](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)[articles](https://stackoverflow.com/questions/18244417/how-do-i-create-some-kind-of-table-of-content-in-github-wiki) from StackOverflow that I found helpful.
 
@@ -402,11 +414,15 @@ Additionally, here is sample code from my table of contents:
 - [Incremental Development](#incremental-development)
 ```
 
-Note that the links must be in *lower case*.
+So, why does this code work? 
 
-Additionally, any punctuation or spaces are removed or replaced from the Header to form the header link (the part in parentheses).  For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
+If you hover over a Header in a GitHub Markdown file, you'll see a little icon appear, and then if you hover over that icon, you'll see the link itself at the bottom left of the screen. The format for that link is `<project URL#<header name>`. 
 
-If you hover over a Header in a GitHub Markdown file, you'll see a little link icon appear. This is where you find the "slugified" version of the Header - the version in lower case and with spaces and punctuation removed.  The format for that link is `project URL#<header link>`.
+You can use that `#<header name>` in the parentheses part of table of contents to link to the connected Headers. You can put any text in the brackets - this is the text that will actually display on the page.
+
+Note that these header names are in "slugified form" - meaning that they are all in lower case, with spaces replaced by '-', and with all punctuation removed.
+
+For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
 
 
 ### Random: Variety is the spice of life
