@@ -458,6 +458,8 @@ I don't know if this sort of hack away and try everything approach is ok - maybe
 
 I remember being told that when learning development, you have to be ok with "breaking things".  In this case, I interpreted that to mean, you have to be ok with messing with your code, with the risk that you'll "screw things up", only to have to go back and fix it later.  It's scary when you're new to coding and you feel that you don't have to the tools to fix what you've "broken", but I guess you can only develop those tools by "breaking" a lot of things and then trying to put them back together.
 
+See the Carol Dweck TED talk on the growth mindset and this TED radiohour podcast on the Nudge technique for changing habits for more strategies on breaking out of your comfort zone and becoming comfortable with taking risks.
+
 ### The map() function
 
 Here's Dan's video on the [map() function](https://www.youtube.com/watch?v=nicMAoW6u1g&t=33s).
