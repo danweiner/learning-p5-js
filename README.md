@@ -47,10 +47,6 @@ I'm beginning to think this may become an open source project similar to [The Od
 
 I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours.
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 ## What is p5.js?
 
 See [this Coding Train video](https://www.youtube.com/watch?v=8j0UDiN7my4&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) for Dan Shiffman's explanation of the origin of p5.js, and how to get started coding with p5.js.
