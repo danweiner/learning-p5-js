@@ -334,7 +334,7 @@ I don't think this is covered by any Coding Train videos.  See the videos above 
 
 Exercise 4.5, getting the shapes to resize themselves relative to the window size, did not work in the online editor.  I tried my code, and Dan's code in the learning p5.js repo.  I think the code might have worked in the deprecated p5.js editor (when a separate canvas launches, which can then be resized - similar to what happens with processing), but this does not happen with the online editor.
 
-This was the best answer I could come up with.  I used windowWidth and windowHeight, instead of width and height (which are suggested in the book).  
+This was the [best answer](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/resize) I could come up with.  I used windowWidth and windowHeight, instead of width and height (which are suggested in the book).  
 
 In any event, this seemed like a good time for a detour.  I will now go through Dan's [workflow](https://www.youtube.com/watch?v=HZ4D3wDRaec&index=2&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) video to see if this code works in the browser on a local server.  It will also be a good test to see if I can execute the steps in his workflow video.  Here we go.
 
@@ -361,7 +361,7 @@ python -m SimpleHTTPServer
 
 ### JavaScript Objects
 
-The next chapter in the book Learning Processing is about using the random() function, but Coding Train has two videos before this.  One about [JavaScript Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY&index=8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) and the other about the [map function](https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=9).  I'll follow the Coding Train curriculum and address these subjects before moving on to random().
+The next section in the book Learning Processing is about using the random() function, but Coding Train has two videos before this.  One about [JavaScript Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY&index=8&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) and the other about the [map function](https://www.youtube.com/watch?v=nicMAoW6u1g&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=9).  I'll follow the Coding Train curriculum and address these subjects before moving on to random().
 
 Dan sets up an example of using variables and moving an ellipse across the screen.
 
@@ -402,7 +402,7 @@ I was proud of myself that I was able to troubleshoot creating a table of conten
 
 This was also a good experience in troubleshooting with googling for answers, and finding relevant StackOverflow articles.  I needed to read a couple of different articles, and eventually, by putting together useful pieces of information from both of them, I made the table of contents work.  
 
-Here are the [two](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)[articles](https://stackoverflow.com/questions/18244417/how-do-i-create-some-kind-of-table-of-content-in-github-wiki) from StackOverflow that I found helpful.
+Here are the [two](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents) [articles](https://stackoverflow.com/questions/18244417/how-do-i-create-some-kind-of-table-of-content-in-github-wiki) from StackOverflow that I found helpful.
 
 Additionally, here is sample code from my table of contents:
 
