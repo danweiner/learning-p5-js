@@ -4,7 +4,6 @@
 [Introduction](#introduction)  
 - [What is p5.js?](#what-is-p5js)  
 - [Incremental Development](#incremental-development)
-<<<<<<< Updated upstream
 - [Debugging](#debugging)
 - [Algorithms](#algorithms)
 - [Detour 1 - GitHub and Command Line](#detour-1---github-and-command-line)
@@ -30,8 +29,6 @@
 	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
-=======
->>>>>>> Stashed changes
 
 # Introduction
 
