@@ -29,7 +29,6 @@
 	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
-
 # Introduction
 
 Learning Processing is an introductory workbook/textbook for Processing, which is built on top of Java.
@@ -46,7 +45,10 @@ I'm beginning to think this may become an open source project similar to [The Od
 
 I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours.
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ## What is p5.js?
 
 See [this Coding Train video](https://www.youtube.com/watch?v=8j0UDiN7my4&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) for Dan Shiffman's explanation of the origin of p5.js, and how to get started coding with p5.js.
