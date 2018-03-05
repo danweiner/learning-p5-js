@@ -447,7 +447,7 @@ It turned out I had a merge conflict in my README.md file.
 
 I tried to resolve the conflict in Sublime, but somehow whatever I was doing wasn't working.  
 
-I watched Dan's video on merge conflicts.
+I watched Dan's video on [merge conflicts](https://www.youtube.com/watch?v=JtIX3HJKwfo&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=9).
 
 I copy and pasted my error message into Google and that didn't help - it just led to the Git rabbit hole (Git rebase?!).
 
