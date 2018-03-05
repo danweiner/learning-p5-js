@@ -27,6 +27,7 @@
 	- [Detour 3 - Workflow](#detour-3---workflow)
 	- [JavaScript Objects](#javascript-objects)
 	- [Detour 4 - Table of Contents in Markdown](#detour-4---table-of-contents-in-markdown)
+	[Detour 1a - More GitHub](#detour-1a---more-github)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 
 # Introduction
@@ -425,6 +426,16 @@ You can use that `#<header name>` in the parentheses part of table of contents t
 Note that these header names are in "slugified form" - meaning that they are all in lower case, with spaces replaced by '-', and with all punctuation removed.
 
 For instance, Incremental Development becomes "incremental-development" and What is p5.js? becomes "what-is-p5js".
+
+### Detour 1a - More GitHub
+
+Just a note to self that I'll have to return to learn more about Git and GitHub.
+
+I foresee this being a potential problem down the road as I develop larger projects.
+
+I just almost got into some issues with `git stash`.  That almost led to a Git rabbit hole, with me resolving Git conflicts that may or may not have existed, with upstream changes that I dont really understand.
+
+I'll leave this on the backburner for now, but I know that this is important, and potentially a major hurdle.
 
 
 ### Random: Variety is the spice of life
