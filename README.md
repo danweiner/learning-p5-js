@@ -45,7 +45,7 @@ I think this will be helpful for my learning process, and I hope it's helpful to
 
 I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
 
-I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours.
+I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours. Longroadcode?
 
 ## What is p5.js?
 
@@ -458,7 +458,9 @@ I don't know if this sort of hack away and try everything approach is ok - maybe
 
 I remember being told that when learning development, you have to be ok with "breaking things".  In this case, I interpreted that to mean, you have to be ok with messing with your code, with the risk that you'll "screw things up", only to have to go back and fix it later.  It's scary when you're new to coding and you feel that you don't have to the tools to fix what you've "broken", but I guess you can only develop those tools by "breaking" a lot of things and then trying to put them back together.
 
-See the Carol Dweck TED talk on the growth mindset and this TED radiohour podcast on the Nudge technique for changing habits for more strategies on breaking out of your comfort zone and becoming comfortable with taking risks.
+See the Carol Dweck [TED talk](https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve) on the growth mindset and this TED radiohour podcast on the [Nudge](https://www.npr.org/programs/ted-radio-hour/483080945/nudge) technique for changing habits for more strategies on breaking out of your comfort zone and becoming comfortable with taking risks.
+
+I'm beginning to think that my thoughts on Zen and deliberate practice might stem from being stuck in a fixed mindset.  If I can continue to try to see challenges as opportunities, I will maybe be more successful on my coding journey (or maybe just be less frustrated by what I've been considering "setbacks" or "roadblocks").
 
 ### The map() function
 
