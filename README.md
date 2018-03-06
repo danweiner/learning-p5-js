@@ -33,9 +33,9 @@
 
 # Introduction
 
-Learning Processing is an introductory workbook/textbook for Processing, which is built on top of Java.
+[Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
 
-There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to p5.js. Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target.
+There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to [p5.js](https://p5js.org/). Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target and [this book](https://p5js.org/books/) is often recommended as an introduction to p5.js.
 
 This repo is an attempt to solve that problem.  I will go through the Learning Processing book, link to the appropriate Shiffman p5.js repos from the Learning Processing book, link to the most relevant Coding Train videos, and post my own code for the exercises. 
 
@@ -477,6 +477,8 @@ Syntax:
 `col = map(mouseX, 0, 600, 0, 255)`
 
 Here's Dan's [code](https://github.com/CodingTrain/website/blob/master/Tutorials/P5JS/p5.js/02/2.4_p5.js_map/sketch.js) using the map function
+
+This [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/map) is the same as my [variables](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/variables) example, except I use the map function to make the background change from black to white as the the mouse moves from the left side of the canvas to the right.
 
 
 ### Random: Variety is the spice of life
