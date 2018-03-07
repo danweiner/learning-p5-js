@@ -17,13 +17,14 @@ function setup() {
 
 function draw() {
 	
-		
 }
 
 function mousePressed() {
-	backgroundCol.r = random(0, 255);
-	backgroundCol.g = random(0, 255);
-	backgroundCol.b = random(0, 255);
+
+	// changes to a random color when mouse pressed
+	backgroundCol.r = random(0, 155);
+	backgroundCol.g = random(155, 255);
+	backgroundCol.b = random(100, 255);
 	background(backgroundCol.r, backgroundCol.g, backgroundCol.b);
 }
 
@@ -31,11 +32,19 @@ function mousePressed() {
 // avoids random circle from being drawn in upper left corner
 // I think from using the draw() function
 function mouseMoved() {
+
+	// color is more green towards left of screen and
+	// more blue towards right of screen
+	col.g = map(mouseX, 0, windowWidth, 155, 255)
+	col.b = map(mouseX, 0, windowWidth, 100, 255)
+
+	col.g = random(155, col.g);
+	col.b = random(100, col.b);	
+
+	print("col.g " + col.g);
+	print("col.b " + col.b);
+
 	noStroke();
 	fill(col.r, col.g, col.b, 100);
 	ellipse(mouseX, mouseY, 25, 25);
-
-	col.r = random(0);
-	col.g = random(155, 255);
-	col.b = random(100, 255);	
 }
