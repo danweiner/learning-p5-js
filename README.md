@@ -487,6 +487,10 @@ Think back to incremental development - learn the fundamentals by looking at ind
 
 random() returns a value - abs() does the same thing - more on this in Chapter 7
 
+This example uses variables to draw a circle at a particular spot, with a certain color and alpha.  
+
+
+
 
 
 
