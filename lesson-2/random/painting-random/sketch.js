@@ -35,13 +35,13 @@ function mouseMoved() {
 
 	// color is more green towards left of screen and
 	// more blue towards right of screen
-	col.g = map(mouseX, 0, windowWidth, 155, 255)
-	col.b = map(mouseX, 0, windowWidth, 100, 255)
+	var gr = map(mouseX, 0, windowWidth, 155, 255)
+	var bl = map(mouseX, 0, windowWidth, 100, 255)
 
-	col.g = random(155, col.g);
-	col.b = random(100, col.b);	
+	col.g = random(155, gr);
+	col.b = random(100, bl);	
 
-	print("col.g " + col.g);
+	print("col.g"  + col.g);
 	print("col.b " + col.b);
 
 	noStroke();
