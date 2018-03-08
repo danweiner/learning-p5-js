@@ -525,7 +525,7 @@ Here's my updated "Fido" with two new pieces of functionality:
 - Feature 1: Fido rises from below the screen and flies into space (aboe the screen)
 - Feature 2: Fido's eyes will be colored randomly as he moves
 
-We can complete Feature 1 for Fido by taking our previous program that used mouseX and mouse Y and substituting our own variables in their place. (Dan used the word "simply" here - it may be a knee-jerk reaction but I will never use the word simply when it comes to coding).  Remember the article above about the [rule of simply](https://medium.freecodecamp.org/one-does-not-simply-learn-to-code-f25bacdc5b62). 
+We can complete Feature 1 for Fido by taking our previous program that used mouseX and mouseY and substituting our own variables in their place. (Dan used the word "simply" here - it may be a knee-jerk reaction but I will never use the word simply when it comes to coding).  Remember the article above about the [rule of simply](https://medium.freecodecamp.org/one-does-not-simply-learn-to-code-f25bacdc5b62). 
 
 We can implement Feature 2 by creating variables for the red, green, and blue values to plug into the fill() function.
 
