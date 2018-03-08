@@ -483,11 +483,33 @@ This [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/
 
 ### Random: Variety is the spice of life
 
+Here is Dan's [video](https://www.youtube.com/watch?v=nfmV2kuQKwA&index=10&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) on random().
+
 Think back to incremental development - learn the fundamentals by looking at individual pieces - programs that do one and only one thing.  Then begin to add functionality on top, step by step.
 
 random() returns a value - abs() does the same thing - more on this in Chapter 7
 
-This example uses variables to draw a circle at a particular spot, with a certain color and alpha.  
+[This example]() uses variables to draw a circle at a particular spot, with a certain color and alpha.  
+
+If we want to make a new circle, with a random size, color, and position, every time through draw(), we can use the *random()* function.
+
+The [random() function in p5.js](https://p5js.org/reference/#/p5/random) returns a floating point (or decimal) value.  The book and Processing website talk about [casting these returned](https://processing.org/reference/random_.html) values to integers if you want to return an integer instead of a a float.
+
+In JavaScript, I believe you would use a function such as [Math.floor()](https://www.w3schools.com/jsref/jsref_random.asp) to accomplish the same task.
+
+Another thing to note from the video - Dan's steps in *debugging*
+- try to read the error message (this one was pretty cryptic)
+- stay calm
+- comment out the lines causing the problems (much easier to do in such a short piece of code)
+- reinsert the lines of code one by one to see what was causing the problem
+- when you find the code causing the problems, see if you can can fix the bug
+
+Dan's video had a number of good exercise suggestions at the end:
+- update his painting program so the background color changes to a random color with a mouse click or "paintbrush" changes color randomly as the mouse moves - here's [my version](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/random/painting-random)
+
+Here's Dan's [dots](https://github.com/CodingTrain/website/tree/master/Tutorials/P5JS/p5.js/02/2.5_p5.js_random) example.  Note that he puts the variables into JavaScript objects.
+
+
 
 
 
