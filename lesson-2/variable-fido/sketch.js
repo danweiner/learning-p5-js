@@ -64,7 +64,7 @@ function draw() {
 	rect(0, 0, 30, 130);
 	pop();
 
-	// Zoog moves up
+	// Fido moves up
 	fidoY = fidoY - 1;
 
 }
