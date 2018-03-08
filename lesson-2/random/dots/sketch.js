@@ -1,0 +1,30 @@
+var r;
+var g;
+var b;
+var a;
+
+var diam;
+var x;
+var y;
+
+function setup() {
+	createCanvas(480, 270);
+	background(255);
+}
+
+function draw() {
+	// Each time through draw(), new random numbers are picked for a new ellipse
+	r = random(255);
+	g = random(255);
+	b = random(255);
+	a = random(255);
+	diam = random(20);
+	x = random(width);
+	y = random(height);
+
+	// use new values to draw an ellipse
+	noStroke();
+	fill(r, g, b, a);
+	ellipse(x, y, diam, diam);
+
+}

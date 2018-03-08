@@ -462,6 +462,8 @@ See the Carol Dweck [TED talk](https://www.ted.com/talks/carol_dweck_the_power_o
 
 I'm beginning to think that my thoughts on Zen and deliberate practice might stem from being stuck in a fixed mindset.  If I can continue to try to see challenges as opportunities, I will maybe be more successful on my coding journey (or maybe just be less frustrated by what I've been considering "setbacks" or "roadblocks").
 
+Also, listen to this [freakonomics radio podcast](http://freakonomics.com/podcast/project-management/) on why you always finish projects late.  You may think you can learn to program in six months, or a year, but maybe it will take you thre or four years.  There is something called the planning fallacy where we tend to underestimate how long projects will take.  This is related to being overly optimistic about our chances of success about the projects we undertake.  This is directly related to coding.  We think it will take shorter than it actually will to learn to code, and we're overly optimistic about our ability to learn to code in the first place.
+
 ### The map() function
 
 Here's Dan's video on the [map() function](https://www.youtube.com/watch?v=nicMAoW6u1g&t=33s).
@@ -487,13 +489,13 @@ Here is Dan's [video](https://www.youtube.com/watch?v=nfmV2kuQKwA&index=10&list=
 
 Think back to incremental development - learn the fundamentals by looking at individual pieces - programs that do one and only one thing.  Then begin to add functionality on top, step by step.
 
-random() returns a value - abs() does the same thing - more on this in Chapter 7
+random() returns a value - abs() does the same thing - more on this in Chapter 7.
 
-[This example]() uses variables to draw a circle at a particular spot, with a certain color and alpha.  
+We have learned how to make one circle, at a particular location, with a particular size and fill, using variables.
 
 If we want to make a new circle, with a random size, color, and position, every time through draw(), we can use the *random()* function.
 
-The [random() function in p5.js](https://p5js.org/reference/#/p5/random) returns a floating point (or decimal) value.  The book and Processing website talk about [casting these returned](https://processing.org/reference/random_.html) values to integers if you want to return an integer instead of a a float.
+The [random() function in p5.js](https://p5js.org/reference/#/p5/random) returns a floating point (or decimal) value.  The book and Processing website talk about [casting these returned](https://processing.org/reference/random_.html) values to integers if you want to return an integer instead of a float.
 
 In JavaScript, I believe you would use a function such as [Math.floor()](https://www.w3schools.com/jsref/jsref_random.asp) to accomplish the same task.
 
@@ -504,10 +506,33 @@ Another thing to note from the video - Dan's steps in *debugging*
 - reinsert the lines of code one by one to see what was causing the problem
 - when you find the code causing the problems, see if you can can fix the bug
 
-Dan's video had a number of good exercise suggestions at the end:
+Dan's video had a number of good exercise suggestions at the end- here's one:
 - update his painting program so the background color changes to a random color with a mouse click or "paintbrush" changes color randomly as the mouse moves - here's [my version](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/random/painting-random)
 
 Here's Dan's [dots](https://github.com/CodingTrain/website/tree/master/Tutorials/P5JS/p5.js/02/2.5_p5.js_random) example.  Note that he puts the variables into JavaScript objects.
+
+See also this example, [random painting](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp04_variables/example_04_07_randompainting), from the book and Dan's repo, which takes every variable associated with drawing the ellipse (fill, location, size), and assigns it to a random number each cycle through draw().
+
+When reading a book, or watching videos, it's easy to fall into a trap of being told what code is going to do and not having to think about it for yourself.
+
+I am trying to get into the habit of reading the code and thinking through what the code is going to do before running it.  I did this with the random painting program.
+
+In the final part of this chapter, we update our original sketches (for Dan this was "Zoog", for me this was "Fido" and the house drawing) to incorporate what we've learned - variables and the random() function.  We should even try putting variables into objects, and maybe even using map() to tie everything together.
+
+Here's Dan's ["variable Zoog"](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp04_variables/example_04_08_zoogvars) in p5.js.
+
+Here's my updated "Fido" with two new pieces of functionality:
+- Feature 1: Fido rises from below the screen and flies into space (aboe the screen)
+- Feature 2: Fido's eyes will be colored randomly as he moves
+
+We can complete Feature 1 for Fido by taking our previous program that used mouseX and mouse Y and substituting our own variables in their place. (Dan used the word "simply" here - it may be a knee-jerk reaction but I will never use the word simply when it comes to coding).  Remember the article above about the [rule of simply](https://medium.freecodecamp.org/one-does-not-simply-learn-to-code-f25bacdc5b62). 
+
+We can implement Feature 2 by creating variables for the red, green, and blue values to plug into the fill() function.
+
+
+
+
+
 
 
 
