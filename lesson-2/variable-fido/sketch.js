@@ -21,7 +21,7 @@ function draw() {
 	ellipseMode(CENTER);
 	rectMode(CENTER);
 
-	// Feature #1.  zoogX and zoogY are used for the shape locations.		
+	// Feature #1.  fidoX and fidoY are used for the shape locations.		
 	translate(fidoX, fidoY);
 
 	//head
