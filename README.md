@@ -646,6 +646,29 @@ if (mouseX < width/2) {
 }
 ```
 
+Else if - statements evaluated in order presented.  As soon as one is found to be true, code is executed and *remaining boolean expressions are ignored*
+
+```
+// If mouse on left third, background white,
+// if middle, draw gray, otherwise black
+
+if (mouseX < width/3) {
+	background(255);
+}	else if (mouseX < 2*width/3) {
+	background(127);
+}	else {
+	background(0);
+}
+```
+
+Exercise 5-1: Grading system where numbers are turned into letters
+(Dan doesn't have an answer - I'll code something placing text on the screen)
+
+I ended up using the Math.floor function and also various text functions from p5.js to display grades on the screen.
+
+I found that I needed to declare the grade variable outside of setup, without an initial value.  Then give grade its initial value within setup, then use that value within draw.  I think this is a pattern I might need to keep following.
+
+
 
 
 
