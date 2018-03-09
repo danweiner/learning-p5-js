@@ -33,6 +33,75 @@
 
 # Introduction
 
+Maybe a section could go here on Logo, Seymour Papert, and the history of visual ways of learning to code?  That [inspired](https://www.wired.com/2013/10/processing-2-0-a-short-introduction/) Processing in the first place.
+
+See also [Design by numbers](https://mitpress.mit.edu/books/design-numbers) by John Maeda - tying together the arts and technology, and viewing the computer as an artistic medium in its own right.
+
+This video on [responsive programming](https://vimeo.com/36579366) inspired John Resig's [curriculum at Khan Academy](https://johnresig.com/blog/introducing-khan-cs/).
+
+Is p5.js currently working on responsive programming?  I think I might have seen a video about that.
+
+Bret Victor's [critique](https://johnresig.com/blog/introducing-khan-cs/) of Khan Academy and Processing is also very enlightening.  It's very long.  I'll have to read it a few times.
+
+Some notes from the article:
+- environment should make meaning transparent
+- environment should explain in context - show and tell - label things
+- should be able to see the steps (like [Python tutor](http://pythontutor.com/))
+- make flow visible (also a feature of Python tutor I think)
+- make time visible - flatten time - "One of the deepest and most powerful ideas in mathematics is the relationship between a differential formulation (such as a step-by-step process, like our "draw" function) and its integrated form (such as a function of time, or plot over time). "Flattening time" allows the learner to see the process and its trajectory as two representations of the same thing, and thereby think of them interchangeably."
+- make flow tangible, visible, and represent time at multiple granularities
+- show the data (variable values) - most important thing you can do in creating a programming environment for learning is *show the data*
+- *Code manipulates data. To understand code, a learner must see the data, and see the effect of code on the data.*
+- Edward Tufte rule #2 - show the comparisons
+- Processing has implicit state - "current" fll color 	
+	- answer is to either show or elimimate the state
+	- transform is also invisible - this wasn't the case with Logo's turtle
+- Programmer must be able to react to a work in progress - not imagine all code in his/her head - "create-by-reacting" - external imagination - thoughts immediately visible
+	- using autocomplete - "Strangely, I don't actually know of any APIs that are intentionally designed with autocomplete in mind. I do know many APIs, such as Processing, that are designed for brevity, which is irrelevant in an environment with good autocomplete"
+	- "I am very uncomfortable with the Khan Academy approach of encouraging learners to adjust unlabeled numbers and figure out what they're for, and I feel that this is a case of a tool being adopted without an understanding of what purpose the tool serves."
+- Creating by abstracting - learning programming is learning abstraction
+	- you don't learn abstraction - you write concrete code then gradually change it to introduce abstraction, and the environment must provide understandable tools for the learner
+	- "At each stage, the programmer has interactive control over the relevant parameters, but the parameters are at successively higher levels of abstraction. That is, the programmer can still create by reacting, but she's creating and reacting at higher levels."
+	- start constant, then vary
+	- start with one, then make many
+- A programming system has two parts - the environment is installed on the computer, and the language lives in the programmer's head
+	- the design of the language is critical for the programmer's way of thinking
+	- programming systems should be designed around the way prople think and learn - Seymour Papert "Mindstorms"
+	- Four programming systems designed for learning
+		- Logo - identify with the turtle
+		- Smalltalk - objects sending and receiving messages
+		- Hypercard - Recomposition
+			- What the web should have been? Create a website by copying and pasting graphical objects from other websites?
+		- Rocky's Boots
+		- Forth (decomposability)
+	- Processing's core metaphor is the "painter's algorithm" - computer places a series of shapes on the screen, like drawing on paper
+		- lacks modularity
+		- language does not encouage combining two programs
+		- dependence on global state hinders even simplest forms of recomposition
+	- Modularity - breaking down a complex thing into understandable chunks - is essential for understanding
+	- Etoys as a genuine learning environent? Every onscreen object is a living thing
+	- Programming language must encourage recomposition
+		- "Designing a system that supports recomposition demands long and careful thought, and design decisions that make programming more convenient for individuals may be detrimental to social creation."
+- Readability - a learner must be able to look at a line of code and know what it means
+	- syntax and context matter
+- Checklist for programming system for learning:
+	- environment
+		- readable vocab
+		- follow the flow
+		- see the state (data)
+		- create by reacting
+		- create by abstracting
+	- language
+		- identity and metaphor
+		- decomposition
+		- recomposition
+		- readability
+- "Programming has to work like this. Programmers must be able to read the vocabulary, follow the flow, and see the state. Programmers have to create by reacting and create by abstracting. Assume that these are requirements. Given these requirements, how do we redesign programming?"
+- "A better question is: How do we design a new programming model that does allow for continuous change? We already have clear hints." 
+	- Smalltalk and Clojure
+- "Visualize data, not code. Dynamic behavior, not static structure."
+
+
 [Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
 
 There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to [p5.js](https://p5js.org/). Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target and [this book](https://p5js.org/books/) is often recommended as an introduction to p5.js.
@@ -40,6 +109,7 @@ There, however, is no Learning p5.js book, meaning there is no JavaScript-based 
 This repo is an attempt to solve that problem.  I will go through the Learning Processing book, link to the appropriate Shiffman p5.js repos from the Learning Processing book, link to the most relevant Coding Train videos, and post my own code for the exercises. 
 
 I will also have the occasional "detour" when relevant topics come up that aren't covered in the book.  For instance, Command Line, using GitHub, etc.  These "detours" might end up overwhelming the initial goal of the project, but we'll see.
+
 
 I think this will be helpful for my learning process, and I hope it's helpful to anyone else who stumbles across this repo.
 
