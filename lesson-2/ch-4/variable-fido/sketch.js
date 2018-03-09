@@ -67,4 +67,7 @@ function draw() {
 	// Fido moves up
 	fidoY = fidoY - 1;
 
+	// Exercise 4.6 - Fido shakes as he moves up the screen
+	fidoX = fidoX + random(-1, 1);
+
 }

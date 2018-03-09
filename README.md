@@ -30,6 +30,9 @@
 	- [Detour 1a - More GitHub](#detour-1a---more-github)
 	- [The map() function](#the-map-function)
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
+- [Chapter 5 - Conditionals](#chapter-5---conditionals)
+	- [Boolean Expressions](#boolean-expressions)
+	- [Conditionals: If, Else, Else If](#conditionals-if-else -else-if)
 
 # Introduction
 
@@ -599,10 +602,49 @@ We can complete Feature 1 for Fido by taking our previous program that used mous
 
 We can implement Feature 2 by creating variables for the red, green, and blue values to plug into the fill() function.
 
+# Chapter 5 - Conditionals
 
+## Boolean Expressions
 
+Boolean test - true or false
 
+Boolean expression - evaluates to true or false
 
+Use the current value stored in a variable in boolean expressions `(x > 20))`
+
+```
+Relational Operators
+>, <, >=, <=, ==, !=
+```
+
+## Conditionals: If, Else, Else If
+
+Conditionals are another word for boolean expressions
+
+Introduces the concept of branching - depending on various conditions, the program can follow different paths
+
+'''
+// If the mouse is on the left side of the screen, draw a rect
+// on the left side of the screen
+
+if (mouseX < width/2) {
+	fill(255); // white
+	rect(0, 0, width/2, height);
+}
+'''
+
+Example with else statement:
+
+```
+// If mouse on left, draw white background, otherwise
+// draw black background
+
+if (mouseX < width/2) {
+	background(255);
+} 	else {
+	background(0);
+}
+```
 
 
 
