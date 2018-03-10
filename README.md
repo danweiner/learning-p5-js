@@ -128,6 +128,8 @@ Note that the above video references an editor for download that has since been 
 
 Dan Shiffman's [next video](https://www.youtube.com/watch?v=HZ4D3wDRaec&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=2) is about a p5.js workflow, meaning how to download the project files, how to setup node.js and package manager, and how to run a local server on your computer.  I plan on going through all these steps later, but for now, I'm going to use the [online editor](https://alpha.editor.p5js.org/).
 
+learning graphical coordinates might be difficult.  0,0 in top left
+
 ## Incremental Development
 
 This is also known as the "one step at a time" approach.
