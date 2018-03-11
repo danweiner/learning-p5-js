@@ -44,6 +44,8 @@ This video on [responsive programming](https://vimeo.com/36579366) inspired John
 
 Is p5.js currently working on responsive programming?  I think I might have seen a video about that.
 
+D is for digital.
+
 Bret Victor's [critique](https://johnresig.com/blog/introducing-khan-cs/) of Khan Academy and Processing is also very enlightening.  It's very long.  I'll have to read it a few times.
 
 Some notes from the article:
@@ -181,6 +183,8 @@ This seems logical, but it forgets that fact that a true newbie might be totally
 Additionally, unless the newbie is in a course, or has another network to rely on, he or she is all alone to find the "bug".  This can end up being a hopeless endeavor.
 
 This brings be back to my early point, which was the importance of finding projects at the right difficulty level.  Additionally, the newbie either needs to know how to find answers online (StackOverflow for instance), or needs a network of people to call on for assistance).  Otherwise there will be a string of failed projects.  
+
+Dans video on println from processing. Reminds me that other processing videos might be useful.
 
 
 ## Algorithms
