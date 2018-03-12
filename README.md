@@ -33,6 +33,7 @@
 - [Chapter 5 - Conditionals](#chapter-5---conditionals)
 	- [Boolean Expressions](#boolean-expressions)
 	- [Conditionals: If, Else, Else If](#conditionals-if-else-else-if)
+	- [Conditionals in a Sketch](#conditionals-in-a-sketch)
 
 # Introduction
 
@@ -45,6 +46,7 @@ This video on [responsive programming](https://vimeo.com/36579366) inspired John
 Is p5.js currently working on responsive programming?  I think I might have seen a video about that.  Check video on brickbreaker from Dan Shiffman.
 
 D is for digital. [Princeton course](http://www.cs.princeton.edu/courses/archive/fall14/cos109/) that uses this book.  Newer [class website](https://www.cs.princeton.edu/courses/archive/fall17/cos109/).  [Understanding the Digital World](http://www.kernighan.org/#) looks like the updated version of D is for Digital.
+	- Interestingly, there are no laptops allowed in this introductory class, even though it's a class on coding
 
 Bret Victor's [critique](https://johnresig.com/blog/introducing-khan-cs/) of Khan Academy and Processing is also very enlightening.  It's very long.  I'll have to read it a few times.
 
@@ -610,6 +612,8 @@ We can implement Feature 2 by creating variables for the red, green, and blue va
 
 # Chapter 5 - Conditionals
 
+Start with [video 3.1](https://www.youtube.com/watch?v=1Osb_iGDdjk&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=11) from Coding train
+
 ## Boolean Expressions
 
 Boolean test - true or false
@@ -674,6 +678,95 @@ I ended up using the Math.floor function and also various text functions from p5
 
 I found that I needed to declare the grade variable outside of setup, without an initial value.  Then give grade its initial value within setup, then use that value within draw.  I think this is a pattern I might need to keep following.
 
+Note this important example from the book about how conditional statements work.  Meaning, as soon as one is found to be true, the code is executed and the remaining boolean expressions are ignored:
+
+'''
+// Determine if a number is between 0 and 25, 26 and 50, or > 50
+
+// good code
+
+var x = 75;
+
+if (x > 50) {
+	print(x + " is greater than 50!");
+} else if (x > 25) {
+	print(x + " is greater than 25!")
+} else {
+	print(x + " is 25 or less!")
+}
+
+// Output: 75 is greater than 50!
+
+// Bad code
+
+var x = 75;
+
+if (x > 25) {
+	print(x + " is greater than 25!");
+} else if (x > 50) {
+	print(x + " is greater than 50!")
+} else {
+	print(x + " is 25 or less!")
+}
+
+// Output: 75 is greater than 25!
+
+// first conditional is true, so code executes and rest of 
+// boolean expressions are ignored
+
+'''
+
+Another example:
+
+'''
+// If a number is 5, change it to 6.  If a number is 6, change it to 5.
+
+// good code
+
+var x = 5;
+print("x is now: " + x);
+if (x == 5) {
+	x = 6;
+} else if (x == 6) {
+	x = 5;
+}
+print("x is now: " + x)
+
+Output: "x is now: " + 6
+
+
+// bad code 
+
+var x = 5;
+print("x is now: " + x);
+if (x == 5) {
+	x = 6;
+} 
+if (x == 6) {
+	x = 5;
+}
+print("x is now: " + x)
+
+Output: "x is now: " + 5
+
+// This is buggy because both if statements are executed
+'''
+
+## Conditionals in a Sketch
+
+Our program will perform different tasks based on the result of different conditions
+
+Heres the pseudocode:
+- Create variables to hold color components (r, g, b)
+- Continuously draw the background based on those colors
+- If mouse is on right side, increment r.  If left, decrement r
+- Constrain value of r to be within 0 to 255 (this was a new concept)
+
+Note that functions are often included in libraries because they solve common problems.  The constrain() function can be used to "constrain" the size or location of a shape, so that it does not get too big or small, or wander off of the screen.
+
+Functions like constrain are also a great way to avoid errors and to ensure that sections of code work well together on larger projects with multiple programmers.
+
+A more advanced example will change all three color components according to mouse location and click state (mouseIsPressed - mousePressed in processing is [mouseIsPressed](https://p5js.org/reference/#/p5/mouseIsPressed) in p5.js). Note that the system variable mouseIsPressed() is true or false depending on wheter the user is holding down the mouse button.
 
 
 
