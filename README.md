@@ -32,7 +32,7 @@
 	- [Random: Variety is the spice of life](#random-variety-is-the-spice-of-life)
 - [Chapter 5 - Conditionals](#chapter-5---conditionals)
 	- [Boolean Expressions](#boolean-expressions)
-	- [Conditionals: If, Else, Else If](#conditionals-if-else -else-if)
+	- [Conditionals: If, Else, Else If](#conditionals-if-else-else-if)
 
 # Introduction
 
