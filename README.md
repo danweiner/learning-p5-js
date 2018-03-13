@@ -859,6 +859,16 @@ We need to combine with with checking mouse location to see if it's inside of a 
 
 See [this example](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp05_conditionals/example_05_04_holdbutton).
 
+Let's make this more like a light switch.  Press the button. If the light is off, it turns on.  If it is on, it turns off.  ("toggles the switch")
+
+We need to use the mousePressed() function here.  By definition, when the user clicks the mouse, the code inside mousePressed() is executed once and only once.
+
+mouseIsPressed is used when you check if the mouse is being held down.
+
+Watch Dan's video for an example of [creating a button](https://www.youtube.com/watch?v=Rk-_syQluvc&index=14&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).  He does a very nice job of explaining all the steps of creating the button.
+
+Here's the example code from Coding train, which is better in my opinion than the p5.js ported code.  Note also that Dan mentions that we could use a function to determine if the mouse is inside of the rectangle.  We'll get to that later.
+
 
 
 
