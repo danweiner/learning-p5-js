@@ -34,6 +34,7 @@
 	- [Boolean Expressions](#boolean-expressions)
 	- [Conditionals: If, Else, Else If](#conditionals-if-else-else-if)
 	- [Conditionals in a Sketch](#conditionals-in-a-sketch)
+	- [Multiple Rollovers](#multiple-rollovers)
 
 # Introduction
 
@@ -808,9 +809,26 @@ The above example could also be written without the logical NOT, saying:
 
 - If the mouse is pressed, draw a square, otherwise, draw a circle
 
-Exercise demonstrating a [simple rollover]().
+Exercise demonstrating a [simple rollover](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/exercise-5.5) using dist.
 
+## Multiple Rollovers
 
+Pseudocode:
+- Setup:
+	- window 400x400
+- Draw:
+	- white background
+	- horizontal and vertical lines to divide window into four quadrants
+	- if mouse in top left, fraw black rect in top left
+	- if mouse in top right, draw black rect in top right
+	- if mouse in bottom left, draw black rect in bottom left
+	- if mouse in bottom right, draw black rect in bottom right
+
+So - how do we know if the mouse is in a given corner?
+
+The [answer](https://github.com/shiffman/LearningProcessing-p5.js/blob/master/chp05_conditionals/example_05_03_rollovers/sketch.js) uses numerical values (100 for mouseX and mouseY).  I am going to use [width and height]().
+
+[Exercise 5.6](): squares fade from black to white when the mouse leaves their area
 
 
 
