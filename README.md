@@ -35,6 +35,7 @@
 	- [Conditionals: If, Else, Else If](#conditionals-if-else-else-if)
 	- [Conditionals in a Sketch](#conditionals-in-a-sketch)
 	- [Multiple Rollovers](#multiple-rollovers)
+	- [Boolean Variables](#boolean-variables)
 
 # Introduction
 
@@ -828,10 +829,35 @@ So - how do we know if the mouse is in a given corner?
 
 The [answer](https://github.com/shiffman/LearningProcessing-p5.js/blob/master/chp05_conditionals/example_05_03_rollovers/sketch.js) uses numerical values (100 for mouseX and mouseY).  I am going to use [width and height]().
 
-[Exercise 5.6](): squares fade from black to white when the mouse leaves their area
+[Exercise 5.6](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/exercise-5.6): squares fade from black to white when the mouse leaves their area
 - hint: you need four variables, one for each rectangle's color
+(This was actually really hard)
 
+## Boolean Variables
 
+Making a button - a rollover that responds when clicked
+
+Practicing learning how to program these GUI elements from scratch (bottons, rollovers, sliders) is an excellent way to learn the basics of variables and conditionals.  It also allows you to create customizable interfaces.
+
+Boolean variables to program a button.  Boolean variables can only be true or false.
+
+Our button example starts with one booleann variable with a starting value of false (button starts in the off state).
+
+` var button = false `
+
+Our sketch will turn the background white when the button is pressed, and black when it is not.
+
+```
+if (button) {
+	background(255);
+} else {
+	background(0);
+}
+```
+
+We need to combine with with checking mouse location to see if it's inside of a shape (in our example a rectangle).  If it is inside the rectangle, and the mouseIsPressed, we set the button variable to true or false accordingly.
+
+See [this example](https://github.com/shiffman/LearningProcessing-p5.js/tree/master/chp05_conditionals/example_05_04_holdbutton).
 
 
 
