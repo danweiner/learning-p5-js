@@ -580,6 +580,8 @@ The [random() function in p5.js](https://p5js.org/reference/#/p5/random) returns
 
 In JavaScript, I believe you would use a function such as [Math.floor()](https://www.w3schools.com/jsref/jsref_random.asp) to accomplish the same task.
 
+I just discovered that there's an [int()](https://p5js.org/reference/#/p5/int) function in p5.js.
+
 Another thing to note from the video - Dan's steps in *debugging*
 - try to read the error message (this one was pretty cryptic)
 - stay calm
@@ -614,9 +616,15 @@ We can implement Feature 2 by creating variables for the red, green, and blue va
 
 Start with [video 3.1](https://www.youtube.com/watch?v=1Osb_iGDdjk&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=11) from Coding train
 
+Taking different paths
+
+Not on using the dist() function for rollovers (might come up in later video)
+
+Brief note on == vs === but said that might come up in videos on strings
+
 ## Boolean Expressions
 
-Boolean test - true or false
+Boolean test - true or false (1 or 0)
 
 Boolean expression - evaluates to true or false
 
@@ -671,7 +679,7 @@ if (mouseX < width/3) {
 }
 ```
 
-Exercise 5-1: Grading system where numbers are turned into letters
+[Exercise 5-1](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/ex-5.1-grades): Grading system where numbers are turned into letters
 (Dan doesn't have an answer - I'll code something placing text on the screen)
 
 I ended up using the Math.floor function and also various text functions from p5.js to display grades on the screen.
@@ -768,7 +776,39 @@ Functions like constrain are also a great way to avoid errors and to ensure that
 
 A more advanced example will change all three color components according to mouse location and click state (mouseIsPressed - mousePressed in processing is [mouseIsPressed](https://p5js.org/reference/#/p5/mouseIsPressed) in p5.js). Note that the system variable mouseIsPressed() is true or false depending on wheter the user is holding down the mouse button.
 
+These [examples](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.2) [demonstrate](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/exercise-5.3) using the constrain() function
 
+## Logical Operators
+
+Example: If the mouse is on the right side of the screen AND the mouse is on the bottom of the screen, draw a rect in the bottom right corner.
+
+```
+if (mouseX > width/2 && mouseY > height/2) {
+	fill(255);
+	rect(width/2, height/2, width/2, height/2);
+}
+```
+
+Logical Operators:
+
+```
+&&	(logical AND)
+||	(logical OR)
+! 	(logical NOT)
+```
+
+Example using logical NOT:
+if (!mouseIsPressed) {
+	ellipse(width/2, height/2, 100, 100);
+} else {
+	rect (width/2, height/2, 100, 100);
+}
+
+The above example could also be written without the logical NOT, saying:
+
+- If the mouse is pressed, draw a square, otherwise, draw a circle
+
+Exercise demonstrating a [simple rollover]().
 
 
 
