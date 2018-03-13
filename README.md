@@ -867,7 +867,9 @@ mouseIsPressed is used when you check if the mouse is being held down.
 
 Watch Dan's video for an example of [creating a button](https://www.youtube.com/watch?v=Rk-_syQluvc&index=14&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).  He does a very nice job of explaining all the steps of creating the button.
 
-Here's the example code from Coding train, which is better in my opinion than the p5.js ported code.  Note also that Dan mentions that we could use a function to determine if the mouse is inside of the rectangle.  We'll get to that later.
+The example code from Coding train is better in my opinion than the p5.js ported code.  Here's [my version](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.5-button-switch) Note also that Dan mentions that we could use a function to determine if the mouse is inside of the rectangle.  We'll get to that later.
+
+[Exercise 5.8]() modifies the circle move program to incorporate mousePressed().  The book only asks to make the circle move when the mouse is pressed, but I updated it so the circle stops when the mouse is pressed as well.
 
 
 
