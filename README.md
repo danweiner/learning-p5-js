@@ -829,6 +829,7 @@ So - how do we know if the mouse is in a given corner?
 The [answer](https://github.com/shiffman/LearningProcessing-p5.js/blob/master/chp05_conditionals/example_05_03_rollovers/sketch.js) uses numerical values (100 for mouseX and mouseY).  I am going to use [width and height]().
 
 [Exercise 5.6](): squares fade from black to white when the mouse leaves their area
+- hint: you need four variables, one for each rectangle's color
 
 
 
