@@ -36,6 +36,7 @@
 	- [Conditionals in a Sketch](#conditionals-in-a-sketch)
 	- [Multiple Rollovers](#multiple-rollovers)
 	- [Boolean Variables](#boolean-variables)
+	- [Bouncing Ball](#bouncing-ball)
 
 # Introduction
 
@@ -869,7 +870,41 @@ Watch Dan's video for an example of [creating a button](https://www.youtube.com/
 
 The example code from Coding train is better in my opinion than the p5.js ported code.  Here's [my version](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.5-button-switch) Note also that Dan mentions that we could use a function to determine if the mouse is inside of the rectangle.  We'll get to that later.
 
-[Exercise 5.8]() modifies the circle move program to incorporate mousePressed().  The book only asks to make the circle move when the mouse is pressed, but I updated it so the circle stops when the mouse is pressed as well.
+[Exercise 5.8](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/exercise-5.8-circle-move) modifies the circle move program to incorporate mousePressed().  The book only asks to make the circle move when the mouse is pressed, but I updated it so the circle stops when the mouse is pressed as well.
+
+## Bouncing Ball
+
+We can use conditionals to check if a shape (or something more complex like Zoog or Fido) has reached the edge of the screen, and if so make it turn around.
+
+Write a program where a simple circle moves across the screen horizontally from left to right.  When it reaches the right edge of the screen, it reverses direction.
+
+We need to introduce a new variable - `var speed = 1`
+
+To make the circle move, the value of the x location should change each cycle through draw() - `x = x + speed`.
+
+This would make the circle run off the edge of the screen.
+
+To make it turn around, we need a conditional statement:
+- If x is greater than width, reverse the speed
+```
+if (x > width) {
+	speed = speed * -1
+}
+```
+
+To make the circle bounce off of both sides of the screen, we can use the conditional OR:
+- If the ball goes off the right or left edge, turn the ball around
+- or, if x > width OR if x < 0, reverse speed
+
+```
+if ((x > width) || (x < 0)) {
+	speed = speed * -1
+}
+```
+
+See example 5.6 for the [bouncing ball]().
+
+
 
 
 
