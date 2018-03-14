@@ -37,6 +37,7 @@
 	- [Multiple Rollovers](#multiple-rollovers)
 	- [Boolean Variables](#boolean-variables)
 	- [Bouncing Ball](#bouncing-ball)
+	- [Physics 101[(#physics-101)
 
 # Introduction
 
@@ -902,8 +903,31 @@ if ((x > width) || (x < 0)) {
 }
 ```
 
-See example 5.6 for the [bouncing ball]().
+See example 5.6 for the [bouncing ball](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.6-bouncing-ball).  
 
+This exercise modifies the above example to have the ball [bounce off all the edges](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/exercise-5.9-bounce-all-edges).
+
+I was inspired by this repo about [brickbreaker](https://github.com/CodingTrain/BrickBreaker).
+
+The bouncing ball logic of incrementing and decrementing a variable can be aplied to also, say, make a color more red.
+
+See this example called ["bouncing color"](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.7-bouncing-color).
+
+Now for more complex motion - a [rectangle that follows the edges](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.8-rect-edges) of the window.
+
+We can think of a rectangle's motion as having four possible states, numbered 0 through 3:
+- 0: left to right
+- 1: top to bottom
+- 2: right to left
+- 3: bottom to top
+
+We use a variable to keep track of the state number and adjust the x,y coordinate of the rect according to the state.  For instance, if the state is 2, x = x - 1.
+
+Once the rect reaches the endpoint for that state, we can change the state variable.  If state is 2, x = x - 1.  If x < 0, state = 3.
+
+This is probably the most complicated program we've written so far.  
+
+## Physics 101
 
 
 
