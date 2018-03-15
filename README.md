@@ -42,6 +42,7 @@
 	- [What is iteration?](#what-is-iteration)
 	- [While loops](#while-loops)
 	- [Exit Conditions](#exit-conditions)
+	- [For loop](#for-loop)
 
 # Introduction
 
@@ -971,7 +972,7 @@ Do-while is rarely used so there are no examples for it.
 
 While loops employ a boolean test condition.  If the test evaluates to true, the instructions enclosed in curly brackets are executed.  If false, we continue on to the next line of code.
 
-See these two examples using while loops to draw [lines]() and [ellipses]().
+See these two examples using while loops to draw [lines](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.1-lines) and [ellipses](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.1-ellipses).
 
 ## Exit Conditions
 
@@ -981,8 +982,23 @@ To avoid an infinite loop, we must make sure that the exit condition for a loop 
 
 If you have an infinite loop, force quit the program.
 
-Dan has a kind of [confusing example]() of an infinite loop and how to avoid it using constrain.  Maybe his videos are clearer.
+Dan has a kind of [confusing example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.5-infinite-loop) of an infinite loop and how to avoid it using constrain.  Maybe his videos are clearer.
 
+## For loop
+
+A style of while loop whereone value is incremented repeatedly (often useful with arrays).
+
+Example code:
+```
+// Start at 0 and count up to 9
+for (var i = 0; i < 10; i++)
+
+// Start at 0 and count up to 100 
+for (var i = 0; i < 101; i += 10)
+
+// Start at 100 and count down to 0 by 5
+for (var i = 100; i >= 0; i -= 5)
+```
 
 
 
