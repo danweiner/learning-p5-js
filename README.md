@@ -38,6 +38,9 @@
 	- [Boolean Variables](#boolean-variables)
 	- [Bouncing Ball](#bouncing-ball)
 	- [Physics 101[(#physics-101)
+- [Chapter 6 - Loops](#chapter-6---loops)
+	- [What is iteration?](#what-is-iteration)
+	- [While loops](#while-loops)
 
 # Introduction
 
@@ -940,6 +943,34 @@ Adding "acceleration" to our bouncing ball, which increases or decreases speed. 
 `speed = speed + acceleration`
 
 See this [simple gravity](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.9-simple-gravity) example.  I updated it adding code so the ball bounces off the edges.
+
+# Chapter 6 - Loops
+
+We will learn:
+- the concept of iteration
+- two types of loops (while and for) and when to use them
+- iteration in the context of computer graphics
+
+## What is iteration?
+
+A generative process of repeating a set of rules or steps over and over again.
+
+It is a *control structure*.  It is similar to conditionals (if/else), except instead of asking a yes or no to determine if a block of code should be executed *one time*, it asks a yes or no question to determing *how many times* the block of code should be *repeated*.
+
+## While loops
+
+There are three types of loops:
+- while loop
+- do-while loop
+- for loop
+
+The only loop you really ever need is a while loop, though the for loop is a convenient alternative for simple counting operations.
+
+Do-while is rarely used so there are no examples for it.
+
+While loops employ a boolean test condition.  If the test evaluates to true, the instructions enclosed in curly brackets are executed.  If false, we continue on to the next line of code.
+
+See these two examples using while loops to draw [lines]() and [ellipses]().
 
 
 
