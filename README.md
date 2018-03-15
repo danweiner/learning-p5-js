@@ -192,6 +192,8 @@ This brings be back to my early point, which was the importance of finding proje
 
 Dans video on println from processing. Reminds me that other processing videos might be useful.
 
+[Chrome debugging](https://developers.google.com/web/tools/chrome-devtools/javascript/) tools in DevTools
+
 
 ## Algorithms
 
@@ -929,7 +931,15 @@ This is probably the most complicated program we've written so far.
 
 ## Physics 101
 
+Coding gravity with conditionals.
 
+Gravity is a force of attraction between all masses.
+
+Adding "acceleration" to our bouncing ball, which increases or decreases speed.  Acceleration is the rate of change of speed.  And speed is the rate of change of location.
+
+`speed = speed + acceleration`
+
+See this [simple gravity](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.9-simple-gravity) example.  I updated it adding code so the ball bounces off the edges.
 
 
 
