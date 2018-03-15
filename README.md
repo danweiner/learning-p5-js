@@ -1000,6 +1000,17 @@ for (var i = 0; i < 101; i += 10)
 for (var i = 100; i >= 0; i -= 5)
 ```
 
+For loops consist of three parts:
+- Initialization: variable is initialized and declared within the body of the loop - used inside the loop as a counter (local variables)
+- Boolean test: evaluates to true or false
+- Iteration expression: what you want to happen with each loop cycle - executed at the end of each cycle through the loop
+
+Here's rewriting the earlier [lines](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.2-lines) and [ellipses](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.2-ellipses) exercises using for loops.
+
+Some very cool examples of using loops to create funky drawings.  I could never create these, but this is a good example of trying to read code then guess what it displays.  Good to see what's possible with loops and code.
+
+[Circles]().  [Funky rects]().  [Progressively darker squares]().  [Spaced squares]().
+
 
 
 
