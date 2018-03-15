@@ -41,6 +41,7 @@
 - [Chapter 6 - Loops](#chapter-6---loops)
 	- [What is iteration?](#what-is-iteration)
 	- [While loops](#while-loops)
+	- [Exit Conditions](#exit-conditions)
 
 # Introduction
 
@@ -971,6 +972,16 @@ Do-while is rarely used so there are no examples for it.
 While loops employ a boolean test condition.  If the test evaluates to true, the instructions enclosed in curly brackets are executed.  If false, we continue on to the next line of code.
 
 See these two examples using while loops to draw [lines]() and [ellipses]().
+
+## Exit Conditions
+
+You don't want infinite loops - where the boolean test condition is always true.
+
+To avoid an infinite loop, we must make sure that the exit condition for a loop will eventually be met.
+
+If you have an infinite loop, force quit the program.
+
+Dan has a kind of [confusing example]() of an infinite loop and how to avoid it using constrain.  Maybe his videos are clearer.
 
 
 
