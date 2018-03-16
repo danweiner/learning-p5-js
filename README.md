@@ -1033,9 +1033,9 @@ Display doesn't update until the end of draw() is reached.  This is critical to 
 
 To display one line at a time, we need a global variable in combination with the very looping nature of draw() itself.
 
-See [this example]() where lines display, one at a time, from y = 0 until y = height.
+See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.8-lines-one-by-one) where lines display, one at a time, from y = 0 until y = height.
 
-The next exercise is tricky.  It implements the above example but [using a for loop]().
+The next exercise is tricky.  It implements the above example but [using a for loop](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.5-line-by-line-for-loop).
 
  
 
