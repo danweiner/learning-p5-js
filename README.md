@@ -43,7 +43,7 @@
 	- [While loops](#while-loops)
 	- [Exit Conditions](#exit-conditions)
 	- [For loop](#for-loop)
-	- [Variable Scope#](#variable-scope)
+	- [Variable Scope](#variable-scope)
 	- [Loop inside the main loop](#loop-inside-the-main-loop)
 
 # Introduction
