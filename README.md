@@ -43,6 +43,7 @@
 	- [While loops](#while-loops)
 	- [Exit Conditions](#exit-conditions)
 	- [For loop](#for-loop)
+	- [Variable Scope#](#variable-scope)
 
 # Introduction
 
@@ -1009,9 +1010,21 @@ Here's rewriting the earlier [lines](https://github.com/danweiner/learning-p5-js
 
 Some very cool examples of using loops to create funky drawings.  I could never create these, but this is a good example of trying to read code then guess what it displays.  Good to see what's possible with loops and code.
 
-[Circles]().  [Funky rects]().  [Progressively darker squares]().  [Spaced squares]().
+[Circles](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.3/circles).  [Funky rects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.3/funky-rects).  [Progressively darker squares](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.3/progressively-darker-squares).  This darker squares one gives a cool optical illusion that the squares are different sizes but they aren't. [Spaced squares](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.3/spaced-squares).
 
+## Variable Scope
 
+Local vs. Global variables
+
+Deciding what it means to declare a variable somewhere other than the top (before setup()) and how to go about choosing the right location for declaring a variable.
+
+Scope - some variable exist (and are accessible) throughout the entire program's life (global scope) and some live temporarily, only for the brief moment when their value is required for an instruction or calculation (local variables).
+
+Global variables are declared at the top of the program - outside of setup() and draw().  They can be used in any line of code anywhere in the program.
+
+Local variables are variables delared within a block of code.  These variables are only available for use within that specific block of code where it was declared (is this the same in JavaScript - I'll have to check in on this - it's not).  Dan has a video on scope in his Processing series, but not on scope related to JavaScript.  
+
+See this video on [let vs var](https://www.youtube.com/watch?v=q8SHaDQdul0) (and even const) and this [article](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/) which discuss function and block scope for variables in JavaScript and the concept of hoisting.
 
 
  
