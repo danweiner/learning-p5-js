@@ -1037,6 +1037,8 @@ See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesso
 
 The next exercise is tricky.  It implements the above example but [using a for loop](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.5-line-by-line-for-loop).
 
+ Using the loop inside draw() for interactivity.  This [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.9-while-loop-interactive) displays a series of rectangles, from left to right, each colored with a brightness according to its distance from the mouse.
+
  
 
 
