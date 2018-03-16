@@ -1035,10 +1035,12 @@ To display one line at a time, we need a global variable in combination with the
 
 See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.8-lines-one-by-one) where lines display, one at a time, from y = 0 until y = height.
 
-The next exercise is tricky.  It implements the above example but [using a for loop](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.5-line-by-line-for-loop).
+The next exercise is tricky.  It implements the above example but using a [for loop](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.5-line-by-line-for-loop).
 
- Using the loop inside draw() for interactivity.  This [example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.9-while-loop-interactive) displays a series of rectangles, from left to right, each colored with a brightness according to its distance from the mouse.
+ Using the loop inside draw() for interactivity.  This [code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.9-while-loop-interactive) displays a series of rectangles, from left to right, each colored with a brightness according to its distance from the mouse.
 
- 
+ We can use the same principles to draw [multiple arms](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-zoog-arms) for Zoog.  Or draw [multiple instances of Zoog]() by placing the code for Zoog's body inside of a for loop.
+
+
 
 
