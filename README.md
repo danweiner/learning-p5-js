@@ -1039,7 +1039,7 @@ The next exercise is tricky.  It implements the above example but using a [for l
 
  Using the loop inside draw() for interactivity.  This [code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-6.9-while-loop-interactive) displays a series of rectangles, from left to right, each colored with a brightness according to its distance from the mouse.
 
- We can use the same principles to draw [multiple arms](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-zoog-arms) for Zoog.  Or draw [multiple instances of Zoog]() by placing the code for Zoog's body inside of a for loop.
+ We can use the same principles to draw [multiple arms](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-zoog-arms) for Zoog.  Or draw [multiple instances of Zoog](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/zoog-multiples) by placing the code for Zoog's body inside of a for loop.
 
 
 
