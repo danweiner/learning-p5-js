@@ -44,6 +44,7 @@
 	- [Exit Conditions](#exit-conditions)
 	- [For loop](#for-loop)
 	- [Variable Scope#](#variable-scope)
+	- [Loop inside the main loop](#loop-inside-the-main-loop)
 
 # Introduction
 
@@ -1026,6 +1027,15 @@ Local variables are variables delared within a block of code.  These variables a
 
 See this video on [let vs var](https://www.youtube.com/watch?v=q8SHaDQdul0) (and even const) and this [article](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/) which discuss function and block scope for variables in JavaScript and the concept of hoisting.
 
+## Loop inside the main loop
+
+Display doesn't update until the end of draw() is reached.  This is critical to remember when using while and for loops. These loops serve the purpose of repeating something in the context of *one cycle* through draw().  They are a loop inside of the sketch's main loop, draw().
+
+To display one line at a time, we need a global variable in combination with the very looping nature of draw() itself.
+
+See [this example]() where lines display, one at a time, from y = 0 until y = height.
+
+The next exercise is tricky.  It implements the above example but [using a for loop]().
 
  
 
