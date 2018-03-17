@@ -1041,6 +1041,8 @@ The next exercise is tricky.  It implements the above example but using a [for l
 
  We can use the same principles to draw [multiple arms](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/example-zoog-arms) for Zoog.  Or draw [multiple instances of Zoog](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/zoog-multiples) by placing the code for Zoog's body inside of a for loop.
 
+ Exercise 6.8 asks you to create a grid of squares using a for loop - actually using [nested loops]().  Here's Dan's [video]() on nested loops.  It's a pretty big oversight that the book doesn't explain nested loops, because they can be pretty complicated to understand.  A better example is actually a checkerboard.  It introduces the modulo / remainder operator.  My example draws a checkerboard.  Mehran from Stanford also uses a checkerboard in his CS106A class.
+
 
 
 
