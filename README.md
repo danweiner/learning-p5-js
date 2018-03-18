@@ -46,7 +46,7 @@
 	- [Variable Scope](#variable-scope)
 	- [Loop inside the main loop](#loop-inside-the-main-loop)
 
-[Lesson 3 - Organization](#lesson-2---organization)
+[Lesson 3 - Organization](#lesson-3---organization)
 - [Chapter 7 - Functions](#chapter-7---functions)
 
 # Introduction
