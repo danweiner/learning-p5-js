@@ -46,6 +46,9 @@
 	- [Variable Scope](#variable-scope)
 	- [Loop inside the main loop](#loop-inside-the-main-loop)
 
+[Lesson 3 - Organization](#lesson-2---organization)
+- [Chapter 7 - Functions](#chapter-7---functions)
+
 # Introduction
 
 Maybe a section could go here on Logo, Seymour Papert, and the history of visual ways of learning to code?  That [inspired](https://www.wired.com/2013/10/processing-2-0-a-short-introduction/) Processing in the first place.
@@ -1043,6 +1046,23 @@ The next exercise is tricky.  It implements the above example but using a [for l
 
  Exercise 6.8 asks you to create a grid of squares using a for loop - actually using [nested loops](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-6/exercise-6.8-grid-squares).  Here's Dan's [video](https://www.youtube.com/watch?v=1c1_TMdf8b8&index=16&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) on nested loops.  It's a pretty big oversight that the book doesn't explain nested loops, because they can be pretty complicated to understand.  A better example is actually a checkerboard.  It introduces the modulo / remainder operator.  My example draws a checkerboard.  Mehran from Stanford also uses a [checkerboard](https://see.stanford.edu/Course/CS106A/171) in his CS106A class.
 
+## Lesson Two Project
 
+Step 1: Rewrite lesson one design with variables instead of hard-coded values.  Use a for loop for something.
 
+Step 2: Use assignment operations that alter the values of those variables and make the design dynamic.
 
+Step 3: Using conditional statements, alter the design behavior based on certain conditions.  
+
+I wanted to do something beyond my skill level - go from a daytime sky to a night time sky and back.  I could sort of do it - I went from light blue to dark blue sky, but then it got way too complicated.  I'll stick with a "simpler task" - putting lines on the house which serva as a design.  And updating orion with begin and endshape.
+
+# Lesson 3 - Organization
+
+## Chapter 7 - Functions
+Overview:
+- Modularity
+- Declaring and defining a function
+- Calling a function
+- Parameter passing
+- Returning a value
+- Reusability
