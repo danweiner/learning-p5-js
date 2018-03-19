@@ -37,7 +37,7 @@
 	- [Multiple Rollovers](#multiple-rollovers)
 	- [Boolean Variables](#boolean-variables)
 	- [Bouncing Ball](#bouncing-ball)
-	- [Physics 101[(#physics-101)
+	- [Physics 101](#physics-101)
 - [Chapter 6 - Loops](#chapter-6---loops)
 	- [What is iteration?](#what-is-iteration)
 	- [While loops](#while-loops)
@@ -48,6 +48,9 @@
 
 [Lesson 3 - Organization](#lesson-3---organization)
 - [Chapter 7 - Functions](#chapter-7---functions)
+	- [Break it down](#break-it-down)
+	- [User defined functions](#User-defined-functions)
+	- [Defining a function](#defining-a-function)
 
 # Introduction
 
@@ -1066,3 +1069,82 @@ Overview:
 - Parameter passing
 - Returning a value
 - Reusability
+
+I'm sure there are many differences between Java and JS functions - I'll need to revisit this - watch Dan's videos and probably read about it
+
+### Break it down
+
+Functions are a means of taking the parts of our program and separating them out into modular pieces, making our code easier to read and revise
+
+Returning to Space Invaders - steps inside draw():
+- Erase background
+- Draw spaceship
+- Draw enemies
+- Move spaceship according to user keyboard interaction
+- Move enemies
+
+Previously, we would have translated the above pseudocode into actual code, and placed it inside draw().
+
+Now, we can approach the problem as follows:
+
+```
+// calling functions we made up inside of draw - also called top-down design
+// Stanford 106A is really good for an overview of top-down design
+function draw() {
+	background(0);
+	drawSpaceShip();
+	drawEnemies();
+	moveShip();
+	moveEnemies();
+}
+```
+
+What about function definitions? We'll get to this later
+
+Why is it so important to write our own functions?
+- Modularity: break down a larger program into smaller parts, making code more manageable and readable
+- Reusability: reuse same code without having to repeat it (importance of arguments and paramenters)
+
+Local and global variables are also important, as functions are independent blocks of code that will require using local variables (I think this is true in JavaScript - function scope?)
+
+### User defined functions
+
+This just means moving beyond the functions provided by p5.js (like line()) and writing our own functions.
+
+### Defining a function
+
+A function definition ('declaration') had three parts:
+- Return type (not in JavaScript)
+- Function name
+- Arguments
+
+Here's Dan's first video on [functions](https://www.youtube.com/watch?v=wRHAitGzBrg&index=17&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
+
+His example in the video is a bouncing ball, demonstrating modularity.  This comes up in the book later.
+
+Function example:
+
+```
+function drawBlackCircle() {
+	fill(0);
+	ellipse(50, 50, 20, 20);
+}
+```
+
+This code won't happen *unless it's called* from a part of the program that is being executed.  We accomplish this by referencing the function name (calling the function).
+
+```
+function draw() {
+	background(255);
+	drawBlackCircle();
+}
+```
+
+The exercise is to write a function that displays Zoog, or my own design using a function.
+
+
+
+
+
+
+
