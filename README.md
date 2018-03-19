@@ -51,6 +51,7 @@
 	- [Break it down](#break-it-down)
 	- [User defined functions](#User-defined-functions)
 	- [Defining a function](#defining-a-function)
+	- [Simple Modularity](#simple-modularity)
 
 # Introduction
 
@@ -1118,10 +1119,6 @@ A function definition ('declaration') had three parts:
 - Function name
 - Arguments
 
-Here's Dan's first video on [functions](https://www.youtube.com/watch?v=wRHAitGzBrg&index=17&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
-
-His example in the video is a bouncing ball, demonstrating modularity.  This comes up in the book later.
-
 Function example:
 
 ```
@@ -1140,8 +1137,15 @@ function draw() {
 }
 ```
 
-The exercise is to write a function that displays Zoog, or my own design using a function.
+The exercise is to write a function that displays Zoog, or [my own design]() using a function.
 
+### Simple Modularity
+
+Here's Dan's first video on [functions](https://www.youtube.com/watch?v=wRHAitGzBrg&index=17&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
+
+His example in the video is a bouncing ball, demonstrating modularity.
+
+Here is the [bouncing ball code]() with functions.
 
 
 
