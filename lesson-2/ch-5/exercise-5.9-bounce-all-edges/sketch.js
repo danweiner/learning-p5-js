@@ -7,6 +7,10 @@ certain conditions? Can you make the ball speed up
 or slow down in addition to changing direction?
 */
 
+// This whole program could have been written 
+// without direction - see lesson 3 - need 
+// xspeed and yspeed
+
 var circle = {
 	x: 400,
 	y: 10,

@@ -52,6 +52,7 @@
 	- [User defined functions](#User-defined-functions)
 	- [Defining a function](#defining-a-function)
 	- [Simple Modularity](#simple-modularity)
+	- [Arguments](#arguments)
 
 # Introduction
 
@@ -1137,7 +1138,7 @@ function draw() {
 }
 ```
 
-The exercise is to write a function that displays Zoog, or [my own design]() using a function.
+The exercise is to write a function that displays Zoog, or [my own design](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.2-fido-functions) using a function.
 
 ### Simple Modularity
 
@@ -1145,7 +1146,57 @@ Here's Dan's first video on [functions](https://www.youtube.com/watch?v=wRHAitGz
 
 His example in the video is a bouncing ball, demonstrating modularity.
 
-Here is the [bouncing ball code]() with functions.
+Here is the [bouncing ball code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/example-7.3-ball-functions) with functions.
+
+Another benefit of functions is greater ease in debugging - we can turn on and off parts of the program by commenting out certain functions
+
+*Debugging tip*
+
+By adding function calls one by one and executing the sketch each time, we can more easily deduce the location of the problem code
+
+### Arguments
+
+AKA Parameters - values that are passed into a functions
+
+Instead of just saying move - you're saying move n steps (n is the argument)
+
+Example:
+
+```
+// diameter is an argument to the function 
+// drawBlackCircle()
+function drawBlackCircle(diameter) {
+	fill(0);
+	ellipse(50, 50, diameter, diameter)
+}
+```
+
+An argument is simply a variable declaration inside the parens in the function definition
+
+This variable is a local variable to be used in that function.
+
+Another example:
+```
+// The argument 'speedFactor' affects how fast
+// the circle moves
+function move(speedFactor) {
+	x = x + (speed * speedFactor)
+}
+```
+
+So, to move the ball twice as fast:
+`move(2)`
+
+Or pass in a variable or the result of a mathematical expression:
+`move(mouseX/10)`
+
+Arguments allow for more flexible, reusable functions.
+
+Let's look at the code for drawing a collection of shapes and examine how functions allow us to draw multiple versions of the pattern without retyping the same code over and over.
+
+The example will be drawing a car.  We'll look at two examples - one using functions, one without.
+
+
 
 
 
