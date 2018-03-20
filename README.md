@@ -1207,7 +1207,16 @@ Parameter *passing* is a very important idea.
 
 The value you pass as a parameter to a function can be a literal value (20, 5, 4.3), a variable (x, y), or the result of an expression (8 + 3, 4 * x/2, random(0, 10))
 
-Arguments act as local variables to a function and are only accessible
+Arguments act as local variables to a function and are only accessible.
+
+Exercise 7.4: Write code that [calls a function]()
+
+The code is a function that adds three numbers and prints the sum of the three.
+
+Exercise 7.5- [write a function]() definition: You are provided with the function call `multiply(5.2, 9.0)`.  Write the code that takes these two parameters, multiplies them and prints the result to the message window.
+
+Exercise 7.6 is interesting because it's a [bouncing car]().  Using functions, global, and local variables altogether.
+
 
 
 
