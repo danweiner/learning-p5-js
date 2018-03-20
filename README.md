@@ -56,6 +56,19 @@
 
 # Introduction
 
+[Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
+
+There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to [p5.js](https://p5js.org/). Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target and [this book](https://p5js.org/books/) is often recommended as an introduction to p5.js.
+
+This repo is an attempt to solve that problem.  I will go through the Learning Processing book, link to the appropriate Shiffman p5.js repos from the Learning Processing book, link to the most relevant Coding Train videos, and post my own code for the exercises. 
+
+I will also have the occasional "detour" when relevant topics come up that aren't covered in the book.  For instance, Command Line, using GitHub, etc.  These "detours" might end up overwhelming the initial goal of the project, but we'll see.
+
+
+I think this will be helpful for my learning process, and I hope it's helpful to anyone else who stumbles across this repo.
+
+I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
+
 Maybe a section could go here on Logo, Seymour Papert, and the history of visual ways of learning to code?  That [inspired](https://www.wired.com/2013/10/processing-2-0-a-short-introduction/) Processing in the first place.
 
 See also [Design by numbers](https://mitpress.mit.edu/books/design-numbers) by John Maeda - tying together the arts and technology, and viewing the computer as an artistic medium in its own right.
@@ -126,22 +139,6 @@ Some notes from the article:
 - "A better question is: How do we design a new programming model that does allow for continuous change? We already have clear hints." 
 	- Smalltalk and Clojure
 - "Visualize data, not code. Dynamic behavior, not static structure."
-
-
-[Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
-
-There, however, is no Learning p5.js book, meaning there is no JavaScript-based version of Learning Processing.  There is just the Dan Shiffman repo of Learning Processing code ported to [p5.js](https://p5js.org/). Although [this book](https://www.springer.com/us/book/9781484234259?gclid=CjwKCAiA8bnUBRA-EiwAc0hZk7BwWdTn-f-2ELGoh1CwFpMvYHrMZH-0kV553OsjfIXqBFbaHyGQqxoCPkIQAvD_BwE#aboutBook) looks like it might be on target and [this book](https://p5js.org/books/) is often recommended as an introduction to p5.js.
-
-This repo is an attempt to solve that problem.  I will go through the Learning Processing book, link to the appropriate Shiffman p5.js repos from the Learning Processing book, link to the most relevant Coding Train videos, and post my own code for the exercises. 
-
-I will also have the occasional "detour" when relevant topics come up that aren't covered in the book.  For instance, Command Line, using GitHub, etc.  These "detours" might end up overwhelming the initial goal of the project, but we'll see.
-
-
-I think this will be helpful for my learning process, and I hope it's helpful to anyone else who stumbles across this repo.
-
-I'm beginning to think this may become an open source project similar to [The Odin Project](https://www.theodinproject.com/) or [freeCodeCamp](https://www.freecodecamp.org/).
-
-I'm thinking of calling it Space Bear. Or Coding Jet. Or coding detours. Longroadcode?
 
 ## What is p5.js?
 
@@ -1198,11 +1195,21 @@ The example will be drawing a car.  We'll look at two examples - one using funct
 
 The example from the book for car without functions doesnt match up perfectly because he doesn't even show if the code for the cars is in setup() or draw().  Maybe he isn't using setup() or draw() because he doesn't need to in a Processing sketch?
 
+Here's [car with functions](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/cars-functions).
+
 The book example doesn't work because of [variable scope](https://p5js.org/examples/data-variable-scope.html).
 
-I actually logged an [issue]() about this example because I thought that the example was buggy.  I asked them to include something about hoisting in JavaScript.  I'll see if I get a response.
+I actually logged an [issue](https://github.com/processing/processing-docs/issues/647#issuecomment-374639677) about this example because I thought that the example was buggy.  I asked them to include something about hoisting in JavaScript.  I'll see if I get a response.
 
 Note the use of [color()](https://p5js.org/reference/#/p5/color) in this example on parameter passing in functions.
+
+Parameter *passing* is a very important idea.
+
+The value you pass as a parameter to a function can be a literal value (20, 5, 4.3), a variable (x, y), or the result of an expression (8 + 3, 4 * x/2, random(0, 10))
+
+Arguments act as local variables to a function and are only accessible
+
+
 
 
 
