@@ -1237,7 +1237,7 @@ Pseudocode for randomizer():
 
 Let's see if the same thing happens in JavaScript. (Yes it is because JavaScript is pass by value for primitives.)
 
-Here's the [randomizer() code]().
+Here's the [randomizer() code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/randomizer-pass-copy).
 
 This is commonly referred to as "pass by value".
 
