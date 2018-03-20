@@ -53,6 +53,7 @@
 	- [Defining a function](#defining-a-function)
 	- [Simple Modularity](#simple-modularity)
 	- [Arguments](#arguments)
+	- [Passing a copy](#passing-a-copy)
 
 # Introduction
 
@@ -1209,15 +1210,40 @@ The value you pass as a parameter to a function can be a literal value (20, 5, 4
 
 Arguments act as local variables to a function and are only accessible.
 
-Exercise 7.4: Write code that [calls a function]()
+Exercise 7.4: Write code that [calls a function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.4-sum-call)
 
 The code is a function that adds three numbers and prints the sum of the three.
 
-Exercise 7.5- [write a function]() definition: You are provided with the function call `multiply(5.2, 9.0)`.  Write the code that takes these two parameters, multiplies them and prints the result to the message window.
+Exercise 7.5- [write a function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.5-multiply) definition: You are provided with the function call `multiply(5.2, 9.0)`.  Write the code that takes these two parameters, multiplies them and prints the result to the message window.
 
-Exercise 7.6 is interesting because it's a [bouncing car]().  Using functions, global, and local variables altogether.
+Exercise 7.6 is interesting because it's a [bouncing car](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.6-bouncing-car).  Using functions, global, and local variables altogether.
 
+### Passing a copy
 
+This may or may not be the same in JavaScript.  I'll need to read more.
+
+In Java, whenever you pass a primitive value (integer, float, char) to a function, you do not actually pass the value itself, but a copy of that variable.
+
+Here is a function called randomizer().  This function receives one argument (float) and adds a random number between -2 and 2 to it.  
+
+Pseudocode for randomizer():
+- num is the number 10
+- num is displayed: 10
+- copy of num is passed into the argument newnum in the function randomizer()
+- in the function randomizer()
+	- a random number is added to newnum
+	- newnum is displayed (10.34232)
+- num is displayed again (it's still 10 bc a copy was sent into newnum)
+
+Let's see if the same thing happens in JavaScript. (Yes it is because JavaScript is pass by value for primitives.)
+
+Here's the [randomizer() code]().
+
+This is commonly referred to as "pass by value".
+
+Remember [this article](http://jasonjl.me/blog/2014/10/15/javascript/) later because it describes how JavaScript uses pass by value for primitives but call by sharing for objects.
+
+This definitely gets confusing.
 
 
 
