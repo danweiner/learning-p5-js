@@ -1196,6 +1196,14 @@ Let's look at the code for drawing a collection of shapes and examine how functi
 
 The example will be drawing a car.  We'll look at two examples - one using functions, one without.
 
+The example from the book for car without functions doesnt match up perfectly because he doesn't even show if the code for the cars is in setup() or draw().  Maybe he isn't using setup() or draw() because he doesn't need to in a Processing sketch?
+
+The book example doesn't work because of [variable scope](https://p5js.org/examples/data-variable-scope.html).
+
+I actually logged an [issue]() about this example because I thought that the example was buggy.  I asked them to include something about hoisting in JavaScript.  I'll see if I get a response.
+
+Note the use of [color()](https://p5js.org/reference/#/p5/color) in this example on parameter passing in functions.
+
 
 
 
