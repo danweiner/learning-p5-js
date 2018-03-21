@@ -55,6 +55,7 @@
 	- [Arguments](#arguments)
 	- [Passing a copy](#passing-a-copy)
 	- [Return Type](#return-type)
+	- [Zoog Reorganization](#zoog-reorganization)
 
 # Introduction
 
@@ -1300,6 +1301,22 @@ function distance(x1, y1, x2, y2) {
 	return d;
 }
 ```
+
+Example 7.4: Using our [distance function]() to calculate brightness for squares in quadrants.
+
+Exercise 7.8: write a function that takes one argument (F for Fahrenheit) and computes the [temperature in Celsius]().
+
+
+### Zoog Reorganization
+
+Two new functions - drawZoog() and jiggleZoog() - move randomly in x and y directions.
+
+Incorporate arguments so jiggliness is determined by mouseX position and Zoog's eye color is determined by Zoog's distance to the mouse.
+
+Example 7.5 - [Zoog with functions]()
+
+Exercise 7.9 - [Multiple Zoogs]() - calls a function to draw Zoog within a for loop, so multiple Zoogs are drawn.
+
 
 
 
