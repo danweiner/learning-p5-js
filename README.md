@@ -54,6 +54,7 @@
 	- [Simple Modularity](#simple-modularity)
 	- [Arguments](#arguments)
 	- [Passing a copy](#passing-a-copy)
+	- [Return Type](#return-type)
 
 # Introduction
 
@@ -1257,11 +1258,48 @@ Here's an example:
 
 An interesting example to predict the output of the program that has various function calls.  You have to understand the flow of functions and function calls.
 
-Here's the [code]().
+Here's the [code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.7-function-output).
 
+### Return Type
 
+This is not really relevant to JavaScript - JavaScript is [untyped](https://stackoverflow.com/questions/964910/is-javascript-an-untyped-language) - not totally clear on how and why this matters.
 
+But return values are definitely important.
 
+As soon as the return statement is executed, the program exits the function and sends the returned value back to the location in the code where the function was called.  That value can be used in an assignment operation (to give another variable a value) or in any appropriate expression.
+
+Examples:
+
+```
+function sum(a, b, c) {
+	var total = a + b + c;
+	return total;
+}
+var answer = sum(5, 10, 32);
+
+var x = sum(5, 6, 8);
+var y = sum(8, 9, 10) * 2;
+var z = sum(x, y, 40);
+line(100, 100, 110, sum(x, y, z));
+```
+
+Functions that return values are traditionally used to perform complex calculations that may need to be performed multiple times throughout the course of the program (like calculating the distance between two points (x1,y1 and x2,y2)).
+
+The dist() function is built into p5.js to calculate the distance between pixels:
+`var d = dist(100, 100, mouseX, mouseY)`
+
+This calculates the distance between (100, 100) and (mouseX, mouseY).  Without this function, we would need the Pythagorean Theorem.
+
+Our version of p5.js dist() function:
+
+```
+function distance(x1, y1, x2, y2) {
+	var dx = x1 - x2;
+	var dy = y1 - y2;
+	var d = sqrt(dx*dx + dy*dy);
+	return d;
+}
+```
 
 
 
