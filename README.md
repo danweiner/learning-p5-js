@@ -1245,6 +1245,23 @@ Remember [this article](http://jasonjl.me/blog/2014/10/15/javascript/) later bec
 
 This definitely gets confusing.
 
+Flow of a program when using a function.  The code is executed in the order that the lines are written, but when a function is called, the code leaves its current line, executes the lines inside the function, then comes back to where it left off.
+
+Here's an example:
+- set num equal to 10
+- print value of num
+- call the function randomizer
+	- set newnum equal to newnum plus a random number
+	- print value of newnum
+- print value of num
+
+An interesting example to predict the output of the program that has various function calls.  You have to understand the flow of functions and function calls.
+
+Here's the [code]().
+
+
+
+
 
 
 
