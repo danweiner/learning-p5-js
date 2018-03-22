@@ -153,6 +153,40 @@ Dan Shiffman's [next video](https://www.youtube.com/watch?v=HZ4D3wDRaec&list=PLR
 
 learning graphical coordinates might be difficult.  0,0 in top left
 
+Processing (2001) - started by Casey Reas and Ben Fry - created a tool to help them with their own work at MIT (derived from Design by numbers at MIT Media Lab)
+
+“Creative Coding” - creative apps through coding - creative expression through computational tools
+
+Learning to program is powerful - dont have to be stuck using software that others have created - can make your own
+
+Also can publish and distribute your creations on the web
+Processing used Java - something called applets - would run in the web browser - made sense then
+
+Doesn’t make sense now - error message city
+Language of the web is JavaScript	
+
+New project - if Processing were being created today - what language would you pick?
+
+Lauren McCarthy - JavaScript
+
+Processing.js - not to be confused - John Resig - Java translated to JavaScript
+
+Resig created jQuery and Khan Academy coding curriculum
+So - p5.js is a simple, beginner friendly environment to learn JavaScript, to make applications (creative expressions) happen in the browser
+
+To make thing happen in the browser, you also need HTML, CSS, but we’ll leave that for later
+
+Processing was “built on top of Java”
+
+P5.js is a “library” of functions
+
+If you want to learn javascript there are a million resources - stack overflow, jquery, articles, books
+
+P5.js is a sandbox, walled garden
+
+You get a set of functions to use to learn some of the beginner steps of programming
+
+
 ## Incremental Development
 
 This is also known as the "one step at a time" approach.
