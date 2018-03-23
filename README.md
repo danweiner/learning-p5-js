@@ -56,6 +56,7 @@
 	- [Passing a copy](#passing-a-copy)
 	- [Return Type](#return-type)
 	- [Zoog Reorganization](#zoog-reorganization)
+- [Objects](#objects)
 
 # Introduction
 
@@ -1336,9 +1337,9 @@ function distance(x1, y1, x2, y2) {
 }
 ```
 
-Example 7.4: Using our [distance function]() to calculate brightness for squares in quadrants.
+Example 7.4: Using our [distance function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/example-7.4-distance-function) to calculate brightness for squares in quadrants.
 
-Exercise 7.8: write a function that takes one argument (F for Fahrenheit) and computes the [temperature in Celsius]().
+Exercise 7.8: write a function that takes one argument (F for Fahrenheit) and computes the [temperature in Celsius](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.8-temperature-convert).
 
 
 ### Zoog Reorganization
@@ -1347,9 +1348,12 @@ Two new functions - drawZoog() and jiggleZoog() - move randomly in x and y direc
 
 Incorporate arguments so jiggliness is determined by mouseX position and Zoog's eye color is determined by Zoog's distance to the mouse.
 
-Example 7.5 - [Zoog with functions]()
+Example 7.5 - [Zoog with functions](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/example-7.5-zoog-functions).
 
-Exercise 7.9 - [Multiple Zoogs]() - calls a function to draw Zoog within a for loop, so multiple Zoogs are drawn.
+Exercise 7.9 - [Multiple Zoogs](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-7-functions/exercise-7.9-multiple-zoogs) - calls a function to draw Zoog within a for loop, so multiple Zoogs are drawn.
+
+
+## Objects
 
 
 
