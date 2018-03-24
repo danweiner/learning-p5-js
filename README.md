@@ -1355,6 +1355,15 @@ Exercise 7.9 - [Multiple Zoogs](https://github.com/danweiner/learning-p5-js/tree
 
 ## Objects
 
+We talked about [JavaScript Objects](#javascript-objects) earlier.  
+
+Dan's first video is [introduction to OOP with ES6](https://www.youtube.com/watch?v=xG2Vbnv0wvg&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=20&t=0s). 
+
+He then talks about [ES6 Classes](https://www.youtube.com/watch?v=T-HGdc8L-7w&index=21&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
+
+There could be significant differences between OOP in Java and JavaScript.  I guess we'll see.
+
+
 
 
 
