@@ -57,6 +57,7 @@
 	- [Return Type](#return-type)
 	- [Zoog Reorganization](#zoog-reorganization)
 - [Objects](#objects)
+	- [Object Oriented Programming](#object-oriented-programming)
 
 # Introduction
 
@@ -1355,6 +1356,14 @@ Exercise 7.9 - [Multiple Zoogs](https://github.com/danweiner/learning-p5-js/tree
 
 ## Objects
 
+In this chapter:
+- Data and functionality together
+- What is an object?
+- What is a class?
+- Writing your own classes
+- Creating your own objects
+- Processing 'tabs' - This will probably be something else in JS
+
 We talked about [JavaScript Objects](#javascript-objects) earlier.  
 
 Dan's first video is [introduction to OOP with ES6](https://www.youtube.com/watch?v=xG2Vbnv0wvg&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=20&t=0s). 
@@ -1362,6 +1371,8 @@ Dan's first video is [introduction to OOP with ES6](https://www.youtube.com/watc
 He then talks about [ES6 Classes](https://www.youtube.com/watch?v=T-HGdc8L-7w&index=21&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
 
 There could be significant differences between OOP in Java and JavaScript.  I guess we'll see.
+
+### Object Oriented Programming
 
 
 
