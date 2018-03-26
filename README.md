@@ -58,6 +58,7 @@
 	- [Zoog Reorganization](#zoog-reorganization)
 - [Objects](#objects)
 	- [Object Oriented Programming](#object-oriented-programming)
+	- [Using an Object](#using-an-object)
 
 # Introduction
 
@@ -1374,7 +1375,43 @@ There could be significant differences between OOP in Java and JavaScript.  I gu
 
 ### Object Oriented Programming
 
+We're not introducting any new programming fundamentals - objects use everything we have already learned (variables, conditionals, loops, functions).
 
+What is new is a different way of thinking, a way of structuring and organizing everything we have already learned.
+
+A program for your day (a list of instructions):
+- wake up
+- drink coffee
+- eat breakfast (cereal, blueberries, almond milk)
+- drive to work
+
+What is involved here?  What *things* are involved?
+
+The maint thing is *you* - a human being.  You exhibit certain properties.  You have certain traits (how you look).  You can do things (wake up, eat, drive).
+
+An object is like you - a thing that has properties and can do stuff.
+
+The properties of an object are variables and the stuff an object can do are functions.  OOP is the marriage of everything we have learned up to now (data and functionality) all rolled into one *thing*.
+
+Data and functionality for very simple human object.
+
+Data:
+- Height
+- Weight
+- Gender
+- Eye color
+- Hair color
+
+Functions:
+- Sleep
+- Wake up
+- Eat
+- Ride some form of transportation
+
+Of course, this is not a real human.  This is just the idea, or concept behind a human.  It describes what it is to be a human.  This is a *template* known as a *class*.  A class is different from an object.  You then create *instances* of a class - which are individual human beings.
+
+
+### Using an Object
 
 
 
