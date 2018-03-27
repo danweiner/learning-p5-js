@@ -1433,6 +1433,44 @@ Draw:
 - display car at location with color
 - increment car's location by speed
 
+What did we do previously:
+- defined global variables at the top of the program
+- initialized the in setup()
+- called *functions* to move and display the car in draw()
+
+With OOP, we an take the variables and functions out of the main program and store them *inside the car object*.
+
+A car object will know about its data - color, location, speed.  That is part one.
+
+Part two is the stuff it can do - the methods (functions inside an object).  The car can *move* and it can be *displayed*.
+
+Pseudocode for *object-oriented design*:
+
+Data (Global Variables):
+- Car object
+
+Setup:
+- Initialize car object
+- This is the constructor in JavaScript I think
+
+Draw:
+- Fill background
+- Display car object
+- Move car object
+
+We now have only one variabe - a car variable - instead f separate variables for car color, location, and speed.
+
+Instead of initializing those three variables, we initialize one thing - the ***Car*** object.
+
+Those variables (color, location, speed) still exist, but they live inside the Car object.  They will be defined in the Car class.
+
+There's now code for a Java class - I'm watching the [Coding Train video](https://www.youtube.com/watch?v=T-HGdc8L-7w&index=21&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) to see if the code is the same.
+
+Here's the [code](https://github.com/CodingTrain/website/tree/master/Tutorials/P5JS/p5.js/06/6.2_p5js_Classes_in_JavaScript) from the coding train video.
+
+Note that his code uses JavaScript [let, instead of var](https://www.youtube.com/watch?v=q8SHaDQdul0).
+
+The examples online for 8.1 for learning p5.js put functions into the object literal.  Dan seems to like constructor functions.  Here's example 8.1 using a constructor function.
 
 
 
