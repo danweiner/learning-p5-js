@@ -59,6 +59,7 @@
 - [Objects](#objects)
 	- [Object Oriented Programming](#object-oriented-programming)
 	- [Using an Object](#using-an-object)
+	- [Writing the Cookie Cutter](#writing-the-cookie-cutter)
 
 # Introduction
 
@@ -1472,7 +1473,55 @@ Note that his code uses JavaScript [let, instead of var](https://www.youtube.com
 
 The examples online for 8.1 for learning p5.js put functions into the object literal.  Dan seems to like constructor functions.  Here's example 8.1 using a constructor function.
 
+### Writing the Cookie Cutter
 
+Use of objects in p5.js makes for clean, readable code.
+
+The hard work goes into writing the template - writing the class itself.
+
+It's a good exercise to take a program without objects and, not changing the functionality at all, reqrite it using objects.
+
+All classes must include four elements:
+- name
+- data
+- constructor
+- methods
+
+Here's a simple non-OOP car
+
+```
+let c;
+let xpos;
+let ypos;
+let xpseed;
+
+function setup() {
+	createCanvas(200, 200);
+	c = color(255);
+	xpos = width/2;
+	ypos = height/2;
+	xspeed = 1;
+}
+
+function draw() {
+	background(0);
+	display();
+	drive();
+}
+
+function display() {
+	rectMode(CENTER);
+	fill(c);
+	rect(xpos, ypos, 20, 10);
+}
+
+function drive() {
+	xpos += xspeed;
+	if (xpos > width) {
+		xpos = 0;
+	}
+}
+```
 
 
 
