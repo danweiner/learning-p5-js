@@ -1413,6 +1413,25 @@ Of course, this is not a real human.  This is just the idea, or concept behind a
 
 ### Using an Object
 
+How is using objects in our main program (setup() and draw()) useful?
+
+Car example:
+
+Data (global variables):
+- car color
+- car x location
+- car y location
+- car x speed
+
+Setup:
+- initialize car color
+- initialize car location to starting point
+- initialize car speed
+
+Draw:
+- fill background
+- display car at location with color
+- increment car's location by speed
 
 
 
