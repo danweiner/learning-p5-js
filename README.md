@@ -60,6 +60,7 @@
 	- [Object Oriented Programming](#object-oriented-programming)
 	- [Using an Object](#using-an-object)
 	- [Writing the Cookie Cutter](#writing-the-cookie-cutter)
+	- [Using an Object: The Details](#using-an-object-the-details) 
 
 # Introduction
 
@@ -1572,6 +1573,50 @@ Data - a collection of variables.  Often referred to as instance variables, sinc
 
 Constructor - Special function inside of a class that creates the instance of the object itself.  Where you give instructions on how to set up the object.  Called by invoking the *new* operator - "car = new Car()".
 
-Functionality - Add functionality by writing methods.  
+Functionality - Add functionality by writing methods. 
 
+### Using an Object: The Details 
+
+The three steps outlining how to use an object in a sketch:
+1: Declare an object `let car`
+2: Initialize an object (in setup()) `car = new Car()`
+3: Call methods on the object (in draw()) `car.move()`
+
+Let's look at the details behind these three steps.
+
+Step one: Declaring an object variable
+
+In JavaScript we don't need to specify a type.  We do need to give our variable a name.
+
+Objects are *complex* data types (as opposed to primitive data types like ints, floats, and chars).  This is because they store multiple pieces of information: data and functionality. Primitives only store data.
+
+Step two: Initializing an object
+
+We initialized a variable using an assignment operation: `let x = 10`.
+
+Initializing an object is a bit more complex.  Instead of simply assigning it a primitive value, like an int or a float, we have to construct the object.  An object is made with the *new* operator.  `car = new Car();`
+
+"car" is the object variable name and "=" indicates that we are setting it equal to something that something being a *new* instance of a Car object.  What we are really doing here is intializing a Car object.  This line of code calls the *constructor*, which we create later (simply called "constructor"), that initializes all of the objects variables and makes sure the Car is ready to go.
+
+Beware of ***"NullPointerException"***.  
+
+It looks like in Java, the default value of a primitive int is 0, while the default value of a variable in JavaScript is [undefined](https://stackoverflow.com/questions/10560362/when-declaring-a-variable-in-javascript-is-the-default-value-null).  
+
+If you forget to initialize an object, you get the value null, meaning nothing.  
+
+Apparently, in JavaScript, the error will be ["undefined is not a function"](http://dobegin.com/npe-hell/).  
+
+Step 3: Using an object
+
+Once we have successfully declared and initialized an object variable, we can use it.
+
+Using an object involves coalling functions that are built into that object.  
+
+Functions that are inside of an object are called "methods" in Java - I'll call them the same for now in JavaScript.
+
+Calling a method inside of an object is accomplished via dot syntax. ***`variableName.objectMethod(Method Arguments)`***
+
+Example: 
+-`car.draw()`
+-`car.display()`
 
