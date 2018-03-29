@@ -62,6 +62,7 @@
 	- [Writing the Cookie Cutter](#writing-the-cookie-cutter)
 	- [Using an Object: The Details](#using-an-object-the-details) 
 	- [Putting it all together](#putting-it-all-together)
+	- [Constructor Arguments](#constructor-arguments)
 
 # Introduction
 
@@ -1658,5 +1659,30 @@ Note also that classes are ["syntactical sugar"](https://developer.mozilla.org/e
 
 I'm going to need a real textbook to better understand this concept.
 
+Wow - it actually works...
 
+All I needed to do was reference the car.js file in index.html...
 
+That's a big lesson.  All the reading and searching, no answers, and all I needed to do was add one line to index.html.  All the other reading and researching was helpful I guess, but ultimately not getting me any closer to the answer.
+
+### Constructor Arguments
+
+Our old code would have create identical objects.
+
+If we want to create different objects, we need constructor arguments.
+
+For instance: `var car = new Car(color(255, 0, 0), 0, 100, 2)`
+
+We need to rewrite the constructor to reflect this:
+
+```
+ constructor(tempC, tempXpos, tempYpos, tempXspeed) { 
+ // The Constructor is defined with arguments.
+    this.c = tempC;
+    this.xpos = tempXpos;
+    this.ypos = tempYpos;
+    this.xspeed = tempXspeed;
+  }
+```
+
+Here's the program updated with constructor arguments, so there are now two car objects, each different.
