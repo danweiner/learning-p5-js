@@ -61,6 +61,7 @@
 	- [Using an Object](#using-an-object)
 	- [Writing the Cookie Cutter](#writing-the-cookie-cutter)
 	- [Using an Object: The Details](#using-an-object-the-details) 
+	- [Putting it all together](#putting-it-all-together)
 
 # Introduction
 
@@ -1619,4 +1620,43 @@ Calling a method inside of an object is accomplished via dot syntax. ***`variabl
 Example: 
 -`car.draw()`
 -`car.display()`
+
+
+### Putting it all together
+
+Dan actually calls this "Putthing it together *with a Tab*".  I'm going to assume there's some other construct in JavaScript besides a Tab because I don't know what a Tab is.
+
+Here is Example 8.1 - a [Car class and a Car object](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/exercise-8.1-OOP-car).  Note that I submitted this to Dan's repo as a pull request and haven't heard anything yet.
+
+We placed the Car class below the main body of the program (under draw()), which is identical to where we have been placing user-defined functions.  But technically speaking the order does not matter as long as the blocks of code remain intact.
+
+It's just nice to have things make the most logical sense to us humans, the bottom of the code being a good starting point.
+
+Processing offers a useful means for separating code fro each other through the use of tabs.
+
+We're not using Processing, however.  Let's consult the videos.
+
+It doesn't look like he talks about some analogous concept to tabs in the videos.  
+
+I think in JS you would just create new files for each class.  For now I'll just assume each tab is a new .js file.
+
+You can name each tab anything you like, but you should name it after the *class* you intend to put there.  
+
+You can then type the main body of code on one tab (entitled "objectExample") and type the code for your class in another (entitled "Car").
+
+I'm assuming these will be sketch.js and car.js...
+
+So basically, create a new file calles "objectName".js to hold the code for your class.
+
+Let's try this with our Car example from before.
+
+Apparently my assumptions about a new .js file were [wrong](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).  I got led down a rabbit hole about class-based vs. prototype-based languages.  
+
+This might be a bit over my head for now.
+
+Note also that classes are ["syntactical sugar"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) over JavaScript's prototype-based inheritance model.
+
+I'm going to need a real textbook to better understand this concept.
+
+
 
