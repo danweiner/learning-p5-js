@@ -63,6 +63,8 @@
 	- [Using an Object: The Details](#using-an-object-the-details) 
 	- [Putting it all together](#putting-it-all-together)
 	- [Constructor Arguments](#constructor-arguments)
+	- [Objects are data types](#objects-are-data-types)
+	- [Object-Oriented Zoog](#object---oriented-zoog)
 
 # Introduction
 
@@ -1693,4 +1695,58 @@ This allows us to make a variety of objects *using the same constructor*.
 
 Here's the program updated with constructor arguments, so there are now [two car objects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/example-8.2-two-car-objects), each different.
 
-The next exercise is to rewrite the gravity example using objects with a Ball class.  Include two instances of a Ball object.
+The next exercise is to [rewrite the gravity example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/exercise-8.5-simple-gravity-OOP) using objects with a Ball class.  Include two instances of a Ball object.
+
+### Objects are data types
+
+You can include as many classes as you feel like writing.
+
+Back to Space Invaders.  You could include a:
+- Spaceship class
+- Enemy class
+- Bullet class
+
+Using an object for each entity in your game
+
+Although not primitive, classes are data types just like ints and floats.  Since classes are made up of data, an object can therefore contain other objects!  
+
+This could be different in JavaScript since it's a prototype language instead of a class-based language, as described above.  I won't get too into this.
+
+Objects can be passes as arguments ito a function.  Again I'm sure JS has all sorts of different issues here, left for another time.
+
+Here, Dan discusses pass by copy for primitives vs pass by reference for objects.  With pass by reference, if an object is passed to a function, those changes will affect that object used anywhere else in the sketch.
+
+Again, this is likely different for JS.
+
+This could start to get tricky because the book will start to use multiple objects, pass objects into functions, etc.
+
+I might need a real JavaScript book to figure out how to use JavaScript classes and objects sadly.
+
+We'll see.
+
+### Object-Oriented Zoog
+
+So, when do we use object-oriented programming?
+
+Always!
+
+Objets allow us to organize concepts inside of a software application into modular, reusable packages.  
+
+However, it's not always convenient or necessary to start out every project using object-orientation, especially when you are learning.  
+
+We can easily "sketch" out vidual ideas with p5.js using non object-oriented code.
+
+For any project, take a step-by-step approach.  Do not start out writing classes for everything you want to do.  
+
+Sketch out your idea first by writing code in setup() and draw().  Nail down the logic of what you want to do as well as how you wnat it to look.  
+
+As your project begins to grow, take time to reorganize your code, perhaps first with functions, then with objects.
+
+It is perfectly acceptable to dedicate a significant chunk of your time to this reorganization process (often referred to as refactoring) without making any changes to the end result, that is what your sketch looks like and does on screen.
+
+We will now *refactor* Zoog by making Zoog into an object.  This will give us a leg up in programming Zoog's future life in more complex sketches.
+
+So, let's make a Zoog class.
+
+
+
