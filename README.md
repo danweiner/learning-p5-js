@@ -1691,4 +1691,6 @@ We are now creating *temporary* constructor artyments that exist solely to pass 
 
 This allows us to make a variety of objects *using the same constructor*.  
 
-Here's the program updated with constructor arguments, so there are now [two car objects](), each different.
+Here's the program updated with constructor arguments, so there are now [two car objects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/example-8.2-two-car-objects), each different.
+
+The next exercise is to rewrite the gravity example using objects with a Ball class.  Include two instances of a Ball object.
