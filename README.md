@@ -1661,7 +1661,7 @@ I'm going to need a real textbook to better understand this concept.
 
 Wow - it actually works...
 
-All I needed to do was reference the car.js file in index.html...
+All I needed to do was reference the [car.js file in index.html...](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/exercise-8.4-car-tabs).
 
 That's a big lesson.  All the reading and searching, no answers, and all I needed to do was add one line to index.html.  All the other reading and researching was helpful I guess, but ultimately not getting me any closer to the answer.
 
@@ -1685,4 +1685,10 @@ We need to rewrite the constructor to reflect this:
   }
 ```
 
-Here's the program updated with constructor arguments, so there are now two car objects, each different.
+Arguments are local variables used inside the body of a function that get filled with values when the function is called.
+
+We are now creating *temporary* constructor artyments that exist solely to pass a value from where the object is made into the object itself.
+
+This allows us to make a variety of objects *using the same constructor*.  
+
+Here's the program updated with constructor arguments, so there are now [two car objects](), each different.
