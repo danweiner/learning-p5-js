@@ -1748,5 +1748,7 @@ We will now *refactor* Zoog by making Zoog into an object.  This will give us a 
 
 So, let's make a [Zoog class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/example-8.3-zoog-oop).
 
+Exercise 8-6 - rewrite Zoog class to inclood [two Zoogs]().  Vary appearance somehow.  Vary behavior somehow.  Add color variable.
+
 
 
