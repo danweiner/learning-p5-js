@@ -1748,7 +1748,15 @@ We will now *refactor* Zoog by making Zoog into an object.  This will give us a 
 
 So, let's make a [Zoog class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/example-8.3-zoog-oop).
 
-Exercise 8-6 - rewrite Zoog class to inclood [two Zoogs]().  Vary appearance somehow.  Vary behavior somehow.  Add color variable.
+Exercise 8-6 - rewrite Zoog class to inclood [two Zoogs](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/exercise-8.6-two-zoogs).  Vary appearance somehow.  Vary behavior somehow.  Add color variable.
 
+
+## Lesson Three Project
+
+Take your lesson two project and reorganize your code using functions.
+
+Reorgainze the code one step further using a class and object variable.
+
+Add arguments to the Constructor of your class and try making two or three objects with different variables.
 
 
