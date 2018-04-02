@@ -1746,7 +1746,7 @@ It is perfectly acceptable to dedicate a significant chunk of your time to this 
 
 We will now *refactor* Zoog by making Zoog into an object.  This will give us a leg up in programming Zoog's future life in more complex sketches.
 
-So, let's make a Zoog class.
+So, let's make a [Zoog class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/ch-8-objects/example-8.3-zoog-oop).
 
 
 
