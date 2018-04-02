@@ -66,6 +66,13 @@
 	- [Objects are data types](#objects-are-data-types)
 	- [Object-Oriented Zoog](#object---oriented-zoog)
 
+[Lesson 4 - More of the Same](#lesson-4---more-of-the-same)
+- [Arrays](#arrays)
+	- [Arrays - Why do we care?](#arrays---why-do-we-care)
+	- [What is an array?](#what-is-an-array)
+	- [Declaring and Creating an Array](declaring-and-creating-an-array)
+	- [Initializing an Array](#initializing-an-array)
+
 # Introduction
 
 [Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
@@ -1759,4 +1766,66 @@ Reorgainze the code one step further using a class and object variable.
 
 Add arguments to the Constructor of your class and try making two or three objects with different variables.
 
+Here's my lesson 3 project - [Sol Lewitt Squares](https://github.com/danweiner/learning-p5-js/tree/master/lesson-3/lesson-3-project).  One version with functions, one with classes.
+
+
+# Lesson 4 - More of the Same
+
+## Arrays
+
+In this chapter:
+- What is an array?
+- Declaring an array
+- Initialization
+- Array operations - using the "for" loop with an array
+- Arrays of objects
+
+### Arrays - Why do we care?
+
+What if we want a program with 100 car objects?
+
+We could use clever copying and pasting, but that's not a good solution.
+
+An array is one thing tht contains a *list* of variables.
+
+Any time a program requires multiple instances of similar data, it might be time to use an array.  
+
+Examples:
+- store the scores of four players in a game
+- a selection of ten colors in a design program
+- a list of fish objects in an aquarium simulation
+
+### What is an array?
+
+A variable is a named pointer to a location in memory where data is stored.  In other words, variables allow programs to keep track of information over a period of time.
+
+An array is exactly the same, only instead of pointing to one singular piece of information, an array points to multiple pieces.
+
+We an think of an array as a list of variables.  
+
+A list is useful for two important reasons.  One, it keeps track of the tlements in the list itself.  Two, the list keeps track of the order of those elements.  The order can be just as important as the information itself.  
+
+In an array, each element of the list has a unique indes, an integer value that designates its position in the list.  In all cases, the name of the array refers to the list as a whole, while each element is accessed via its position.
+
+We start counting arrays from index 0.  This is because the first element of the array is located at the start, a distance of zero from the beginning.  Numbering the elements starting at 0 also makes many array operations (the process of executing a line of code for every element of the list) a great deal more convenient.
+
+### Declaring and Creating an Array
+
+This is different in Java and JavaScript.
+
+We denote the use of an array by placing empty square brackets ("[]")after the name.  
+
+I don't think there's any difference between an array of ints and an array of objects in JavaScript.
+
+Arrays in Java are also of fixed size.  Arrays in JavaScript are [not fixed size](https://stackoverflow.com/questions/2504990/are-variable-length-arrays-possible-with-javascript). 
+
+You can also use the new keyword to create arrays in JavaScript instead of creating an [array literal](https://www.w3schools.com/js/js_arrays.asp).
+
+### Initializing an Array
+
+One way to fill an array is to hard-code the values in each spot.
+
+Do we need to initialize an array in JS?  I guess so.
+
+What we really want to do is *iterate* through the elements of the array.  This requires a loop.
 
