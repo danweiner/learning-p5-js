@@ -72,6 +72,8 @@
 	- [What is an array?](#what-is-an-array)
 	- [Declaring and Creating an Array](declaring-and-creating-an-array)
 	- [Initializing an Array](#initializing-an-array)
+	- [Array Operations](#array-operations)
+	- [Simple Array Example: The Snake](#simple-array-example-the-snake)
 
 # Introduction
 
@@ -1828,4 +1830,250 @@ One way to fill an array is to hard-code the values in each spot.
 Do we need to initialize an array in JS?  I guess so.
 
 What we really want to do is *iterate* through the elements of the array.  This requires a loop.
+
+### Array Operations
+
+Consider the following problem:
+
+***(A) Create an array of 1,000 floating point numbers.  (B) Initialize every element of that array with a random number between 0 and 10.***
+
+Part A we already know how to do.
+
+```Java
+float[] values = new float[1000]
+```
+
+```JS
+let values = new Array(1000)
+```
+
+We want to avoid this for B:
+
+`values[0] = random(0, 10);`
+`values[1] = random(0, 10);`
+etc...
+
+Let's describe in English what we want to program (write some pseudocode):
+
+For every number n from 0 to 999, initialize the nth element stored in the array as a random value between 0 and 10.
+
+Translating into code, we have:
+
+```
+let n = 0;
+values[n] = random(0, 10);
+values[n + 1] = random(0, 10);
+etc...
+```
+
+We have not improved the situation, but we have taken a big step forward in understanding th problem.  By using a variable (n) to describe an index in the array, we can now employ a *while* loop or a *for* loop to initialize every n element.
+
+```
+/// while loop
+let n = 0;
+while (n < 1000) {
+	values[n] = random(0, 10);
+	n = n + 1;
+}
+```
+
+```
+// for loop
+for(let n = 0; n < 1000; n++) {
+	values[n] = random(0, 10);
+}
+
+```
+
+We don't want to use hard-coded values like 1000.  What if we wanted to use 2000?  
+
+We can use [array.length](https://www.w3schools.com/jsref/jsref_length_array.asp).
+
+'''
+for (let i = 0; i < values.length; i + + ) {
+	values[i] = 0;
+}
+'''
+
+Exercise 9-6: Write code to perform the following array operations:
+1: Square each number
+2: Add a random number between zero and 10 to each number
+3: Add to each number the numbe that follows in the array (skip the last value in th array)
+4: Calculate the sum of all the numbers
+
+Note this video series on [ES6 Array functions](https://www.youtube.com/watch?v=mrYMzpbFz18) like the arrow function, map, fill, reduce, filter, etc. 
+
+I'll try to do these exercises with the ES6 Array functions as well.
+
+let nums = [5, 4, 2, 7, 6, 8, 5, 2, 8, 14]
+
+```
+// Square each number
+for(let i = 0; i < nums.length; i++){
+	nums[i] = nums[i] * nums[i]
+}
+```
+
+One example to use is the [for...of loop](https://www.youtube.com/watch?v=Y8sMnRQYr3c&index=4&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr).
+
+```
+for (let bubble of bubbles) {
+	bubble.move();
+	bubble.show()
+}
+```
+
+You need [higher order functions](https://www.youtube.com/watch?v=H4awPsyugS0&index=5&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr) for most of these exercises.  Dan briefly discusses the difference between functional and object oriented programming (something beyond my scope right now).
+
+Function that takes a function as input or returns a function as output - higher order function.
+
+Can manipulate array in one fell swoop.
+
+Map() might look nice but also might not be high performance (need to replicate entire array).
+
+```
+// Using higher order function map()
+function squared(x) {
+	return x * x;
+}
+
+nums = nums.map(squared)
+```
+
+Or with an anonymous function:
+```
+nums = nums.map(function(x) {
+	return x * x;
+});
+```
+
+Now with an arrow function:
+
+```
+nums = nums.map(x => x * x);
+```
+
+2: Add a random number
+
+```
+nums = nums.map(x => x + Math.floor(Math.random() * 10));
+```
+
+3: Add to each number the number that follows (skip last value)
+
+```
+// without higher order functions
+for(let i = 0; i < nums.length - 1; i++) {
+	nums[i] += nums[i + 1]
+}
+```
+
+4: Find sum
+
+```
+// Without higher order functions (reduce())
+let sum = 0;
+for (let num of nums) {
+	sum += num;
+}
+```
+
+```
+function sum(acc, num) {
+	console.log(acc);
+	return acc + num;
+}
+// acc is like sum in previous example
+
+let answer = nums.reduce(sum, 0);
+// pass in initial value otherwise first value of acc is first value of array
+```
+
+Now with arrow syntax:
+```
+let sum = nums.reduce((acc, num) => acc + num, 0);
+```
+
+Finding min and max:
+
+```
+function findMax(acc, val) {
+	if(val > acc) {
+		acc = val;
+	}
+	return acc;
+}
+
+let biggest = vals.reduce(findMax);
+console.log(biggest);
+```
+
+Making it an arrow function:
+
+```
+let biggest = vals.reduce((acc, val) => {
+	if (val > acc) {
+		add = val;
+	}
+	return acc;
+})
+```
+
+Or using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator):
+```
+let biggest = vals.reduce((a, b) => b > a ? b : a);
+```
+
+### Simple Array Example: The Snake
+
+Here's the task - programming a train following the mouse - it's not so easy.
+
+It will require an array which will serve to store the history of mouse locations.
+
+We will use two arrays, one to store horizontal mouse locations, and one for vertical.
+
+Let's say, arbitrarily that we want to store the last 50 mouse locations.
+
+First, we declare two arrays:
+
+```
+let xpos = new Array(50);
+let ypos = new Array(50);
+```
+
+In setup(), we need to initialize the arrays.  At the start of the program there has not been any mouse movement, so we fill the arrays with 0's.
+
+```
+for(let i = 0; i < xpos.length; i++) {
+	xpos[i] = 0;
+	ypos[i] = 0;
+}
+```
+
+Another way to do this, in one line is:
+
+```
+let xpos = new Array(50).fill(0);
+let ypos = new Array(50).fill(0);
+```
+
+Each time through the draw() loop, we want to update the array with the current mouse location.  Let's choose to put the current mouse location in the last spot of the array.  The length of the array is 50, meaning the index values range from 0 - 49.  The las tspot is 49 (length - 1).  
+
+```
+xpos[xpos.length-1] = mouseX;
+ypos[ypos.length-1] = mouseY;
+```
+
+Now comes the hard part - we want to keep only the last 50 mouse locations.  
+
+By storing the current mouse location at the end, we are overwriting what was previously stored there.  If the mouse is at (10,10) during one frame, and (15,15) during another, we want to put (10,10) in the second to last spot and (15,15) in the last spot.
+
+The solution is to shift all the elements of the array down one spot before updating the current location.
+
+See ![this image](/images/array_shift.png) to see how it works.
+
+
+
+
+
 
