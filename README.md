@@ -2114,6 +2114,14 @@ for(let i = 0; i < xpos.length; i++){
 
 Here's the complete code for the [snake following the mouse](lesson-4/ch-9-arrays/example-9.8-snake).
 
+The next exercise is to make the [snake example object-oriented]().  We can try to make snakes with slightly different looks (different shapes, colors, and sizes). 
 
+I actually needed to look at the [Processing example](https://github.com/shiffman/LearningProcessing/blob/master/chp09_arrays/exercise_09_07_array_snakes/Snake.pde) for help. 
+
+An advanced problem is to create a Point class that stores the x and y coordinate as part of the sketch.  Each snake object will have an array of Point objects, instead of two separate arrays of x and y values.
+
+The next section is about an array of objects, so maybe I'll come back to this later after learning about arrays of objects.
+
+Note here's [Dan's example](https://github.com/shiffman/LearningProcessing-p5.js/blob/master/chp09_arrays/example_09_08_mouse_history/sketch.js) using a point object literal and the splice array function to solve the snake problem.
 
 

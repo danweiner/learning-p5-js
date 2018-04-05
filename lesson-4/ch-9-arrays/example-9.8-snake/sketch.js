@@ -1,5 +1,5 @@
-let xpos = new Array(50).fill(50);
-let ypos = new Array(50).fill(50);
+let xpos = new Array(50).fill(0);
+let ypos = new Array(50).fill(0);
 
 function setup() {
 	createCanvas(200, 200);
