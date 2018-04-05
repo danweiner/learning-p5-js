@@ -2070,9 +2070,49 @@ By storing the current mouse location at the end, we are overwriting what was pr
 
 The solution is to shift all the elements of the array down one spot before updating the current location.
 
-See ![this image](/images/array_shift.png) to see how it works.
+The image below shows how it works.
 
+![array image](/images/array_shift.png)
 
+Element index 49 moves into 48, 48 to 47, etc.  
+
+We can do this by looping through the array and setting each element at i to the value of element *i plus one*.
+
+We must stop at the second to last value because there is no element 50 (49 plus 1).
+
+Instead of `i < xpos.length;` we must say `i < xpos.length - 1`.
+
+Here's the full code for the array shift:
+```
+for(let i = 0; i < xpos.length - 1; i++) {
+	xpos[i] = xpos[i+1];
+	ypos[i] = ypos[i+1];
+}
+```
+
+Finally, we can use the history of mouse locations to draw a series of circles.  For each element of the xpos array and ypos array, draw an ellipse at the corresponding values stored in the array.
+
+```
+for(let i = 0; i < xpos.length; i++) {
+	noStroke();
+	fill(255);
+	ellipse(xpos[i], ypos[i], 32, 32);
+}
+```
+
+We could make this fancier by linking the brightness of the circle to the location in the array, meaning the earlier (older) values will be bright and small and the later (newer) values will be darker and bigger.
+
+This is accomplished by using the counting variable i to evaluate color and size.
+
+```
+for(let i = 0; i < xpos.length; i++){
+	noStroke();
+	fill(255 - i*5);
+	ellipse(xpos[i], ypos[i], i, 0);
+}
+```
+
+Here's the complete code for the [snake following the mouse](lesson-4/ch-9-arrays/example-9.8-snake).
 
 
 
