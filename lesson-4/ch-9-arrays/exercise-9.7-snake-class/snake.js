@@ -16,7 +16,7 @@ class Snake {
 		// Update the last spot in the array with the mouse location.
 		this.xpos[this.xpos.length-1] = newX; 
 		this.ypos[this.ypos.length-1] = newY;
-    console.log(this.xpos);
+    //console.log(this.xpos);
 	}
 
   display() {
