@@ -74,6 +74,7 @@
 	- [Initializing an Array](#initializing-an-array)
 	- [Array Operations](#array-operations)
 	- [Simple Array Example: The Snake](#simple-array-example-the-snake)
+	- [Array of objects](#array-of-objects)
 
 # Introduction
 
@@ -2123,5 +2124,60 @@ An advanced problem is to create a Point class that stores the x and y coordinat
 The next section is about an array of objects, so maybe I'll come back to this later after learning about arrays of objects.
 
 Note here's [Dan's example](https://github.com/shiffman/LearningProcessing-p5.js/blob/master/chp09_arrays/example_09_08_mouse_history/sketch.js) using a point object literal and the splice array function to solve the snake problem.
+
+
+### Array of objects
+
+How can we write a program with 100 car objects?
+
+With OOP and arrays, we can simply transition a program from one object to 10 to 10,000, maybe without changing the car class at all.  The class does not care how many objects are made from it. 
+
+Revisiting the code for creating one Car object:
+
+```
+let myCar;
+
+function setup() {
+	myCar = new Car(color(255, 0, 0), 0, 100, 2);
+}
+
+function draw() {
+	background(255);
+	myCar.move();
+	myCar.display();
+}
+``` 
+
+Three steps in the above code needed to alter each one to account for an array.
+
+Before we had to:
+
+1: Declare the Car - `let myCar;`
+2: Initialize the Car = `myCar = new Car(color(255, 0, 0), 0, 100, 2);`
+3: Run the Car by Calling Methods: 
+```
+myCar.move();
+myCar.display();
+```
+
+After:
+1: Declare the Car Array: `let cars = new Array(100);`
+2: Initialize each element of the Car Array:
+```
+for(let i = 0; i < cars.length; i++) {
+	cars[i] = new Car(color(i*2), 0, i*2, i)
+}
+```
+3: Run each element of the Car Array:
+```
+for(let i = 0; i < cars.length; i++) {
+	cars[i].move();
+	cars[i].display;
+}
+```
+
+See this [example for 100 cars]().  If we wand to change the number of cars present, all we have to do is change the array definition - nothing else has to change!
+
+
 
 
