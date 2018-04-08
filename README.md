@@ -75,6 +75,7 @@
 	- [Array Operations](#array-operations)
 	- [Simple Array Example: The Snake](#simple-array-example-the-snake)
 	- [Array of objects](#array-of-objects)
+	- [Interactive Objects](#interactive-objects)
 
 # Introduction
 
@@ -2176,7 +2177,50 @@ for(let i = 0; i < cars.length; i++) {
 }
 ```
 
-See this [example for 100 cars]().  If we wand to change the number of cars present, all we have to do is change the array definition - nothing else has to change!
+See this [example for 100 cars](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/ch-9-arrays/example-9.9-array-cars).  If we wand to change the number of cars present, all we have to do is change the array definition - nothing else has to change!
+
+### Interactive Objects
+
+Back to the simple rollover effect.  A rectangle appears in the window and is one color when the mouse is on top and another color when the mouse is not.
+
+The following is an example that takes this simple idea and puts it into a "Stripe" object.  Even though there 10 stripes, each one individually responds to the mouse by having its own rollover() function.
+
+```
+function rollover(mx, my) {
+	if (mx > this.x && mx < this.x + this.w) {
+		mouse = true;
+	} else {
+		mouse = false;
+	}
+}
+```
+
+This function checks to see if a point (mx, my) is located within a verticle stripe.  Is it greater than the left edge and less than the right edge?  If so, a boolean variable "mouse" is set to true.  
+
+When designing your classes, it is often convenient to use a boolean variable to keep track of properties of an object that resemble a switch.  For example, a Car object could be running or not running.  Zoog could be happy or not happy.
+
+This boolean variable is used in a conditional statement inside of the Stripe object's display() function to determine the Stripe's color.
+
+```
+function display() {
+	if (mouse) {
+		fill(255);
+	} else {
+		fill(255, 100);
+	}
+	noStroke();
+	rect(this.x, 0, this.w, height);
+}
+```
+
+When we call the rollover() function on that object, we can then pass in mouseX and mouseY as the arguments.
+
+`stripes[i].rollover(mouseX, mouseY);`
+
+Even though we could have accessed mouseX and mouseY direcedly inside of the rollover() function, it is better to use arguments.  This allows for greater flexibility.  The Stripe object can check and determine if any x,y coordinate is contained within its rectangle.  Perhaps later, we will want the Stripe to turn white when another object, rather than the mouse, is over it.
+
+Here is the full ["interactive stripes"]() example.
+
 
 
 
