@@ -76,6 +76,7 @@
 	- [Simple Array Example: The Snake](#simple-array-example-the-snake)
 	- [Array of objects](#array-of-objects)
 	- [Interactive Objects](#interactive-objects)
+	- [Array Functions](#array-functions)
 
 # Introduction
 
@@ -2219,7 +2220,31 @@ When we call the rollover() function on that object, we can then pass in mouseX 
 
 Even though we could have accessed mouseX and mouseY direcedly inside of the rollover() function, it is better to use arguments.  This allows for greater flexibility.  The Stripe object can check and determine if any x,y coordinate is contained within its rectangle.  Perhaps later, we will want the Stripe to turn white when another object, rather than the mouse, is over it.
 
-Here is the full ["interactive stripes"]() example.
+Here is the full ["interactive stripes"](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/ch-9-arrays/example-9.10-interactive-stripes) example.
+
+Here's an exercise making [clickable buttons](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/ch-9-arrays/exercise-9.8-array-buttons) using classes.  It's also good practice in using boolean variables.
+
+### Array Functions
+
+
+p5.js ofers a set of array functions that manipulate the size of an array.  I'm not sure how useful this is (unlike in Java where maybe it's more useful with Array and ArrayList), but it's still good to know I guess.
+
+The p5.js Array functions are:
+- append()
+- arrayCopy()
+- concat()
+- reverse()
+- shorten()
+- shuffle()
+- sort()
+- splice()
+- subset()
+
+Find more details in the reference.
+
+Here's [an example using append()]() to expand the size of an array.  Append is very similar to [Array.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) - adding elements to the end of an array.  
+
+The example starts with an array of one object.  Each time the mouse is pressed, a new object is created and appended to the end of the original array.
 
 
 
