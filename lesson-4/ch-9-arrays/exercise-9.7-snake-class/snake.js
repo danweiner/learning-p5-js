@@ -9,8 +9,8 @@ class Snake {
 		// shift all elementd down one spot
 		// xpos[0] = xpos[1] etc up to second to last
 		for (let i = 0; i < this.xpos.length-1; i++ ) {
-      this.xpos[i] = this.xpos[i+1]; 
-      this.ypos[i] = this.ypos[i+1];
+      		this.xpos[i] = this.xpos[i+1]; 
+      		this.ypos[i] = this.ypos[i+1];
 	   }
 
 		// Update the last spot in the array with the mouse location.
