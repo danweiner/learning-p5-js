@@ -2262,6 +2262,10 @@ Step 2: Can you make the objects react to the mouse? Try using the dist() functi
 
 How many objects can you make before the sketch runs too slow?
 
+I went back to my work from lesson 2 - Fido.  First I created a [Fido class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/lesson-4-project/fido-class).
+
+
+
 
 
 
