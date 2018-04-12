@@ -77,6 +77,8 @@
 	- [Array of objects](#array-of-objects)
 	- [Interactive Objects](#interactive-objects)
 	- [Array Functions](#array-functions)
+	- [One Thousand and One Zoogs](#one-thousand-and-one-zoogs)
+- [Lesson 4 Project](#lesson-4-project)
 
 # Introduction
 
@@ -2242,10 +2244,23 @@ The p5.js Array functions are:
 
 Find more details in the reference.
 
-Here's [an example using append()]() to expand the size of an array.  Append is very similar to [Array.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) - adding elements to the end of an array.  
+Here's [an example using append()](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/ch-9-arrays/exercise-9.11-resize-arrays) to expand the size of an array.  Append is very similar to [Array.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) - adding elements to the end of an array.  
 
 The example starts with an array of one object.  Each time the mouse is pressed, a new object is created and appended to the end of the original array.
 
+### One Thousand and One Zoogs
+
+From one Zoog object to many.  Similar to how we geerated the Car array or Stripe array, we can copy the exact Zoog class created in Example 8-3 and implement an array.
+
+See this example for [200 Zoog objects in an array](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/ch-9-arrays/example-9.12-zoog-array).
+
+## Lesson 4 Project
+
+Step 1: Take the Class you made in Lesson Three and make an array of objects from that class
+
+Step 2: Can you make the objects react to the mouse? Try using the dist() function to determine the object's proximity to the mouse.  For example, could you make each object jiggle more the closer it is to the mouse?
+
+How many objects can you make before the sketch runs too slow?
 
 
 
