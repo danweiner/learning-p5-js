@@ -84,6 +84,7 @@
 - [Algorithms](#algorithms)
 	-[Recap and Whats Next](#recap-and-whats-next)
 	- [Algorithm: Dance to the beat of your own drum](#algorithm-dance-to-the-beat-of-your-own-drum)
+	- [From Idea to Parts](#from-idea-to-parts)
 
 # Introduction
 
@@ -2386,6 +2387,33 @@ So, our revised process is:
 - integrating the code for all the parts together
 
 This does not mean to say you shouldnt experiment along the way, even altering the original idea completely.  And certainly, once the code is finished, there will almost certainily remain work to do in terms of cleaning up the code, bug fixes, and additional features.  It is this thinking process, however, that should guide you from idea to code.  If you practice developing your projects with this strategy, creating code that implements your ideas will hopefully feel less daunting.
+
+
+### From Idea to Parts
+
+We will practice with a very simple game.
+
+Lets describe the game in paragraph form.
+
+```
+***Rain Game***
+
+The object of this game is to catch raindrops before they hit the ground.  Every so often (depending on the level of difficulty), a new drop falls from the top of the screen at a random horizontal location with a random vertical speed.  The player must catch the raindrops with the mouse with the goal of not letting any raindrops reach the bottom of the screen.
+```
+
+Exercise - Write out an idea for a project you want to create
+
+Now this is extremely tricky.  Let's try to make it similar to the game we're creating.
+
+```
+My game:
+
+The object of this game is to find the word before the first letter hits the the bottom of the screen. A series of letters will appear at the top of the screen at random horizontal location with a random vertical speed.  The player must catch the correct letters with the mouse with the goal of spelling the correct word.  If the player catches three incorrect letters, that player will lose. 
+```
+
+Now let's see if we can take the "Rain Game" and break it down into smaller parts.  How do we do this?
+
+
 
 
 
