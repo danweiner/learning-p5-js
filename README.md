@@ -80,6 +80,11 @@
 	- [One Thousand and One Zoogs](#one-thousand-and-one-zoogs)
 - [Lesson 4 Project](#lesson-4-project)
 
+[Lesson 5 - Putting It All Together](#lesson-5---putting-it-all-together)
+- [Algorithms](#algorithms)
+	-[Recap and Whats Next](#recap-and-whats-next)
+	- [Algorithm: Dance to the beat of your own drum](#algorithm-dance-to-the-beat-of-your-own-drum)
+
 # Introduction
 
 [Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
@@ -2265,7 +2270,122 @@ How many objects can you make before the sketch runs too slow?
 I went back to my work from lesson 2 - Fido.  First I created a [Fido class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/lesson-4-project/fido-class).
 
 
+Then I made a number of [Fidos using an Array](https://github.com/danweiner/learning-p5-js/tree/master/lesson-4/lesson-4-project/fido-array), and when you click each Fido, the color of its nose changes from black to white.
 
+
+# Lesson 5 - Putting It All Together
+
+## Algorithms
+Remember 'Lather. Rinse. Repeat.'?
+
+### Recap and Whats Next
+What did we learn from Zoog/Fido?
+- basics of the shape drawing libraries in p5.js
+- interacting with the mouse
+- moving autonomously with variables
+- changing directions with conditionals
+- expanding its body with a loop
+- organizing its code with functions
+- encapsulating its data and functionality into an object
+- duplicating itself with an array
+
+We need to pause now and consider how we can apply what we have learned to what we *want to do*.
+
+What is our idea and how can variables, conditionals, loops, function, objects, and arrays help us?
+
+Our earlier examples were "one feature" - Zoog would jiggle and only jiggle.  Zoog didn't suddenly start hopping.  Zoog was also usually all alone.  He would never start interacting with other alien creatures along the way.
+
+In the real world, software projects usually involve many moving parts.  This chapter aims to demonstrate how a larger project is created out of many smaller "one feature" programs just like the ones we are starting to feel comfortable making.
+
+You, the programmer, will start with an overall vision, but you must learn how to break it down into invidual parts to successfully execute that vision.
+
+We will start with an idea.  Ideally, we sould pick a sample 'idea' that could set the basis for any project you want to create after reading this.  Sadly there is no such thing.  There are unlimited possibilities in programming, but that also means you need to find your own way to creating those possibilities.
+
+Nevertheless, we are going to develop one example that will hopefully serve us welll for learning about the process of developing larger projects.
+
+Our choice will be a simple game with interactivity, multipic objects, and a goal.  The focus will not be on good game design, but rather on good *software design*.  How doyou go from thought to code?  How do you implement your own algorithm to realize your ideas?  We will see how a larger project divides into four mini-projects and attack them one by one, ultimately bringing all parts together to execute the original idea.
+
+We will continue to emphasize OOP, and each of these parts will be developed using a *class*.  The payoff will be seeing how easy it then is to create the final program by bringing the self-contained, fully functional classes together.  
+
+Before we get to the idea and its parts, let's review the concept of an *algorithm*.
+
+```
+Our process:
+- 1: Idea - start with an idea
+- 2: Parts - break the idea down into smaller parts
+	- Algorithm pseudocode - for each part, work out the algorithm for that part in pseudocode
+	- Algorithm code - Implement that algorithm with code
+	- Objects - Take the data and functionality associated with that algorithm and build it into a class
+- 3: Integration - Take all the classes from Step 2 and integrate them into one larger algorithm
+```
+
+### Algorithm: Dance to the beat of your own drum
+
+An algorithm is a procedure or formula for solving a problem.
+
+In computer programming, an algorithm is a sequence of steps requred to perform a task.  Every single example so far in this book involved an algorithm.
+
+An algorithm is not too far from a recipe:
+1: Preheat oven fo 400F
+2: Place four boneless chicken breasts in baking dish
+3: Spread mustard evenly over chicken
+4: Bake at 400F for 30 mins
+
+The above is a nice algorithm for cooking mustard chicken.  
+
+This might be the pseudocode for that program:
+
+```
+preheatOven(400);
+placeChicken(4, "baking dish");
+spreadMustard();
+bake(400, 30);
+```
+
+An example that uses an algorith to solve a math problem is more relevant to our pursuits.  Let's describe an algorithm to evaluate the sum of a sequence of numbers 1 through N.
+
+`SUM(N) = 1+2+3+...+N`
+
+Where N is any given number greater than zero.
+
+1. Set SUM = 0 and a counter I = 1
+2. Repeat the followig steps while I is less than or equal to N:
+	- Calculate SUM + I and save the result in SUM
+	- Increase the value of I by 1
+3. The solution is now the number saved in SUM.
+
+Translating the preceding algorithm into code, we have:
+
+```
+let sum = 0;
+let n = 10;
+let i = 0;
+
+while(i <= n) {
+	sum = sum + i;
+	i++;
+}
+console.log(sum);
+```
+
+Traditionally, programming is thought of as the process of:
+- developing an idea
+- working out an algorithm to implement that idea
+- writing the code to implement that algorithm
+
+We have just done this in the chicken and summation examples.
+
+Some ideas, however, are too large to be finished in one fell swoop.
+
+So, our revised process is:
+- developing an idea
+- breaking that idea into smaller manageable parts
+- working out the algorithm for each part
+- writing the code for each part
+- working out the algorithm for all the parts together
+- integrating the code for all the parts together
+
+This does not mean to say you shouldnt experiment along the way, even altering the original idea completely.  And certainly, once the code is finished, there will almost certainily remain work to do in terms of cleaning up the code, bug fixes, and additional features.  It is this thinking process, however, that should guide you from idea to code.  If you practice developing your projects with this strategy, creating code that implements your ideas will hopefully feel less daunting.
 
 
 
