@@ -2523,9 +2523,15 @@ The hard work here is the intersection test, which we will get to in a moment.  
 - Display:
 	- Draw a circle at X and Y location
 
-We can now translate this into code.
+We can now translate this into [code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.02-bouncing-ball-class).
 
+From here it is pretty easy to create a sketch with two ball objects.  Ultimately we'll need an array for many raindrops, but for now, two ball variables will be simpler.
 
+Now that we've set up our system for having two circles move around the screen, we need to develop an algorithm for determining if the circles intersect.
+
+In p5.js, we know we can calculate the distance between two points using the ***dist()*** function.  We also have access to the radius of each circle (I've been calling it r but it's actually d(diameter, or width) I think.  To find radius I would need to divide d by 2).  See the image below - we can compare the distance between the circles and the sum of the radii to determine id the circles overlap.
+
+![intersect](images/intersect.png)
 
 
 
