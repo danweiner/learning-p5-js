@@ -85,6 +85,8 @@
 	-[Recap and Whats Next](#recap-and-whats-next)
 	- [Algorithm: Dance to the beat of your own drum](#algorithm-dance-to-the-beat-of-your-own-drum)
 	- [From Idea to Parts](#from-idea-to-parts)
+	- [Part 1: The Catcher](#part-1-the-catcher)
+	- [Part 2: Intersection](#part-2-intersection)
 
 # Introduction
 
@@ -2411,7 +2413,127 @@ My game:
 The object of this game is to find the word before the first letter hits the the bottom of the screen. A series of letters will appear at the top of the screen at random horizontal location with a random vertical speed.  The player must catch the correct letters with the mouse with the goal of spelling the correct word.  If the player catches three incorrect letters, that player will lose. 
 ```
 
-Now let's see if we can take the "Rain Game" and break it down into smaller parts.  How do we do this?
+Now let's see if we can take the "Rain Game" and break it down into smaller parts.  How do we do this?  For one, we can start by thinking of the elements in the game: the raindrops and the catcher.  Secondly, we should think about these elements' behaviors.  For example, we will need a timing mechanism so that the drops fall 'every so often'.  We will also need to determine when a raindrop is 'caught'.  Let's organize these parts more formally.
+
+Part 1. Develop a program with a circle controlled by a mouse.  This circle will be the user controlled 'rain catcher'.
+
+Part 2.  Write a program to test if two circles intersect.  This will be used to determine if the rain catcher has caught a raindrop.
+
+Part 3. Write a timer program that executes a function every N seconds.
+
+Part 4. Write a program with circles falling from the top of the screen to the bottom.  These will be the raindrops.
+
+Parts 1 through 3 are simple and each can be completed in one fell swoop.  However, with Part 4, even though it represents one piece of the larger project, it is complex enough that we will need to complete this exact exercise by breaking it down into smaller steps and building it back up.
+
+Exercise - Take my idea and break it into individual parts.
+
+Part 1. Same as Dan's - Develop a program with a circle controlled by a mouse.  This circle will be the user controlled 'letter catcher'.
+
+Part 2. Same as Dan's, since each letter will reside inside of a circle (I just thought of this). Write a program to test if two circles intersect.  This will be used to determine if the letter catcher has caught a letter.
+
+Part 3.  Write a program to determine if the letter catcher has found a letter in the word.  If it has, add the letter (and all circles with the same letter) to the screen.  If it hasn't, add one strike.
+
+Part 4. Same as Dan's - Write a timer program that executes a function every N seconds.
+
+Part 5. Write a program with circles falling from the top of the screen to the bottom.  Inside each circle will be a letter.  These will be the letters for the words.
+
+I actually think I'm going to program the [UFO game](https://stanford.edu/class/archive/cs/cs106a/cs106a.1136/handouts/23-ufo-game.pdf), same as from [Stanford 106A](https://see.stanford.edu/Course/CS106A/179).
+
+Step 1: Write a function that draws a rect at the top right corner.  Call it 'UFO'.
+
+Step 2:  Write a function that makes the UFO move from the top to the right to the left of the screen, then from the left to the right of the screen, moving down the screen as it reaches each edge of the screen.  If the UFO reaches the bottom of the screen, the game is over.
+
+Step 3: Write a function that creates a small circle at the bottom center of the screen, called 'Bullet', when the mouse is clicked.
+
+Step 4: Write a function that makes the bullet move from the bottom center of the screen to the top of the screen.
+
+Step 5: Write a function that detects when the Bullet intersects with the UFO.  If this happens, make the UFO disappear and display 'Game Over'.
+
+We will now follow this process for each part:
+- first work out the algorithm in pseudocode
+- then in actual code
+- then finish with an object-oriented version
+
+If we do our job correctly, all of the functionality needed will be built into a class which can then be easily copied into the final project itself.
+
+### Part 1: The Catcher
+
+This is the simplest part to construct and requires little beyond what he learned in Chapter 3.  Having pseudocode that is only two lines long is a good sign, indicating that this step is small enough to handle and does not need to be made into even smaller parts.
+
+***Pseudocode:***
+- Erase background
+- Draw an ellipse at the mouse location
+
+Translating it into code is easy:
+```
+function setup() {
+	createCanvas(400, 400);
+}
+
+function draw() {
+	background(255);
+	stroke(0);
+	fill(175);
+	ellipse(mouseX, mouseY, 64, 64);
+}
+```
+
+This is a good step, but we are not done.  As stated, our goal is to develop the rain catcher program in an object oriented manner.  When we take this code and incorporate it into the final program, we will want to have it separated out into a class so that we can make a 'catcher' object.  Our pseudocode would be revised to look like the following:
+
+Setup:
+- Initialize catcher object
+
+Draw:
+- Erase background
+- Set catcher location to mouse location
+- Display catcher
+
+Here is the [Catcher class](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.01-catcher).
+
+### Part 2: Intersection
+
+Part 2 requires us to determine when a catcher and raindrop intersect.  Intersection *functionality* is what we want to focus on developing in this step.  We will start with a simple bouncing ball class (which we saw in [Example 5-6](https://github.com/danweiner/learning-p5-js/tree/master/lesson-2/ch-5/example-5.6-bouncing-ball)) and work out how to determine when two bouncing circles intersect.  During the 'integration' process, this ***intersect()*** function will be incorporated into the Catcher class to catch raindrops.
+
+Here's the algorithm for the intersection part.
+
+***Setup:***
+- Create two ball objects.
+
+***Draw:***
+- Move two balls.
+- If ball #1 intersects ball #2, change color of both balls to white.  Otherwise, leave color gray.
+- Display balls.
+
+The hard work here is the intersection test, which we will get to in a moment.  First, here is what we need for a simple bouncing "Ball" class without an intersection test.
+
+***Data:***
+- X and Y location
+- Radius
+- Speed in X and Y directions
+
+***Functions:***
+- Constructor:
+	- Set radius based on argument
+	- Pick random location
+	- Pick random speed
+- Move:
+	- Increment X by speed in X direction
+	- Increment Y by speed in Y direction
+	- If Ball hits any edge, reverse direction
+- Display:
+	- Draw a circle at X and Y location
+
+We can now translate this into code.
+
+
+
+
+
+
+
+
+
+
 
 
 
