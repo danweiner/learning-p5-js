@@ -2529,12 +2529,57 @@ From here it is pretty easy to create a sketch with two ball objects.  Ultimatel
 
 Now that we've set up our system for having two circles move around the screen, we need to develop an algorithm for determining if the circles intersect.
 
-In p5.js, we know we can calculate the distance between two points using the ***dist()*** function.  We also have access to the radius of each circle (I've been calling it r but it's actually d(diameter, or width) I think.  To find radius I would need to divide d by 2).  See the image below - we can compare the distance between the circles and the sum of the radii to determine id the circles overlap.
+In p5.js, we know we can calculate the distance between two points using the ***dist()*** function.  We also have access to the radius of each circle (I've been calling it r but it's actually d(diameter, or width) I think.  To find radius I would need to divide d by 2).  See the image below - we can compare the distance between the circles and the sum of the radii to determine if the circles overlap.
 
 ![intersect](images/intersect.png)
 
+OK, so assuming the following:
+- x1,y1: coordinates of circle one
+- x2,y2: coordinates of circle two
+- r1: radius of circle one
+- r2: radius of circle two
 
+We have the statement:
 
+***If the distance between (x1,y1) and (x2,y2) is less than the sum of r1 and r2, circle one intersects circle two.***
+
+Our job now is to write a function that returns true or false based on the above statement.
+
+```
+// A function that returns true of false based on whether two 
+// circles intersect
+// If the distance is less than the sum of radii the circles touch
+
+function intersect(x1, y1, x2, y2, r1, r2) {
+	let distance = dist(x1, y1, x2, y2); // calculate distance
+	if(distance < r1 + r2) {		// compare distance to r1 + r2
+		return true;
+		} else {
+			return false;
+		}
+	}
+}
+```
+
+Now that the function is complete, we can test it with data from ball1 and ball2.
+
+```
+let intersecting = intersect(ball1.x, ball1.y, ball2.x, ball2.y, ball1.r, ball2.r);
+
+if (intersecting) {
+	console.log("The circles are intersecting!");
+}
+```
+
+The code above is somewhat awkward and it will be useful to take the function one step further, incorporating it into the ball class itself.  Let's first look at the entire main program as it stands.
+
+I'm pretty sure Dan has videos about this too, so I'll check that out next.
+
+Here's Dan's first video about [Object Communication](https://www.youtube.com/watch?v=W1-ej3Wu5zg&index=29&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA).
+
+We should, however, program this in an object oriented fashion.  We should have an intersect funtion inside the Ball class that returns true or false.
+
+Now we have learned that an object can have a function that takes another object as an argument.  This is one way to have objects communicate.  In this case, they are checking to see if they intersect.
 
 
 

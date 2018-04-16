@@ -14,7 +14,13 @@ function draw() {
 	ball1.display();
 	ball2.move();
 	ball2.display();
+
+	
 }
+
+
+
+
 
 class Ball {
 	constructor(r, x, y) {
