@@ -87,6 +87,7 @@
 	- [From Idea to Parts](#from-idea-to-parts)
 	- [Part 1: The Catcher](#part-1-the-catcher)
 	- [Part 2: Intersection](#part-2-intersection)
+	- [Part 3: The Timer](#part-3-the-timer)
 
 # Introduction
 
@@ -2581,7 +2582,30 @@ We should, however, program this in an object oriented fashion.  We should have 
 
 Now we have learned that an object can have a function that takes another object as an argument.  This is one way to have objects communicate.  In this case, they are checking to see if they intersect.
 
+### Part 3: The Timer
 
+Our next task is to develop a timer that executes a function every N seconds.  Again, we will do this in two steps, first just using the main body of a program, and second, taking the logic and putting it into a Timer class.
+
+p5.js has the functions ***hour(), second(), minute(), month(), day(),*** and ***year()*** to deal with time.  We could conceivably use the second() function to determine how much time has passed.  However, this is not terribly convenient, since second() rolls over from 60 to 0 at the end of every minute.
+
+For creating a timer, the function millis() is best.  First of all, millis(), which returns the number of milliseconds since a sketch started, allows for a great deal more precision.  One millisecond is one one-thousandth of a second (1000 ms = 1s).  Secondly, millis() never rolls back to zero, so asking for the milliseconds at one moment and subtracting it from the milliseconds at a later moment will always result in the amount of time passed.
+
+Let's say we want to change the background color to red five seconds after our program started.  Five seconds = 5,000 ms, so we can check:
+
+```
+if (millis() > 5000) {
+	background(255, 0, 0);
+}
+```
+
+Let's try to make the background a new random color every five seconds.
+
+Setup:
+- Save the time at startup (this should always be zero, but it is useful to save it in a variable anyway - call this 'savedTime').  Note we set the position of the ball to x=0, y=0 before setting it to mouseX, mouseY, so I guess this is a pattern.
+
+Draw:
+- Calculate the time passed as the current time (i.e. millis()) minus savedTime.  Save this as 'passedTime'.
+- If passedTime > 5000, fill a new random background and *reset savedTime to the current time*.  This step will restart the timer.
 
 
 
