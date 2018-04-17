@@ -2649,7 +2649,9 @@ Part 4 subparts:
 - increment y value
 - display raindrop
 
-See this example for [raindrop using just functions]().
+See this example for [raindrop using functions](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.06-raindrop-functions).
+
+And see this for [object oriented raindrop]().
 
 
 
