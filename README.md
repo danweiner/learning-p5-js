@@ -2600,6 +2600,8 @@ if (millis() > 5000) {
 
 Let's try to make the background a new random color every five seconds.
 
+Create a variable, totalTime, which is how long the timer needs to run before the background changes colors.
+
 Setup:
 - Save the time at startup (this should always be zero, but it is useful to save it in a variable anyway - call this 'savedTime').  Note we set the position of the ball to x=0, y=0 before setting it to mouseX, mouseY, so I guess this is a pattern.
 
@@ -2607,8 +2609,21 @@ Draw:
 - Calculate the time passed as the current time (i.e. millis()) minus savedTime.  Save this as 'passedTime'.
 - If passedTime > 5000, fill a new random background and *reset savedTime to the current time*.  This step will restart the timer.
 
+See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.04-timer) for the code.
 
+With this logic worked out, we can now move the timer into a class.  Let's think about what data is involved in the timer.  A timer must know the time at which it started (*savedTime*) and how long it needs to run (*totalTime*).
 
+Data:
+- savedTime
+- totalTime
+
+A timer must also be able to *start* as well as check to see if it is *finished*.
+
+Functions:
+- start()
+- isFinished() - returns true or false
+
+Here is the [object-oriented timer]().
 
 
 
