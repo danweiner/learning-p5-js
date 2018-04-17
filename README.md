@@ -88,6 +88,7 @@
 	- [Part 1: The Catcher](#part-1-the-catcher)
 	- [Part 2: Intersection](#part-2-intersection)
 	- [Part 3: The Timer](#part-3-the-timer)
+	- [Part 4: Raindrops](#part-4-raindrops)
 
 # Introduction
 
@@ -2623,9 +2624,32 @@ Functions:
 - start()
 - isFinished() - returns true or false
 
-Here is the [object-oriented timer]().
+Here is the [object-oriented timer](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.05-object-oriented-timer).
 
+### Part 4: Raindrops
 
+What have we done so far...
+
+We have:
+- created a catcher
+- we can test for intersection
+- we have completed the timer object
+
+The final piece of the puzzle is the raindrops themselves.
+
+Ultimately, we want an array of Raindrop objects falling from the top of the window to the bottom.  Since this step involves creating an array of objects that move, it is useful to approach this fourth part as a series of even smaller steps, subparts of Part 4, thinking again of the individual elements and behaviors we will need.
+
+Part 4 subparts:
+- 4.1: a single moving raindrop
+- 4.2: an array of raindrop objects
+- 4.3: flexible number of raindrops (appearing one at a time)
+- 4.4: fancier raindrop appearance
+
+4.1 - creating the motion of a raindrop (a simple circle for now) is easy (we learned this in Chapter 3).
+- increment y value
+- display raindrop
+
+See this example for [raindrop using just functions]().
 
 
 
