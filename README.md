@@ -2727,6 +2727,43 @@ function draw() {
 }
 ```
 
+See this code for the [raindrop 'one at a time'](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.07-drops-one-at-a-time).
+
+What have we done so far:
+- figured out how we want the raindrop to move
+- created a class that exhibits the behavior
+- mad an array of objects from that class
+
+We have, however, just been using a circle to display the drop.  The advantage to this is that we were able to delay worrying about the drawing code and focus on the motion behaviors and organization of data and functions (incremental programming). Now we can focus on how the drops look - Part 4.4 - Finalize raindrop appearance.
+
+One way to create a more 'drop-like' look is to draw a sequence of circles in the verticle direction, starting small and getting larget as they move down.
+
+Here's a snippet of that:
+
+```
+background(255);
+for(let i = 2; i < 8; i++) {
+	noStroke();
+	fill(0);
+	ellipse(width/2, height/2+i*4, i*2, i*2);
+}
+```
+
+We can incorporate this algorithm in the raindrop class from raindrop one at a time using x and y as the start of the ellipse locations, and the raindrop radius as the maximum value for i in the loop.
+
+See this snippet:
+
+```
+function display() {
+	// display the drop
+	noStroke();
+	fill(this.c);
+	for(let i = 2; i < this.w; i++) {
+		ellipse(this.x, this.y+i*4, i*2, i*2)
+	}
+}
+```
+
 
 
 

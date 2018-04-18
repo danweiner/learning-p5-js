@@ -32,7 +32,7 @@ function draw() {
 
 class Drop {
 	constructor() {
-		this.w = 16;
+		this.w = 8;
 		this.x = random(width);
 		this.y = -this.w * 4; // a little above the window
 		this.speed = random(1, 5);
@@ -52,11 +52,13 @@ class Drop {
 	}
 
 	display() {
+		// fill(this.c);
+		// noStroke();
+		//ellipse(this.x, this.y, this.w);
 		noStroke();
 		fill(this.c);
-		ellipse(this.x, this.y, this.w);
-		// for(let i = 2; i < this.w; i++) {
-		// 	ellipse(this.x, this.y+i*4, i*2, i*2)
-		// }
+		for(let i = 2; i < this.w; i++) {
+			ellipse(this.x, this.y+i*4, i*2, i*2)
+		}
 	}
 }
