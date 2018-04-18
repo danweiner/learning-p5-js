@@ -2653,5 +2653,80 @@ See this example for [raindrop using functions](https://github.com/danweiner/lea
 
 And see this for [object oriented raindrop](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.06-raindrop-oop).
 
+Now that this is complete, the next step is to go from one drop to an array of drops - Part 4.2.  We learned this in Chapter 9.
+
+Here's a snippet:
+
+```
+let drops = new Array(50);
+
+function setup() {
+	createCanvas(400, 400);
+	for(let i = 0; i < drops.length; i++) {
+		drops[i] = new Drop();
+	}
+}
+
+function draw() {
+	background(255);
+	for(let i = 0; i < drops.length; i++) {
+		drops[i].move();
+		drops[i].display();
+	}
+}
+```
+
+The problem with this code, however, is that the raindrops appear all at once.  According to our specs, we want the raindrops to appear one at a time, every N seconds.
+
+Now we are at Part 4.3 - Flexible number of raindrops (appearing one at a time).  We can skip worrying about the timer for now and just have one new raindrop appear every frame (incremental programming).  We should also make our array much larger, allowing for many more raindrops.
+
+To make this work, we need a new variable to keep track of the total number of drops - 'totalDrops'.  Most array examples involve walking through the entire array in order to deal with the entire list.  Now, we want to access a portion of the list, the number stored in totalDrops.  Let's write some pseudocode to describe this process:
+
+Setup:
+- Create an array of drops with 1000 spaces in it
+- Set totalDrops = 0
+
+Draw:
+- Create a new drop in the array (at the location totalDrops). Since totalDrops starts at 0, we will first create a new raindrop in the first spot of the array.  
+- Increment totalDrops (so that the next time we arrive here, we will create a drop in the next spot in the array).
+- If totalDrops exceeds the array size, reset it to zero and start over.
+- Move and display all available drops (i.e., totalDrops).
+
+This snippet translates the pseudocode into code:
+
+```
+let drops = new Array(1000);
+let totalDrops = 0;
+
+function setup() {
+	createCanvas(400, 400);
+	for(let i = 0; i < drops.length; i++) {
+		drops[i] = new Drop();
+	}
+}
+
+function draw() {
+	background(255);
+
+	// Initialize one drop
+	drops[totalDrops] = new Drop();
+
+	// Increment totalDrops
+	totalDrops++
+
+	// if we hit the end of the array
+	if (totalDrops > drops.length) {
+		totalDrops = 0; // Start over
+	}
+
+	// We only want to display totalDrops
+	for(let i = 0; i < totalDrops; i++) {
+		drops[i].move();
+		drops[i].display();
+	}
+}
+```
+
+
 
 
