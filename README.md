@@ -89,6 +89,7 @@
 	- [Part 2: Intersection](#part-2-intersection)
 	- [Part 3: The Timer](#part-3-the-timer)
 	- [Part 4: Raindrops](#part-4-raindrops)
+	- [Integration](#integration)
 
 # Introduction
 
@@ -2764,6 +2765,96 @@ function display() {
 }
 ```
 
+### Integration
 
+What have we done:
+- developed the individual pieces
+- confirmed that each one works properly
+
+Now we can assemble the together in one program.
+
+The first step - create a new p5.js program - with four different javascript files.  One will be our main program - sketch.js - and the other three will hold our classes - 'catcher.js', 'drop.js', and 'timer.js'.  We have to make sure to add links to all of these files in our index.html.
+
+Just as a quick note, we can create files with the command `touch FILENAME`.  So after `cd` into the correct directory, `touch timer.js` will create a file new file called timer.js in the directory that we want.
+
+Here is how I executed creating three JavaScript files in the directory of my choice, along with changing into the correct directory, and confirming that the files were being created with the command `ls`.
+
+```
+// change into desired directory
+[lesson-5 (master)]$ cd example-10.09-complete-raindrop-game/
+
+// list files in that directory
+[example-10.09-complete-raindrop-game (master)]$ ls
+index.html	libraries	sketch.js
+
+// create first file called 'touch.js'
+[example-10.09-complete-raindrop-game (master)]$ touch timer.js
+
+// confirm that file was created in directory
+[example-10.09-complete-raindrop-game (master)]$ ls
+index.html	libraries	sketch.js	timer.js
+[example-10.09-complete-raindrop-game (master)]$ touch drop.js
+[example-10.09-complete-raindrop-game (master)]$ touch catcher.js
+[example-10.09-complete-raindrop-game (master)]$ ls
+catcher.js	drop.js		index.html	libraries	sketch.js	timer.js
+```
+
+The first step is to copy and paste the code for each class into each of the class files we just created.
+
+Individually, they will not need to change, so there is no need for us to revisit the code.  What we need to revisit is the main program - what goes in setup() and draw().  
+
+Referring back to the original game description and knowing how the pieces were assembled, we can write the pseudocode algorithm for the entire game.
+
+Setup:
+- Create Catcher object
+- Create array of drops
+- Set totalDrops = 0
+- Create Timer object
+- Start timer
+
+Draw:
+- Set Catcher location to mouse location
+- Display Catcher
+- Move all available Drops
+- Display all available drops
+- If Catcher intersects any Drop
+	- Remove Drop from screen
+- If the timer is finished:
+	- Increase the number of drops
+	- Restart the timer
+
+Each step in the above program has already been worked out except for "Remove Drop from screen."
+
+This is rather common.  Even with breaking the idea down into parts and working them out one at a time, little bits can be missed.  Fortunately, this piece of functionality is simple enough and with some ingenuity, we will see how we can slip it in during assembly.
+
+One way to approach assembling the above algorithm is to start combining all of the above elements into one sketch and not worry about how they interact.  In other words, everything but having the timer trigger the drops and testing for intersection.  To get this going, all we need to do is copy/paste from each part's global variables, setup() and draw()!
+
+Here are the global variables: a Catcher object, an array of Drop objects, a Tmer object, and an integer to store the number of drops.
+
+```
+let catcher;
+let timer;
+let drops;
+
+let totalDrops = 0;
+```
+
+In setup(), the variables are initialized.  Note, however, we can skip initializing the individual drops in the array since they will be created one at a time.  We will also need to call the timer's start() function.  
+
+```
+function setup() {
+	createCanvas(400, 400);
+
+	catcher = new Catcher(32); // create the catcher w = 32
+	drops = new Array(1000); // create 1000 spots in the array
+	timer = new Timer(2000); // timer goes off every two secs
+
+	timer.start();
+}
+```
+
+In draw(), the objects call their methods.  Again, we are just taking the code from each part we did separately earlier in this chapter and pasting in sequence.
+
+I'm interested to see how this code turns out.  See [this example]() for all the code together, but not fully integrated.
 
 
