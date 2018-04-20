@@ -90,6 +90,8 @@
 	- [Part 3: The Timer](#part-3-the-timer)
 	- [Part 4: Raindrops](#part-4-raindrops)
 	- [Integration](#integration)
+	- [Review](#review)
+- [Lesson 5 Project](#lesson-5-project)
 
 # Introduction
 
@@ -3002,4 +3004,36 @@ The next part is a big one - if 10 raindrops reach the bottom during any level, 
 
 So, the big part here is that the entire functionality needs to be wrapped inside of a boolean called gameOver.  This is a giant if statement.  gameOver begins as false, and only flips to true if lives <= 0.  That other if statement is nested beneath the if statement for reachedBottom.  So we have three nested if statements within a for loop.  Wow.  And that's all inside an if statement of its own...
 
+### Review
 
+What have we learned:
+- an approach to problem solving
+- taking an idea
+- breaking it down into parts
+- developing pseudocode for those parts
+- implementing them one very small step at a time
+
+This process takes time and takes practice.  Everyone struggles through it when first learning to program.
+
+What we've learned and where we're headed:
+- We've focused entirely on the fundamentals of programming
+- Data - in the form of variables and arrays
+- Control flow - in the form of conditional statements and loops
+- Organization - in the form of function and objects
+
+
+## Lesson 5 Project 
+
+Like I said, I'm going to try the UFO game.  Luckily I have some code to fall back on.
+
+I ultimately still want to code brickbreaker.  Maybe I'll try that If I'm successful with the UFO game.  We'll see.
+
+So, the two main components of the UFO game are the UFO and the bullets.
+
+Let's try the UFO first.
+
+The UFO will be a small rectangle.  Let's have it start at the upper right corner of the screen.  It should move from right to left, then once it reaches the edge of the screen, down one row (down the height of the rect), before reversing direction and repeating the same action all the way down the screen.
+
+So, whats the easiest thing I can do? 
+
+Draw the rect in the upper right hand corner.  Let's do that.  Then let's move the rect from right to left and stop it when the rect is at x=0.  
