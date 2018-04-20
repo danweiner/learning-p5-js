@@ -7,6 +7,10 @@ class Timer {
 		this.savedTime = millis();
 	}
 
+	setTime(t) {
+    	this.totalTime = t;
+ 	}
+
 	isFinished() {
 		let passedTime = millis() - this.savedTime;
 		if (passedTime > this.totalTime) {

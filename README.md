@@ -2950,12 +2950,12 @@ So to make the first part:
 
 1. Start the player off with 10 points.
 
-This is actually implemented as 'lives', not points.  I was on the right track to use the reachedBottom() function, but the bug I was getting was that the score would never stop decrementing.  The drop would hit the bottom then keep decreasing over and over.
+This is actually implemented as 'lives', not points.  Lives are used on a per level basis - 10 lives per level.  I was on the right track to use the reachedBottom() function, but the bug I was getting was that the score would never stop decrementing.  The drop would hit the bottom then keep decreasing over and over.
 
 Dan solved this by adding a value in the constuctor called this.isFinished which is originally set to false.  There is also a function called finished() which sets this.isFinished to true.
 
 Returning to our code, what's interesting is that we're putting all of our code inside of this drops[i].isFinished().  As long as this is true, we move the drops, and display the drops. Then, if the drops have reached the bottom, we say that drop[i] has finished() and we decrement lives by 1. 
- 
+
 ```
 for (let i = 0; i < totalDrops; i++) {
 		if (!drops[i].isFinished) {
@@ -2974,8 +2974,32 @@ We're going to use the same boolean on/off switch to increase the levelCounter a
 
 I need more work with booleans.  This is a coding pattern that I see a lot that I'm not used to yet.
 
+OK, so now lives can decrement by 1, and I have the isFinished data attribute in the drop object along with the finished() method, I need to work on the next part - if all 1000 raindrops fall without the score getting to zero, a new level begins and the raindrops appear faster.
 
+I'm so happy that I have Dan's code because I had no idea where to begin.  I would have been so lost.  
 
+So, Dan has a variable called `levelCounter` that increases each time the catcher intersects a drop.  Each intersection also increases the score.
 
+If levelCounter >= the length of the drops array, we go to the next level and all game elements are reset.
+
+I would never have thought to compare a levelCounter variable to the length of the drops array.  That was not jumping out to me from the problem description.
+
+Another doozy - the setTime function in the Timer.
+
+```
+ setTime(t) {
+    this.totalTime = t;
+  }
+```
+
+So what are we going to do?
+
+First part - when drops reach the bottom, increment the levelCounter.  Then, when the catcher intersects the drops, increment the levelCounter and the score.  Finally, if the levelCounter is greater than the drops array, increment the level and reset the game settings.  This included resetting the time, so we needed to add a time method called setTime.  See above.
+
+So now, the player starts off with a score of 0, has 10 lives per level, loses a life whenever a drop reaches the bottom, gets a point added when the catcher intersects a drop, and loses lives when drops reach the bottom.  I added score-- if raindrop reaches bottom because that should make the score decrease by one for each drop that reaches the bottom of the screen, which is one of the specs.
+
+The next part is a big one - if 10 raindrops reach the bottom during any level, the player loses.
+
+So, the big part here is that the entire functionality needs to be wrapped inside of a boolean called gameOver.  This is a giant if statement.  gameOver begins as false, and only flips to true if lives <= 0.  That other if statement is nested beneath the if statement for reachedBottom.  So we have three nested if statements within a for loop.  Wow.  And that's all inside an if statement of its own...
 
 
