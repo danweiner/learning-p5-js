@@ -2855,6 +2855,84 @@ function setup() {
 
 In draw(), the objects call their methods.  Again, we are just taking the code from each part we did separately earlier in this chapter and pasting in sequence.
 
-I'm interested to see how this code turns out.  See [this example]() for all the code together, but not fully integrated.
+I'm interested to see how this code turns out.  See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.09-using-all-objects) for all the code together, but not fully integrated.
+
+The next step is to take these concepts we have developed and have them work together.  For example, we should only create one new raindrop whenever two seconds have passed (as indicated by the timer's isFinished() function).
+
+```
+// Check the timer
+if (timer.isFinished()) {
+	// Deal with raindrops
+	// Initialize one drop
+	drops[totalDrops] = new Drop();
+	// Increment totalDrops
+	totalDrops++
+	// If we hit the end of the array
+	if (totalDrops >= drops.length) {
+		totalDrops = 0; // Start over
+	}
+	timer.start();
+}
+```
+
+We also need to find out when the Catcher object intersects a Drop.  Earlier, we tested for intersection by calling the intersect() function we wrote inside the Ball class.
+
+```
+let intersecting = ball1.intersect(ball2);
+if (intersecting) {
+	console.log('the circles are intersecting!');
+}
+```
+
+We can do the same thing here, calling an intersect() function in the catcher class and passing through every raindrop in the system.  Instead of printing out a message, we will actually want to affect the raindrop itself, telling it to disappear, perhaps.  This code assumes that the caught() function will do the job. - The book is lacking here - needs more info on top down design.  The Stanford course does a good job with that with introducing Karel first.
+
+```
+// Move and display all drops
+for (let i = 0; i < totalDrops; i++) {
+	drops[i].move();
+	drops[i].display();
+	if (catcher.intersect(drops[i])) {
+		drops[i].caught();
+	}
+}
+```
+
+Our catcher object did not originally contain the function intersect(), nor did the drop include caught().  So these are some new functions we will need to write as part of the integration process.
+
+intersect() is easy to incorporate since we solved the problem already earlier and can literally copy it into the catcher class (changing the argument from a ball object to a drop object).
+
+```
+// A function that returns true of false based if the catcher
+// intersects a raindrop 
+
+intersect(d) {
+	// calculate distance
+	let distance = dist(this.x, this.y, d.x, d.y);
+	// in addition to calling functions, we can access
+	// variables inside of an object using dot syntax
+	if (distance < this.w + d.w) {
+		return true;
+	} else {
+		return false;
+	}
+}
+```
+
+When the drop is caught, we will set its location so somewhere offscreen (so that it can't be seen, the equivalent to 'disappearing') and stop it from moving by setting it's speed equal to 0.  Although we did not work out this functionality in advance of the integration process, it is simple enough to throw in right now.
+
+```
+// if drop is caught
+caught() {
+	this.speed = 0;
+	this.y = -1000;
+}
+```
+
+That's the [whole program]().
+
+
+
+
+
 
 
