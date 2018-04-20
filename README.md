@@ -2930,6 +2930,49 @@ caught() {
 
 That's the [whole program](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/example-10.10-complete-raindrop-game).
 
+This exercise is interesting.  We need to implement a scoring system for the game.  The player starts off with 10 points.  For every raindrop that reaches the bottom, we decrease the score by 1.  If all 1,000 raindrops fall without the score getting to 0, a new level begins and raindrops appear faster.  If 10 raindrops reach the bottom during any level, the player loses.  Show an the score onscreen as a rectangle that increases and decreases with size.
+
+Let's see if I can break this down:
+
+1: Declare global variable score.
+
+2: Set score = 10 pts in setup.
+
+3: We have a reachedBottom function in drop.js - can we use this to also decrease the score?  I assume so - put score-- in the reachedBottom function
+
+OK so this was really hard.  I had to look at the code.  It's a good thing I did because I'm learning a lot.  
+
+I'm always reminded of this image of every coding tutorial ever written.
+
+![tutorial horse](images/tutorial_horse.png)
+
+So to make the first part:
+
+1. Start the player off with 10 points.
+
+This is actually implemented as 'lives', not points.  I was on the right track to use the reachedBottom() function, but the bug I was getting was that the score would never stop decrementing.  The drop would hit the bottom then keep decreasing over and over.
+
+Dan solved this by adding a value in the constuctor called this.isFinished which is originally set to false.  There is also a function called finished() which sets this.isFinished to true.
+
+Returning to our code, what's interesting is that we're putting all of our code inside of this drops[i].isFinished().  As long as this is true, we move the drops, and display the drops. Then, if the drops have reached the bottom, we say that drop[i] has finished() and we decrement lives by 1. 
+ 
+```
+for (let i = 0; i < totalDrops; i++) {
+		if (!drops[i].isFinished) {
+			drops[i].move();
+			drops[i].display();
+			if (drops[i].reachedBottom()){
+				drops[i].finished();
+				lives--;
+			}	
+		}
+	}
+
+```
+
+We're going to use the same boolean on/off switch to increase the levelCounter and score counter later.
+
+I need more work with booleans.  This is a coding pattern that I see a lot that I'm not used to yet.
 
 
 
