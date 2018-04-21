@@ -3037,3 +3037,15 @@ The UFO will be a small rectangle.  Let's have it start at the upper right corne
 So, whats the easiest thing I can do? 
 
 Draw the rect in the upper right hand corner.  Let's do that.  Then let's move the rect from right to left and stop it when the rect is at x=0.  
+
+I accomplished those steps and committed the code.
+
+Now I would like to create the Bullet.
+
+The first step is creating the Bullet, which will just be a small circle, and making the Bullet start at the bottom center of the screen and move up to the top of the screen then stop.
+
+I added all the basic functionality.  I would like to check it against the code from Stanford to see how my code compares.  Good job me.
+
+
+
+

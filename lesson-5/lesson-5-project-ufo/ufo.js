@@ -14,16 +14,6 @@ class UFO {
 	}
 
 	move() {
-		// if (!this.isFinished) {
-		// 	this.x = this.x + this.xspeed;
-		// 	if (this.x < 0 || this.x > width - 40) {
-		// 		this.xspeed *= -1;
-		// 		this.y += 20;
-		// 	}
-		// } if (this.y > height - 20) {
-		// 	this.y = height - 20;
-		// 	this.isFinished = true;
-		// }
 		this.x = this.x + this.xspeed;
 		if (this.x < 0 || this.x > width - 40) {
 			this.xspeed *= -1;
@@ -34,6 +24,8 @@ class UFO {
 	reset() {
 		this.x = width - 40;
 		this.y = 0;
+		this.xspeed = -this.xspeed;
+		this.isFinished = false;
 	}
 
 	reachedBottom() {
@@ -46,5 +38,12 @@ class UFO {
 
 	finished() {
 		this.isFinished = true;
+	}
+
+	levelUp() {
+		this.x = width - 40;
+		this.y = 0;
+		this.xspeed = (-this.xspeed) - 2;
+		this.isFinished = false;
 	}
 }
