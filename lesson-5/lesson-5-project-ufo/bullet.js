@@ -4,6 +4,7 @@ class Bullet {
 		this.y = height;
 		this.w = 10;
 		this.speed = 2;
+		this.isFinished = false;
 	}
 
 	display() {
@@ -16,5 +17,29 @@ class Bullet {
 		if (this.y < 0) {
 			this.y = 0;
 		}
+	}
+
+	intersect(d) {
+		if (this.y - this.w/2 < d.y + d.h && 
+			this.y - this.w/2 > d.y &&
+			this.x + this.w/2 > d.x
+			&& this.x - this.w/2 < d.x + d.w ) {
+			console.log('intersecting');
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	reachedTop() {
+		if (this.y == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	finished() {
+		this.isFinished = true;
 	}
 }
