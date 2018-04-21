@@ -14,15 +14,37 @@ class UFO {
 	}
 
 	move() {
-		if (!this.isFinished) {
-			this.x = this.x + this.xspeed;
-			if (this.x < 0 || this.x > width - 40) {
-				this.xspeed *= -1;
-				this.y += 20;
-			}
-		} if (this.y > height - 20) {
-			this.y = height - 20;
-			this.isFinished = true;
+		// if (!this.isFinished) {
+		// 	this.x = this.x + this.xspeed;
+		// 	if (this.x < 0 || this.x > width - 40) {
+		// 		this.xspeed *= -1;
+		// 		this.y += 20;
+		// 	}
+		// } if (this.y > height - 20) {
+		// 	this.y = height - 20;
+		// 	this.isFinished = true;
+		// }
+		this.x = this.x + this.xspeed;
+		if (this.x < 0 || this.x > width - 40) {
+			this.xspeed *= -1;
+			this.y += 20;
 		}
+	}
+
+	reset() {
+		this.x = width - 40;
+		this.y = 0;
+	}
+
+	reachedBottom() {
+		if (this.y > height - 40) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	finished() {
+		this.isFinished = true;
 	}
 }

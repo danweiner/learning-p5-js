@@ -17,9 +17,16 @@ function draw() {
 		textAlign(CENTER);
 		fill(0);
 		text('GAME OVER', width/2, height/2);
+		textSize(24);
+		text('Press ENTER to play again', width/2, height/2 + 50);
 	} else {
 		ufo.display();
-		ufo.move();
+		if (!ufo.isFinished) {
+			ufo.move();
+		} if (ufo.reachedBottom()) {
+			ufo.finished();
+			gameOver = true;
+		}
 
 		for (var i = 0; i < bullets.length; i++) {
 			if (!bullets[i].isFinished) {
@@ -40,6 +47,15 @@ function draw() {
 function mousePressed() {
 	let bullet = new Bullet();
 	bullets.push(bullet);
+}
+
+function keyPressed() {
+	if (keyCode == ENTER) {
+		ufo.reset();
+		bullets = [];
+		gameOver = false;
+
+	}
 }
 
 
