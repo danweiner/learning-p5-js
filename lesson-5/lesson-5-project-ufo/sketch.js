@@ -9,6 +9,8 @@ let welcome = true;
 
 let bulletsRemaining = 5;
 
+let level = 1;
+
 function setup() {
 	createCanvas(400, 400);
 	ufo = new UFO();
@@ -70,6 +72,11 @@ function draw() {
 					}
 				}
 			}
+
+			textSize(24);
+			textAlign(CENTER);
+			fill(0);
+			text('Level: ' + level, 50, height - 30);
 		}
 	}
 }
@@ -89,12 +96,14 @@ function keyPressed() {
 		bulletsRemaining = 5;
 		welcome = true;
 		playing = false;
+		level = 1;
 
 	} else if (keyCode == UP_ARROW) {
 		ufo.levelUp();
 		bullets = [];
 		gameWon = false;
 		bulletsRemaining = 5;
+		level = level + 1;
 	} else if (key == 'p' || 'P') {
 		playing = true;
 		welcome = false;
