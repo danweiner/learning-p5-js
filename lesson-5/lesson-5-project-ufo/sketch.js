@@ -17,14 +17,6 @@ function setup() {
 
 function draw() {
 	background(150);
-	// textSize(48);
-	// textAlign(CENTER);
-	// fill(0);
-	// text('Welcome', width/2, height/2);
-	// textSize(24);
-	// text('You have 5 shots to hit the UFO.', width/2, height/2 + 50);
-	// text('UFO gets faster each round.', width/2, height/2 + 100);
-	// text('Press "p" to play.', width/2, height/2 + 150);
 
 	if (welcome) {
 		textSize(48);
@@ -35,52 +27,52 @@ function draw() {
 		text('You have 5 shots to hit the UFO.', width/2, height/2 + 50);
 		text('UFO gets faster each round.', width/2, height/2 + 100);
 		text('Press "p" to play.', width/2, height/2 + 150);
-	} 
-		if (playing) {	
-			if (gameWon) {
-				textSize(48);
-				textAlign(CENTER);
-				fill(0);
-				text('You win', width/2, height/2);
-				textSize(24);
-				text('Press UP_ARROW to play again', width/2, height/2 + 50);
-			} else if (gameLost) {
-				textSize(48);
-				textAlign(CENTER);
-				fill(0);
-				text('Game Over', width/2, height/2);
-				textSize(24);
-				text('Press ENTER to play again', width/2, height/2 + 50);
-			} else {
-				ufo.display();
-				if (!ufo.isFinished) {
-					ufo.move();
-				} if (ufo.reachedBottom()) {
-					ufo.finished();
-					gameLost = true;
-					welcome = true;
-				}
+	} else if (playing) {
 
-				for (var i = 0; i < bullets.length; i++) {
-					if (!bullets[i].isFinished) {
-						bullets[i].display();
-						bullets[i].move();
-						if (bullets[i].intersect(ufo)) {
-							bullets[i].finished();
-							gameWon = true;
-						}
-						if (bullets[i].reachedTop()) {
-							bullets[i].finished();
-						}
+		if (gameWon) {	
+			
+			textSize(48);
+			textAlign(CENTER);
+			fill(0);
+			text('You win', width/2, height/2);
+			textSize(24);
+			text('Press UP_ARROW to play again', width/2, height/2 + 50);
+		} else if (gameLost) {
+			textSize(48);
+			textAlign(CENTER);
+			fill(0);
+			text('Game Over', width/2, height/2);
+			textSize(24);
+			text('Press ENTER to play again', width/2, height/2 + 50);
+		} else {
+			ufo.display();
+			if (!ufo.isFinished) {
+				ufo.move();
+			} if (ufo.reachedBottom()) {
+				ufo.finished();
+				gameLost = true;
+			}
 
-						if (bullets.length > 4) {
-							gameLost = true;
-						}
+			for (var i = 0; i < bullets.length; i++) {
+				if (!bullets[i].isFinished) {
+					bullets[i].display();
+					bullets[i].move();
+					if (bullets[i].intersect(ufo)) {
+						bullets[i].finished();
+						gameWon = true;
+					}
+					if (bullets[i].reachedTop()) {
+						bullets[i].finished();
+					}
+
+					if (bullets.length > 4 && bullets[4].reachedTop() == true) {
+						gameLost = true;
 					}
 				}
 			}
 		}
 	}
+}
 
 
 function mousePressed() {
