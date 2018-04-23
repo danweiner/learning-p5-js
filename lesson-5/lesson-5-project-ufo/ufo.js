@@ -24,7 +24,7 @@ class UFO {
 	reset() {
 		this.x = width - 40;
 		this.y = 0;
-		this.xspeed = -this.xspeed;
+		this.xspeed = -2;
 		this.isFinished = false;
 	}
 
