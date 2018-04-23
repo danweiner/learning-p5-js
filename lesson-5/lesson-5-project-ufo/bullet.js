@@ -3,7 +3,7 @@ class Bullet {
 		this.x = width/2;
 		this.y = height;
 		this.w = 10;
-		this.speed = 2;
+		this.speed = 5;
 		this.isFinished = false;
 	}
 

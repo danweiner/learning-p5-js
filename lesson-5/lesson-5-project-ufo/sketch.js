@@ -77,6 +77,7 @@ function draw() {
 			textAlign(CENTER);
 			fill(0);
 			text('Level: ' + level, 50, height - 30);
+			text('Bullets Left: ' + bulletsRemaining, 300, height - 30);
 		}
 	}
 }
