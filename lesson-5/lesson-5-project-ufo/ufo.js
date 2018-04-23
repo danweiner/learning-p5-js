@@ -43,7 +43,11 @@ class UFO {
 	levelUp() {
 		this.x = width - 40;
 		this.y = 0;
-		this.xspeed = (-this.xspeed) - 2;
+		if (this.xspeed > 0) {
+			this.xspeed = (-this.xspeed) - 2;
+		} else {
+			this.xspeed = this.xspeed - 2;
+		}
 		this.isFinished = false;
 	}
 }
