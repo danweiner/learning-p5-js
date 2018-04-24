@@ -24,7 +24,6 @@ class Bullet {
 			this.y - this.w/2 > d.y &&
 			this.x + this.w/2 > d.x
 			&& this.x - this.w/2 < d.x + d.w ) {
-			console.log('intersecting');
 			return true;
 		} else {
 			return false;
