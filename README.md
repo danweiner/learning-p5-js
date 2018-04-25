@@ -105,6 +105,8 @@
 	- [Math and programming](#math-and-programming)
 	- [Modulus](#modulus)
 	- [Random Numbers](#random-numbers)
+	- [Probability Review](#probability-review)
+	- [Event probability in code](#event-probability-in-code)
 
 # Introduction
 
@@ -3234,15 +3236,81 @@ x = (x + 1) % limit;
 
 This is very useful if you want to count through the elements of an array one at a time, always returning to 0 when you get to the length of an array.
 
-[See this example](), where array indices are used to determine background colors, and the modulo operator is used to loop through the array and return to the start.
+[See this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.01-modulo), where array indices are used to determine background colors, and the modulo operator is used to loop through the array and return to the start.
 
 ### Random Numbers
 
 We already learned about the random() function, which allowed us to randomly fill variables.  p5.js random number generator produces what is known as a "uniform" distribution of numbers.  For example, if we ask for a random number between 0 and 9, 0 will come up 10% of the time, 1 will come up 10% of the time, etc.  We could write a simple sketch using an array to prove this fact.  
 
-See [this example]().
+See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.02-random-number-dist).
 
 Pseudo-random numbers - the random numbers we get from random() are not truly random and are known as 'pseudo-random'.  They are the result of a mathematical funciton that simulates randomness.  This function would yield a pattern over time, but that time period is so long that for us, it is just as good as pure randomness.
+
+With a few tricks we can change the way use use random() to produce a nonuniform distribution of random numbers and generate probabilities for certain events to occur.  For example, what if we wanted to create a sketch where the background color had a 10% change of being green and a 90% chance or being blue?
+
+### Probability Review
+
+Let's review the basic principles of probability, first looking at single event probability, that is, the likelihood of something to occur.
+
+Given a system with a certain number of possible outcomes, the probability of any given event occurring is the number of outcomes which qualify as that event divided by the total number of possible outcomes.  The simplese example is a coin toss.  There are a total of two possible outcomes (heads or tails).  There is only one way to flip heads, therefore the probability of heads is divided by two, that is, 1/2 or 50%.
+
+Consider a deck of 52 cards.  The probability of drawing an ace from that deck is:
+
+***number of aces/number of cards = 4/52 = 0.077 = ~8%***
+
+Probability of drawing a diamond is 25% - 13/52.
+
+You can also calculate the probability of multiple events occurring in sequence as the product of the individual probabilities of each event.
+
+Probability of a coin flipping heads three times in a row is:
+
+1/2 * 1/2 * 1/2 = 1/8.
+
+What is the probability of drawing two aces in a row?
+
+4/52 * 3/51 = .4%
+
+### Event probability in code
+
+There are few different techniques for using the random() functions with probability in code.  For example, if we fill an array with a selection of numbers (some repeated), we can randomly pick from that array and generate events based on what we select.
+
+```
+let stuff = new Array(5);
+stuff[0] = 1;
+stuff[1] = 1;
+stuff[2] = 2;
+stuff[3] = 3;
+stuff[4] = 3;
+let index = int(random(stuff.length)); 
+// picking random element from array
+if(stuff[index] == 1) {
+	// do something
+}
+```
+
+If you run this code, there will be a 40% chance of selecting the value 1, a 20% chance of selecting the value 2, and a 40% chance of selecting the value 3.
+
+Another strategy is to ask for a random number (for simplicity we consider random floating point values between 0 and 1) and only allow the event to happen if the random number we pick is within a certain range.  For example:
+
+```
+let prob = .1
+let r = random(1);
+if (r < prob) {
+	// instigate the event here
+}
+```
+
+This same technique can also be applied to multiple outcomes:
+- outcome A 60%, outcome B 10%, outcome C 30%
+
+To implement this in code, we pick one random float and check where it falls:
+- between 0.00 and 0.60 (60%) - outcome A
+- between 0.60 and 0.70 (10%) - outcome B
+- between 0.70 and 1.00 (30%) - outcome C
+
+The [following example]() draws a circle with three different colors, each with the above probability (red: 60%, green: 10%, blue: 30%).
+
+
 
 
 
