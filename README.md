@@ -3449,6 +3449,9 @@ Here's an [Oscillator object and an array of oscillators](https://github.com/dan
 
 And here's an object that uses the sine function to [oscillate in size](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.07-breather).
 
+We can also draw a [sequence of shapes along the path of the sine function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.07-wave).
+
+The following exercise rewrites the above example [using the noise() function]().
 
 
 
