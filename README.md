@@ -109,6 +109,7 @@
 	- [Event probability in code](#event-probability-in-code)
 	- [Perlin Noise](#perlin-noise)
 	- [Trigonometry](#trigonometry)
+	- [Oscillation](#oscillation)
 
 # Introduction
 
@@ -3431,7 +3432,23 @@ let y = r * sin(theta);
 
 This is useful in certain applications where Cartesian coordinates make things difficult, for instance moving a shape along a circular path.  By using polar coordinates, we can just increment the angle.
 
-See this example to see how it is done with the [global variables r and theta]().
+See this example to see how it is done with the [global variables r and theta](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.05-polar-to-cartesian).
+
+Another exercise [draws a spiral](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.05-spiral-path) by setting r initially to 0 and incrementing r in draw.
+
+### Oscillation
+
+Trig functions can be used for more than geometric calculations associated with right triangles.  For instance, graphing a sine function.
+
+The output of `y = sin(x)` is a smooth curve alternating between -1 and 1.  This behavior is konwn as oscillation, a periodic movement between two points.  A swinging pendulum, for example, oscillates.  
+We can simulate oscillation in a p5.js sketch by assigning the output of the sine function to an object's location.  This is similar to how we used noise() to control the size of a circle, only with sin() controlling a location.  Note that while noise() produces a number between 0 and 1.0, sin() outputs a range between -1 and 1.  
+
+Here is the code for an [oscillating pendulum](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.06-oscillation).
+
+Here's an [Oscillator object and an array of oscillators](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.06-oscillating-objects).
+
+And here's an object that uses the sine function to [oscillate in size](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.07-breather).
+
 
 
 
