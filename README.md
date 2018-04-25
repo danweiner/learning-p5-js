@@ -100,6 +100,12 @@
 - [Libraries](#libraries)
 	- [The basics](#the-basics)
 
+[Lesson 6 - The world revolves around you](#lesson-6---the-world-revolves-around-you)
+- [Mathematics](#mathematics)
+	- [Math and programming](#math-and-programming)
+	- [Modulus](#modulus)
+	- [Random Numbers](#random-numbers)
+
 # Introduction
 
 [Learning Processing](http://learningprocessing.com/) is an introductory workbook/textbook for [Processing](https://processing.org/), which is built on top of Java.
@@ -3169,11 +3175,74 @@ To use a core library (DOM or Sound, or a contributed library), link to the libr
   <script src="p5.sound.js">
   <script src="sketch.js">
 
-
 ```
 
+It seems like it might be tough to work with some of these libraries in p5.js - wont be so straightforward to copy from the book.  But we'll see.
 
+# Lesson 6 - The world revolves around you
 
+## Mathematics
+
+In this chapter:
+- Probability
+- Perlin noise
+- Trigonometry
+- Recursion
+
+So, we have finished the basics and we are going to start looking at some more sophisticated topics.  
+
+We will still employ the same flow structure of setup() and draw().  We will continue to use functions from the p5.js library and algorithms made of conditional statements and loops, and organize sketches with an object-oriented approach in mind.  At this point, however, descriptions will assume knowledge of those essential topics.
+
+### Math and programming
+
+We have already been using algebra since we started on variables - `x = x + 1;`
+
+And we tested intersection using the Pythagorean Theorem:
+
+`let d = dist(x1, x2, y1, y2);`
+
+### Modulus
+
+The modulo operator is written as a percent sign. It is a very simple concept that is useful for keeping a number within a certain boundary (a shape on the screen, an index value within the range of an array, etc).  The modulo operator calculates the remainder when one number is divided by another.  It works with both ints and floats.
+
+20 divided by 6 = 3 remainder 2.
+
+Therefore:
+
+20 modulo 6 = 2. or 20 % 6 = 2.
+
+3 / 5 = 0 remainder 3 so 3 % 5 = 3
+
+9.25 % .5 = .25
+
+You will notice that if A = B % C, A can never be larger than C.  The remainder can never be larger than the divisor.
+
+Therefore, modulo can be used whenever you need to cycle a counter variable back to zero.  This example:
+
+```
+x = x + 1;
+if (x >= limit) {
+	x = 0;
+}
+``` 
+
+Can be replaced by:
+
+```
+x = (x + 1) % limit;
+```
+
+This is very useful if you want to count through the elements of an array one at a time, always returning to 0 when you get to the length of an array.
+
+[See this example](), where array indices are used to determine background colors, and the modulo operator is used to loop through the array and return to the start.
+
+### Random Numbers
+
+We already learned about the random() function, which allowed us to randomly fill variables.  p5.js random number generator produces what is known as a "uniform" distribution of numbers.  For example, if we ask for a random number between 0 and 9, 0 will come up 10% of the time, 1 will come up 10% of the time, etc.  We could write a simple sketch using an array to prove this fact.  
+
+See [this example]().
+
+Pseudo-random numbers - the random numbers we get from random() are not truly random and are known as 'pseudo-random'.  They are the result of a mathematical funciton that simulates randomness.  This function would yield a pattern over time, but that time period is so long that for us, it is just as good as pure randomness.
 
 
 
