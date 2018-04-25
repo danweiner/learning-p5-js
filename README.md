@@ -108,6 +108,7 @@
 	- [Probability Review](#probability-review)
 	- [Event probability in code](#event-probability-in-code)
 	- [Perlin Noise](#perlin-noise)
+	- [Trigonometry](#trigonometry)
 
 # Introduction
 
@@ -3372,6 +3373,65 @@ How quickly we increment t also affects the smoothness of the noise.
 
 Notice how noise() always returns a float between 0 and 1.  See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.04-perlin-noise) which assigns the result of the noise() function to the size of a circle.
 
-This exercise uses [Perlin noise to set the location of a circle]().
+This exercise uses [Perlin noise to set the location of a circle](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.03-perlin-noise).
+
+### Angles
+
+Basic understanding of angles will be important for things like rotate() to rotate and spin objects.
+
+We need to learn to learn about radians and degrees.
+
+The book says that Processing requires angles to to be specified in radians.  This is not the case.  You can use [angleMode](https://p5js.org/reference/#/p5/angleMode) to change the default from radians to degrees.  It's still useful to learn about radians, though.
+
+A radian is a unit of measurement for angles defined by the ratio of the length of the arc of a circle to the radius of that circle.  One radian is the angle at which that ratio equals one.  An angle of 180 = PI radians.  An angle of 360 = 2*PI radians.  90 = PI/2.  
+
+The formula to convert from degrees to radians is:
+
+Radians = 2*PI*(degrees/360)
+
+There is also a radians() function to automatically convert values from degres to radians.  The constants PI and TWO_PI are available for convenient access.
+
+This code will rotate shapes by 60 degrees:
+```
+let angle = radians(60);
+rotate(angle);
+```  
+
+FYI - PI is a real number defined as the ratio of the circles circumference (the distance around the perimeter) to its diameter (a straight line that passes through the center).  It is equal to approximately 3.14159.
+
+
+### Trigonometry
+
+Sohcahtoa
+
+This is the foundation for a lot of computer graphics work.
+
+Any time you need to determine the distance between points, deal with circles, arcs, lines, and so on, you will find that a basic understanding of trigonometry is essential.
+
+Trigonometry is the study of the relationships between the sides and angles of triangles and socahtoa is a mnemonic device for remembering the definitions of the trigonometric functions, sine, cosine, and tangent.
+
+1. soh - sine: opposite / hypotenuse
+2. cah - cosine: adjacent / hypotenuse
+3: toa - tangent: opposite / adjacent
+
+Any time we display a shape in p5.js, we have to specify a pixel location, given as x and y coordinates.  These are known as Cartesian coordinates.
+
+Another useful system, known as polar coordinates, describes a point in space as an angle of rotation around the origin and a radius from the origin.  We cant use polar coordinates as arguments to a function in p5.js.  However, trigonometric formulas allow us to convert those coordinates to Cartesian, which can then be used to draw a shape.
+
+![coordinates](images/coordinates.png)
+
+For example, if r is 75 and theta is 45, we can calculate x and y as follows.  The functions for sine and cosine in p5.js are sin() and cos() respectively.  They each take one argument, a floating point angle, measured in radians or degrees as determined by angleMode.
+
+```
+let r = 75;
+let theta = PI / 4;
+let x = r * cos(theta);
+let y = r * sin(theta);
+```
+
+This is useful in certain applications where Cartesian coordinates make things difficult, for instance moving a shape along a circular path.  By using polar coordinates, we can just increment the angle.
+
+See this example to see how it is done with the [global variables r and theta]().
+
 
 
