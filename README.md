@@ -3370,6 +3370,8 @@ function draw() {
 
 How quickly we increment t also affects the smoothness of the noise.
 
-Notice how noise() always returns a float between 0 and 1.  See [this example]() which assigns the result of the noise() function to the size of a circle.
+Notice how noise() always returns a float between 0 and 1.  See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.04-perlin-noise) which assigns the result of the noise() function to the size of a circle.
+
+This exercise uses [Perlin noise to set the location of a circle]().
 
 
