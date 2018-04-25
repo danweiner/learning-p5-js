@@ -107,6 +107,7 @@
 	- [Random Numbers](#random-numbers)
 	- [Probability Review](#probability-review)
 	- [Event probability in code](#event-probability-in-code)
+	- [Perlin Noise](#perlin-noise)
 
 # Introduction
 
@@ -3310,10 +3311,65 @@ To implement this in code, we pick one random float and check where it falls:
 
 The [following example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.03-probabilities) draws a circle with three different colors, each with the above probability (red: 60%, green: 10%, blue: 30%).
 
+### Perlin Noise
 
+See this [video series](https://www.youtube.com/watch?v=Qf4dIN99e2w&list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD) for more information on Perlin noise.
 
+One of the qualitiesof a good random number generator is that numbers produced appear to have no relationship.  If they exhibit no discernible pattern, they are considered random.
 
+In programming behaviors that have an organic, almost lifelike quality, a little bit of randomness is a good thing.  However, we do not want too much randomness.
 
+Hence Perlin noise - naturally ordered (smooth) sequence of psuedo-random numbers.  It was originally designed to create procedural textures.
 
+It can be used to generate a variety of interesting effects including clouds, landscapes, marble textures, and so on.
+
+Noise Detail:
+
+If you visit the p5.js noise reference, you will find that noise is calculated over several "octaves".  You can change the number of octaves and their relative importance by calling the [noiseDetail()](https://p5js.org/reference/#/p5/noiseDetail) function.  This, in turn, can change how the noise function behaves.
+
+p5.js has a built-in implementation of the Perlin noise algorithm with the function noise().  The noise() function takes one, two, or three arguments (referring to the 'space' in which noise is computed: one, two, or three dimensions).  This chapter will look at one-dimensional noise only.  The p5.js and Processing websites have more information on two and three dimensional noise.
+
+One-dimensional Perlin noise produces a liner sequences of values over time.  For example:
+
+.364, .363, .363, .364, .365
+
+Note how the numbers move up or down randomly, but stay close to the value of their predecessor.  
+
+To get those numbers out of p5.js, we have to do 2 things:
+- call the function noise()
+- pass in as an argument the current "time"
+
+We would typically start at t = 0 and therefore call the function like so: "noise(t);"
+
+```
+let t = 0.0;
+let noiseValue = noise(t);
+```
+
+We can also take the above code and run it looping in draw():
+```
+let t = 0.0;
+function draw() {
+	let noiseValue = noise(t);
+	console.log(noiseValue);
+	// prints the same thing over and over
+}
+```
+
+We can get a different result of the noise() function if we increment the time variable.
+
+```
+let t = 0.0;
+function draw() {
+	let noiseValue = noise(t);
+	console.log(noiseValue);
+
+	t += 0.01; // time moves forward
+}
+```
+
+How quickly we increment t also affects the smoothness of the noise.
+
+Notice how noise() always returns a float between 0 and 1.  See [this example]() which assigns the result of the noise() function to the size of a circle.
 
 
