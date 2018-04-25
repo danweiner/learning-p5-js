@@ -92,6 +92,13 @@
 	- [Integration](#integration)
 	- [Review](#review)
 - [Lesson 5 Project](#lesson-5-project)
+- [Debugging](#debugging)
+	- [Tip 1: Take a Break](#tip-1-take-a-break)
+	- [Tip 2: Get another human being involved](#tip-2-get-another-human-being-involved)
+	- [Tip 3: Simplify](#tip-3-simplify)
+	- [Tip 4: print is your friend](#tip-4-print-is-your-friend)
+- [Libraries](#libraries)
+	- [The basics](#the-basics)
 
 # Introduction
 
@@ -3045,6 +3052,128 @@ Now I would like to create the Bullet.
 The first step is creating the Bullet, which will just be a small circle, and making the Bullet start at the bottom center of the screen and move up to the top of the screen then stop.
 
 I added all the basic functionality.  I would like to check it against the code from Stanford to see how my code compares.  Good job me.
+
+I completed the UFO game.  [Here's the code](https://github.com/danweiner/learning-p5-js/tree/master/lesson-5/lesson-5-project-ufo).
+
+## Debugging
+
+Bugs happen.  It can be really frustrating.
+
+A bug is any defect in a program.  Sometimes it is obvious that you have a bug - your sketch will quit (or not run at all) and display an error in the message console.  These can be caused by typos, variables that were never initialized, looking for an element in an array that doesnt exist, and so on.  
+
+Bugs can also be more sinister and mysterious, for instance if your sketch does not function the way you intended.  In this case, your sketch might run without producing any errors in the console.  Fiding this type of bug is more difficult since it will not necessarily be as obvious where to start looking in the code.
+
+We will now discuss a few basic strategies for fixing bugs ("debugging").
+
+### Tip 1: Take a Break
+
+Do anything other than working on your code.  Sometimes time away from the computer is the best thing you can do.
+
+### Tip 2: Get another human being involved
+
+Talk through the problem with a friend.  The process of showing your code to another programmer (or nonprogrammer, even) and walking through the logic out loud will often reveal the bug.  In many cases, it is somethin obvious that you did not see because you know your code so well.  The process of explaining it to someone else, however, forces you to go through the code more slowly.  If you do not have a friend nearby, you can also do this out loud to yourself (rubber ducky debugging).  Yes, you will look silly, but it helps.
+
+### Tip 3: Simplify
+
+Think back to the process of incremental development.  The more you develop your projects step-by-step, in small, easy to manage pieces, the fewer errors and bugs you will end up having.  Of course, there is no way to avoid problems completely, so when then do occur, the philosophy of incremental development can also be applied to debugging.  Instead of building the code up piece by piece, debugging involves taking the code apart piece by piece.
+
+One way to accomplish this is to comment out large chunks of code in order to isolate a particular section.  See the code below, which is sketch.js of a p5.js program.  The skech has an array of Snake objects, a Button object and an Apple object.  The code for the classes is not included.  Let's assume that everything about the sketch is working properly, except that the Apple is invisible  To debug the problem, *everything is commented out except for the few lines of code displaying the Apple object*.  This way, we can be sure that none of the other code is the cause of the issue.
+
+```
+// let snakes = new Snake(100);
+// let button;
+let apple;
+
+function setup() {
+	createCanvas(200, 200);
+	apple = new Apple();
+	/*for (let i = 0; i < snakes.length; i++) {
+		snakes[i] = new Snake();
+	}
+	button = new Button(10, 10, 100, 50); */
+}
+
+function draw() {
+	background(0);
+	apple.display();
+	// apple.move();
+
+	/*for (let i = 0; i < snakes.length; i++ ) {
+		snakes[i].display();
+		snakes[i].slither();
+		snakes[i].eat(apple);
+	}
+
+	// this is probably something different in p5.js - im just copying
+	// the example from the book
+	if (button.pressed()) {
+		applet.restart();
+	} */
+}
+
+/*function mousePressed() {
+	button.click(mouseX,mouseY);
+} */
+```
+
+Once all of the code is commented out, there are two possible outcomes.  Either the apple still does not appear or it does.  In the former, the issue is most definitely cause by the apple itself, and the next step would be to investigate the insides of the *display()* function and look for a mistake.
+
+If the apple does appear, then the problem is caused by one of the other lines of code.  Perhaps the *move()* function sends the apple offscreen so that we do not see it.  Or maybe the Snake objects cover it up by accident.
+
+To figure this out, I would recommend putting back lines of code, one at a time.  Each time you add back in a line of code, run the sketch and see if the apple disappears.  As soon as it does, you have found the culprit and can root out the cause.  
+
+Having an object oriented sketch as above (with many classes) can really help the debugging process.  
+
+Another tactic you can try is to create a new sketch and just use one of the classes, testing its basic features.  In other words, do not worry about fixing your entire program just yet.  First, create a new sketch that only does one thing with the relevant class (or classes) and reproduce the error.  Let's say that, instead of the apple, the snakes are not behaving properly.  To simplify and find the bug, we could create a sketch that just uses one snake (instead of an array) without the apple or the button.  Without the bells and whistles, the code will be much easier to deal with.
+
+### Tip 4: print is your friend
+
+Using the console to display the value of variables can be really helpful.  If an object is completely missing on the screen and you want to know why, you can print out the value of its location variables.
+
+It might look something like this:
+`console.log("x: " + thing.x + "y: " + thing.y);`
+
+Remember - Simplify.  The process of printing variable values will be much more effective if we are doing it in a sketch that only deals with the Thing object.  This way, we can be sure that it is not another class, which is say, drawing over the top of the Thing by accident.
+
+You can also use console.log() to indicate whether or not a certain part of the code has been reached.  For example, what if in our bouncing ball example, the ball never bounces off the right han side of the window?  The problem could be either you are not properly determining when it hits the edge or you are doing the wrong thing when it hits the edge.  To know if your code correctly detects when it hits the edge, you could write:
+
+```
+if (x > width) {
+	console.log("x is greater than width");
+	xspeed *= -1;
+}
+```
+
+If you run the sketch and never see the message printed, then something is probably flawed with your boolean expression.  
+
+Admittedly, console.log() is not a perfect debugging tool.  It can be hard to track multiple pieces of information in the console.  It can slow your sketch significantly (depending on how much printing you are doing).  More advanced development environments usually offer debugging tools which allow you to track specific variables, pause the program, advance line by line in the code, and so on.  
+
+Still, in terms of debugging, some sleep, a little common sense, and console.log() can get you pretty far.
+
+## Libraries
+
+We will now start using p5.js [libraries](https://p5js.org/libraries/).  There are some differences between how to do this in Processing and p5.js, but Dan has tutorials on Coding train for the DOM and Sound libraries, which are easily searchable on Youtube.  
+
+### The basics
+
+Whenever we call a p5.js function, such as line(), background(), stroke() etc, we are calling on a function that we learned about from the p5.js reference page.  That reference page is a list of all the available functions in the core *p5.js library*.  In computer science, a library refers to a collection of "helper" code.  A library might consist of functions, variables, and objects.  The bulk of things we do are made possible by the core p5.js library.
+
+In most programming languages, you are required to specify which libraries you intend to use at the top of your code.  This tells the compiler where to look for things in order to translate your source code into machine code.  
+
+To use a core library (DOM or Sound, or a contributed library), link to the library in your HTML after you have linked to p5.js.  
+
+``` html
+
+  <script src="p5.js">
+  // sound library
+  <script src="p5.sound.js">
+  <script src="sketch.js">
+
+
+```
+
+
+
 
 
 
