@@ -3308,7 +3308,9 @@ To implement this in code, we pick one random float and check where it falls:
 - between 0.60 and 0.70 (10%) - outcome B
 - between 0.70 and 1.00 (30%) - outcome C
 
-The [following example]() draws a circle with three different colors, each with the above probability (red: 60%, green: 10%, blue: 30%).
+The [following example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.03-probabilities) draws a circle with three different colors, each with the above probability (red: 60%, green: 10%, blue: 30%).
+
+
 
 
 
