@@ -111,6 +111,7 @@
 	- [Trigonometry](#trigonometry)
 	- [Oscillation](#oscillation)
 	- [Recursion](#recursion)
+	- [Two-dimensional arrays](#two---dimensional-arrays)
 
 # Introduction
 
@@ -3533,11 +3534,74 @@ Notice that the above function only recursively calls itself if the radius is gr
 
 This example is rather trivial, since it could be achieved through iteration.  But, in more complex scenarios, where a method calls itself more than once, recursion becomes wonderfully elegant.
 
-Here is drawCircle() in a [bit more complex form]().  For every circle displayed, draw a circle half its size to the right and left of that circle.
+Here is drawCircle() in a [bit more complex form](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.08-recursion).  For every circle displayed, draw a circle half its size to the right and left of that circle.
 
-Here's another example of recursion with [branching lines]().
+Here's another example of recursion with [branching lines](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.09-recursion).
 
+### Two-dimensional arrays
 
+Arrays keep track of information in linear order, a one-dimensional list.
 
+The data in certain systems (a digital image, a board game, etc) livs in two dimensions.  To visualize this data, we need a multi-dimensional data structure, that is a multi-dimensional array.
+
+A 2-D array is really nothing more than an array of arrays (a 3-D array is an array of arrays of arrays).
+
+It is better to think of a 2-D array as a matrix.  A matrix can be thought of as a grid of numbers, arranged in rows and columns, kind of like a bingo board.
+
+```
+let myArray = [[0, 1, 2, 3], 
+			   [3, 1, 4, 3],
+			   [3, 7, 9, 2],
+			   [5, 7, 9, 2]];
+```
+
+We can use this type of data structure to encode information about an immage.  For example, a grayscale image might represented by the array:
+
+```
+let myArray = [[236, 189, 189, 0], 
+			   [236, 80, 189, 189],
+			   [236, 0, 189, 80],
+			   [236, 189, 1899, 80]];
+```
+
+To walk through every element of a one-dimensionla array, we use a for loop:
+
+```
+let myArray = new Array(10);
+for(let i = 0; i < myArray.length; i++) {
+	myArray[i] = 0;
+}
+```
+This part is tricky because Java is different from JS.  I'll consult the example code.
+
+For a 2-D array, in order to reference every element, we must use nested loops.  This gives us a counter variable for every column and every row in the matrix.
+
+```
+let cols = 10;
+let rows = 10;
+
+let myArray = new Array(cols);
+for (let i = 0; i < cols; i++) {
+	myArray[i] = new Array(rows);
+}
+```
+
+I think this is actually the correct code:
+
+```
+let cols = 10;
+let rows = 10;
+
+let myArray = [];
+
+for (let i = 0; i < cols; i++) {
+    myArray[i] = [];
+    for (let j = 0; j < rows; j++) {
+        myArray[i][j] = 0;
+    }
+}
+```
+
+Here's a program to draw a [two-dimensional grayscale image]().
 
 
