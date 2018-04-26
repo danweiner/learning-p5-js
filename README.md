@@ -3602,6 +3602,14 @@ for (let i = 0; i < cols; i++) {
 }
 ```
 
-Here's a program to draw a [two-dimensional grayscale image]().
+Here's a program to draw a [two-dimensional grayscale image](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.09-two-dim-array).
+
+A 2D array can also be used to store objects, which is especially convenient for programming sketches that involve some sort of 'grid' or 'board'.
+
+The following example [displays a grid of Cell objects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.10-two-d-array-objects) stored in a 2D array.  Each cell is a rectangle whose brightness oscillates from 0-255 with a sine function.
+
+Here's the beginning of a [tic-tac-toe game]().  This is difficult.
+
+
 
 
