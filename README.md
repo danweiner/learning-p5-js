@@ -110,6 +110,7 @@
 	- [Perlin Noise](#perlin-noise)
 	- [Trigonometry](#trigonometry)
 	- [Oscillation](#oscillation)
+	- [Recursion](#recursion)
 
 # Introduction
 
@@ -3451,7 +3452,92 @@ And here's an object that uses the sine function to [oscillate in size](https://
 
 We can also draw a [sequence of shapes along the path of the sine function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.07-wave).
 
-The following exercise rewrites the above example [using the noise() function]().
+The following exercise rewrites the above example [using the noise() function](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/exercise-13.08-noise-wave).
+
+### Recursion
+
+Mandelbrot - fractal - self-similar shapes found in nature.  Much of the stuff we encounter in our physical world can be described by idealized geometrical forms (a postcard has a rectangular shape, a ping-pong ball is spherical and so on).  However, many naturally occurring structures cannot be described by such simple means.  Some examples are snowflakes, trees, coastlines, and mountains.  
+
+Fractals provide geometry for describing and simulating these types of self-similar shapes (by "self-similar" we mean no matter how "zoomed out" or "zoomed in" the shape ultimately appears the same).  
+
+One process for generating these shakes is known as *recursion*.  
+
+We know that a function can call another function.  We do this whenever we call any function inside of the draw() function.  But can a function call itself?  Can draw() call draw()?  Yes it can, but this would actually result in an infinite loop.
+
+Functions that call themselves are *recursive* and are appropriate for solving different types of problems.  This occurs in mathematical calculations; the most common example of this is "factorial".
+
+The factorial of any number n, usually written as n!, is defined as: 
+
+n! = n * n-1 * ... 3 * 2 * 1
+0! = 1
+
+We could write a function to calculate factorial using a for loop in p5.js:
+
+```
+function factorial(n){
+	let f = 1;
+	for (let i = 0; i < n; i++) {
+		f = f * (i + 1);
+	}
+	return f;
+}
+```
+
+If you look closely at how factorial works, however, you will notice something interesting.  Let's examine 4! and 3!
+
+4! = 4 * 3 * 2 * 1
+3! = 3 * 2 * 1
+therefore... 4! = 4 * 3!
+
+In general terms, for any positive integer n:
+n! = n * (n-1)!
+1! = 1
+
+Written in English:
+
+The factorial of N is defined as N times the factorial is N - 1
+
+So, the definition of factorial actually includes factorial.
+
+This concept of self-reference in functions is known as *recursion*.  We can use recursion to write a function for factorial that calls itself.
+
+```
+function factorial(n) {
+	if(n == 1) {
+		return 1;
+	} else {
+		return n * factorial(n - 1);
+	}
+}
+```
+
+See the image below for the steps that happen when factorial(4) is called:
+
+![recursion](images/recursion.png)
+
+The same principle can be applied to graphics with interesting results.  Look at the following recursive function.
+
+```
+function drawCircle(x, y, radius) {
+	ellipse(x, y, radius);
+	if (radius > 2) {
+		radius *= 0.75;
+		drawCircle(x, y, radius);
+	}
+}
+```
+
+What does drawCircle() do?  It draws an ellipse based on a set of parameters received as arguments, and then calls itself with the same parameters (adjusting them slightly).  The result is a series of circles each drawn inside the previous circle.
+
+Notice that the above function only recursively calls itself if the radius is greater than two.  This is a crucial point.  *All recursive functions need an exit condition!*  This is identical to iteration, where the boolean test eventually evaluates to false thus exiting the loop.  Without one, the program would crash, caught inside an infinite loop.  The same can be said about recursion.  If a recursive function calls itself forever and ever, you will most likely be treated to a nice frozen screen.
+
+This example is rather trivial, since it could be achieved through iteration.  But, in more complex scenarios, where a method calls itself more than once, recursion becomes wonderfully elegant.
+
+Here is drawCircle() in a [bit more complex form]().  For every circle displayed, draw a circle half its size to the right and left of that circle.
+
+Here's another example of recursion with [branching lines]().
+
+
 
 
 
