@@ -112,6 +112,8 @@
 	- [Oscillation](#oscillation)
 	- [Recursion](#recursion)
 	- [Two-dimensional arrays](#two---dimensional-arrays)
+- [Translation and Rotation in 3D](#translation-and-rotation-in-3D)
+	- [The Z-Axis](#the-z---axis)
 
 # Introduction
 
@@ -3609,6 +3611,54 @@ A 2D array can also be used to store objects, which is especially convenient for
 The following example [displays a grid of Cell objects](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/example-13.10-two-d-array-objects) stored in a 2D array.  Each cell is a rectangle whose brightness oscillates from 0-255 with a sine function.
 
 Here's the beginning of a [tic-tac-toe game]().  This is difficult.
+
+
+## Translation and Rotation in 3D
+
+- 2D and 3D translation
+- Using P3D and OPENGL (Probably WebGL but I'll have to see)
+- Vertex shapes
+- 2D and 3D rotation
+- Saving the transformation state in the stack: pushMatrix() and popMatrix()
+
+### The Z-Axis
+
+We need a third axis (known as the Z-axis) for depth of any given point.  The Z-axis dtermines how far in front or behind the window a pixel lives.
+
+We can create a three-dimensional illusion with what we have learned so far.  For example, if you were to draw a rectangle in the middle of the window and slowly increase its width and height, it might appear as if it were moving toward you.  
+
+See [this example](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/translation_rotation/example_14_01_growing_rectangle).
+
+As soon as we enter the world of 3D pixel cooridinates, a certain amount of control must be relinquished to the p5.js renderer.  You can no lover control exact pixel locations as you might with 2D shapes, because XY locations will be adjusted to accound for 3D perspective.
+
+Introduction to translate:
+
+Moves the origin point (0, 0) relative to its previous state.  Always resets back to the top left corner at the beginning of draw().
+
+See this example of [multiple translations](https://github.com/danweiner/learning-p5-js/tree/master/lesson-6/translation_rotation/example_14_02_multiple_translations).
+
+Let's specify 3D coordinates.  Translate, unlike rect, ellipse, etc, can accept a third argument for a Z coordinate.  
+
+```
+// translation along the z-axis
+translate(0, 0, 50)
+rectMode(CENTER);
+rect(100, 100, 8, 8);
+```
+
+It's better to specify the x,y location as part of the translation:
+
+```
+translate(100, 100, 50);
+rectMode(CENTER);
+rect(0, 0, 8, 8);
+```
+
+We can use a variable for the Z location and animate the shape moving towards us.  See [this example]().
+
+See this [tutorial on WEBGL](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5).   (0,0,0) is the middle of the canvas.
+
+
 
 
 
