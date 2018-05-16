@@ -3654,9 +3654,10 @@ rectMode(CENTER);
 rect(0, 0, 8, 8);
 ```
 
-We can use a variable for the Z location and animate the shape moving towards us.  See [this example]().
+We can use a variable for the Z location and animate the shape moving towards us.  See [this example](https://github.com/danweiner/learning-p5-js/blob/master/lesson-6/translation_rotation/example_14_03_rect_along_z_axis/sketch.js).
 
 See this [tutorial on WEBGL](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5).   (0,0,0) is the middle of the canvas.
+
 
 
 
