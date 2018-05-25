@@ -114,6 +114,7 @@
 	- [Two-dimensional arrays](#two---dimensional-arrays)
 - [Translation and Rotation in 3D](#translation-and-rotation-in-3D)
 	- [The Z-Axis](#the-z---axis)
+	- [Vertex Shapes](#vertex-shapes)
 
 # Introduction
 
@@ -3658,8 +3659,65 @@ We can use a variable for the Z location and animate the shape moving towards us
 
 See this [tutorial on WEBGL](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5).   (0,0,0) is the middle of the canvas.
 
+Added a new exercise using WEBGL and translate []().
 
+Translate() is particularly useful when you are drawing a collection of shapes relative to a given centerpoint.  Think back to Zoog.  We saw code like this:
 
+```
+function display() {
+	// body 
+	fill(150);
+	rect(x, y, w/6, h*2);
+
+	// head
+	fill(255);
+	ellipse(x, y-h, w, h);
+}
+```
+
+Since we're drawing everything relative to Zoog's x and y location, translate allows us to set the oritin at x,y and then draw the shapes relatie to 0,0.
+
+```
+function display() {
+	// move origin 0,0 to x,y
+	translate(x,y);
+
+	// body
+	fill(150);
+	rect(0,0, w/6, h*2);
+
+	// head
+	fill(255);
+	ellipse(0, -h/2, w, h);
+}
+```
+
+### Vertex Shapes
+
+We use vertex shapes to create custom shapes.  We need the functions beginShape(), endShape(), and vertex().
+
+The nice thing about using a custom shape over a rectangle is flexibility.  For example, the sides are not required to be perpendicular.
+
+We can also create more than one shape in a loop:
+
+```
+stroke(0);
+for(let i = 0; i < 10; i++) {
+	beginShape();
+	fill(175);
+	vertex(i*20, 10-i);
+	vertex(i*20 + 15, 10 + i);
+	vertex(i*20 + 15, 180 + i);
+	vertex(i*20, 180 - i);
+	endShape(CLOSE);
+}
+```
+
+You can also add an argument to beginShape() specifying exactly what shape you want to make.  Lets say you create six vertex points.  You can specify beginShape(TRIANGLES) to create two triangles instead of a hexagon.  You could also create just points or lines.
+
+Note that LINES is meant for a series of individual lines not a continuous loop.  
+
+Exercise [drawing a vertex shape]().
 
 
 
